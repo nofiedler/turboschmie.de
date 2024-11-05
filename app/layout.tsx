@@ -37,8 +37,8 @@ export default function RootLayout({
         
         <main className="relative z-10">
           {children}
-          <SpeedInsights />
         </main>
+        <SpeedInsights />
       </body>
     </html>
   );
