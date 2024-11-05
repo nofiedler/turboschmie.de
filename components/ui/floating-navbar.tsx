@@ -5,17 +5,17 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
-{/*const logo = "/logo.svg";*/}
+interface NavItem {
+  name: string;
+  link: string;
+  icon?: JSX.Element;
+}
 
 export const FloatingNav = ({
   navItems,
   className,
 }: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
+  navItems: NavItem[];
   className?: string;
 }) => {
   return (
@@ -24,16 +24,13 @@ export const FloatingNav = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       className={cn(
-        // Standard-Klassen für Desktop
         "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-white/[0.2] rounded-full bg-black shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-4 py-2 items-center justify-center space-x-4",
-        // Media-Query für mobile Geräte, um die Positionierung zu ändern
         "sm:top-10 sm:bottom-auto md:top-10 md:bottom-auto",
         "bottom-4 top-auto",
         className
       )}
     >
-      {/*<img src={logo} alt="Logo" />*/}
-      {navItems.map((navItem: any, idx: number) => (
+      {navItems.map((navItem: NavItem, idx: number) => (
         <Link
           key={`link=${idx}`}
           href={navItem.link}
