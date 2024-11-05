@@ -7,6 +7,7 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -26,9 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${
+          geistMono.variable
+        } antialiased min-h-screen bg-black bg-dot-white/[0.2] relative`}
       >
-        {children}
+        {/* Radial Gradient Overlay */}
+        <div className="fixed pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+        
+        <main className="relative z-10">
+          {children}
+        </main>
       </body>
     </html>
   );

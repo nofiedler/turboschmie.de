@@ -1,101 +1,144 @@
-import Image from "next/image";
+"use client";
+
+import React from "react";
+import Footer from "../components/ui/footer";
+import { FlipWords } from "../components/ui/flip-words";
+import { FloatingNav } from "../components/ui/floating-navbar";
+import { BentoGrid, BentoGridItem } from "../components/ui/bento-grid";
+import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
+import {
+  IconHome,
+  IconMessage,
+  IconUser,
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+  IconLayoutGrid,
+  IconChevronRight,
+} from "@tabler/icons-react";
+
+const logo = "/logo.svg";
+
+const navItems = [
+  {
+    name: "Home",
+    link: "/",
+    icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "About",
+    link: "/about",
+    icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Projects",
+    link: "/projects",
+    icon: (
+      <IconLayoutGrid className="h-4 w-4 text-neutral-500 dark:text-white" />
+    ),
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+    icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+];
+
+const words = [
+  "Engine optimization",
+  "ECU tuning",
+  "Control unit coding",
+  "Vehicle cleaning",
+  "Sports car maintenance",
+  "Secure car storage",
+  "Luxury vehicle transport",
+  "Automotive logistics",
+];
+
+const Skeleton = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+);
+const items = [
+  {
+    title: "The Dawn of Innovation",
+    description: "Explore the birth of groundbreaking ideas and inventions.",
+    header: <Skeleton />,
+    className: "md:col-span-2",
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Digital Revolution",
+    description: "Dive into the transformative power of technology.",
+    header: <Skeleton />,
+    className: "md:col-span-1",
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Art of Design",
+    description: "Discover the beauty of thoughtful and functional design.",
+    header: <Skeleton />,
+    className: "md:col-span-1",
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "The Power of Communication",
+    description:
+      "Understand the impact of effective communication in our lives.",
+    header: <Skeleton />,
+    className: "md:col-span-2",
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="relative  w-full">
+      <FloatingNav navItems={navItems} />
+      <Content />
+      <Footer />
     </div>
   );
 }
+
+const Content = () => {
+  return (
+    <div className="min-h-screen w-full flex-col items-center justify-center pt-44">
+      <div className="flex justify-center">
+        <img src={logo} alt="Logo" className="w-full h-auto" />
+      </div>
+      <div className="text-4xl text-center mx-auto text-neutral-600 font-light pt-36">
+        We deliver{" "}
+        <a className="text-neutral-100 underline underline-offset-4 decoration-slate-100 decoration-1">
+          expert solutions
+        </a>{" "}
+        for high-performance sports cars... <br />
+        <FlipWords
+          className="text-5xl font-bold text-neutral-100 text-center pt-8"
+          words={words}
+        />
+      </div>
+      <div className="flex justify-center">
+        <HoverBorderGradient containerClassName="rounded-full" as="button">
+          <div className="flex items-center space-x-2">
+            <span>&nbsp;Book Your Consultation</span>
+            <IconChevronRight className="h-4 w-4 text-white" />
+          </div>
+        </HoverBorderGradient>
+      </div>
+      <div className="h-96"></div>
+      <BentoGrid className="pt-96 max-w-4xl mx-auto md:auto-rows-[20rem] mb-20">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            className={item.className}
+            icon={item.icon}
+          />
+        ))}
+      </BentoGrid>
+    </div>
+  );
+};
