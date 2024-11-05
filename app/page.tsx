@@ -17,6 +17,7 @@ import {
   IconLayoutGrid,
   IconChevronRight,
 } from "@tabler/icons-react";
+import Image from 'next/image'
 
 const logo = "/logo.svg";
 
@@ -105,7 +106,13 @@ const Content = () => {
   return (
     <div className="min-h-screen w-full flex-col items-center justify-center pt-44">
       <div className="flex justify-center">
-        <img src={logo} alt="Logo" className="w-full h-auto" />
+        <Image 
+          src={logo}
+          alt="..."
+          width={1200}  // Passe die Größe an deine Bedürfnisse an
+          height={300} // Passe die Größe an deine Bedürfnisse an
+          priority     // Optional, wenn das Bild above the fold ist
+        />
       </div>
       <div className="text-4xl text-center mx-auto text-neutral-600 font-light pt-36">
         We deliver{" "}

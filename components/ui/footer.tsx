@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import Image from 'next/image'
 
 const logo = "/logo.svg";
 
@@ -53,7 +54,14 @@ export default function Component() {
         </div>
         
         <p className="text-sm flex flex-col items-center">
-        <img src={logo} alt="Logo" className="pt-6 pb-4"/>
+        <Image 
+          src={logo}
+          alt="..."
+          width={250}  // Passe die Größe an deine Bedürfnisse an
+          height={300} // Passe die Größe an deine Bedürfnisse an
+          priority  
+          className="pb-5"   // Optional, wenn das Bild above the fold ist
+        />
           © {new Date().getFullYear()} Turboschmie.de, Inc. All rights reserved.
         </p>
       </div>
