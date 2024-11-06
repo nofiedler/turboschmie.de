@@ -1,50 +1,19 @@
 "use client";
 
 import React from "react";
-import Footer from "../components/ui/footer";
 import { FlipWords } from "../components/ui/flip-words";
-import { FloatingNav } from "../components/ui/floating-navbar";
 import { BentoGrid, BentoGridItem } from "../components/ui/bento-grid";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
+import Image from "next/image";
 import {
-  IconHome,
-  IconMessage,
-  IconUser,
   IconClipboardCopy,
   IconFileBroken,
   IconSignature,
   IconTableColumn,
-  IconLayoutGrid,
   IconChevronRight,
 } from "@tabler/icons-react";
-import Image from 'next/image'
 
 const logo = "/logo.svg";
-
-const navItems = [
-  {
-    name: "Home",
-    link: "/",
-    icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
-  },
-  {
-    name: "About",
-    link: "/about",
-    icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
-  },
-  {
-    name: "Projects",
-    link: "/projects",
-    icon: (
-      <IconLayoutGrid className="h-4 w-4 text-neutral-500 dark:text-white" />
-    ),
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-    icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
-  },
-];
 
 const words = [
   "Engine optimization",
@@ -95,57 +64,43 @@ const items = [
 export default function Home() {
   return (
     <div className="relative  w-full">
-      <FloatingNav navItems={navItems} />
-      <Content />
-      <Footer />
+      <div className="min-h-screen w-full flex-col items-center justify-center pt-44">
+        <div className="flex justify-center">
+          <Image src={logo} alt="..." width={1200} height={300} priority />
+        </div>
+        <div className="text-4xl text-center mx-auto text-neutral-600 font-light pt-36">
+          We deliver{" "}
+          <a className="text-neutral-100 underline underline-offset-4 decoration-slate-100 decoration-1">
+            expert solutions
+          </a>{" "}
+          for high-performance sports cars... <br />
+          <FlipWords
+            className="text-5xl font-bold text-neutral-100 text-center pt-8"
+            words={words}
+          />
+        </div>
+        <div className="flex justify-center">
+          <HoverBorderGradient containerClassName="rounded-full" as="button">
+            <div className="flex items-center space-x-2">
+              <span>&nbsp;Book Your Consultation</span>
+              <IconChevronRight className="h-4 w-4 text-white" />
+            </div>
+          </HoverBorderGradient>
+        </div>
+        <div className="h-96"></div>
+        <BentoGrid className="pt-96 max-w-4xl mx-auto md:auto-rows-[20rem] mb-20">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={item.className}
+              icon={item.icon}
+            />
+          ))}
+        </BentoGrid>
+      </div>
     </div>
   );
 }
-
-const Content = () => {
-  return (
-    <div className="min-h-screen w-full flex-col items-center justify-center pt-44">
-      <div className="flex justify-center">
-        <Image 
-          src={logo}
-          alt="..."
-          width={1200}  // Passe die Größe an deine Bedürfnisse an
-          height={300} // Passe die Größe an deine Bedürfnisse an
-          priority     // Optional, wenn das Bild above the fold ist
-        />
-      </div>
-      <div className="text-4xl text-center mx-auto text-neutral-600 font-light pt-36">
-        We deliver{" "}
-        <a className="text-neutral-100 underline underline-offset-4 decoration-slate-100 decoration-1">
-          expert solutions
-        </a>{" "}
-        for high-performance sports cars... <br />
-        <FlipWords
-          className="text-5xl font-bold text-neutral-100 text-center pt-8"
-          words={words}
-        />
-      </div>
-      <div className="flex justify-center">
-        <HoverBorderGradient containerClassName="rounded-full" as="button">
-          <div className="flex items-center space-x-2">
-            <span>&nbsp;Book Your Consultation</span>
-            <IconChevronRight className="h-4 w-4 text-white" />
-          </div>
-        </HoverBorderGradient>
-      </div>
-      <div className="h-96"></div>
-      <BentoGrid className="pt-96 max-w-4xl mx-auto md:auto-rows-[20rem] mb-20">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            className={item.className}
-            icon={item.icon}
-          />
-        ))}
-      </BentoGrid>
-    </div>
-  );
-};

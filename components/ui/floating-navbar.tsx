@@ -42,13 +42,15 @@ export const FloatingNav = ({
           <span className="hidden sm:block text-sm">{navItem.name}</span>
         </Link>
       ))}
-      <HoverBorderGradient
-        containerClassName="rounded-full"
-        as="button"
-        className="bg-black text-white flex items-center space-x-2"
-      >
-        <span>Configurator</span>
-      </HoverBorderGradient>
+      <Link href="/configurator">
+        <HoverBorderGradient
+          containerClassName="rounded-full"
+          as="button"
+          className="bg-black text-white flex items-center space-x-2"
+        >
+          <span>Configurator</span>
+        </HoverBorderGradient>
+      </Link>
     </motion.div>
   );
-}
+};

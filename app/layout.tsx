@@ -1,7 +1,38 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "../components/ui/footer";
+import { FloatingNav } from "../components/ui/floating-navbar";
+import {
+  IconHome,
+  IconMessage,
+  IconUser,
+  IconLayoutGrid,
+} from "@tabler/icons-react";
+
+const navItems = [
+  {
+    name: "Home",
+    link: "/",
+    icon: <IconHome className="h-4 w-4 text-white" />,
+  },
+  {
+    name: "About",
+    link: "/about",
+    icon: <IconUser className="h-4 w-4 text-white" />,
+  },
+  {
+    name: "Projects",
+    link: "/projects",
+    icon: <IconLayoutGrid className="h-4 w-4 text-white" />,
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+    icon: <IconMessage className="h-4 w-4 text-white" />,
+  },
+];
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,15 +59,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${
-          geistMono.variable
-        } antialiased min-h-screen bg-black bg-dot-white/[0.2] relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-black bg-dot-white/[0.2] relative`}
       >
-        {/* Radial Gradient Overlay */}
         <div className="fixed pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-        
+        <FloatingNav navItems={navItems} />
         <main className="relative z-10">
           {children}
+          <Footer />
         </main>
         <SpeedInsights />
       </body>
