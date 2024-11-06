@@ -64,9 +64,9 @@ const items = [
 export default function Home() {
   return (
     <div className="relative  w-full">
-      <div className="min-h-screen w-full flex-col items-center justify-center pt-44">
+      <div className="min-h-screen w-full flex flex-col items-center justify-center pt-44">
         <div className="flex justify-center">
-          <Image src={logo} alt="..." width={1200} height={300} priority />
+          <Image src={logo} alt="Company Logo" width={1200} height={300} priority />
         </div>
         <div className="text-4xl text-center mx-auto text-neutral-600 font-light pt-36">
           We deliver{" "}
