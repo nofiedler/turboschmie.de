@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Switch } from "@/components/ui/switch"
+import * as React from "react";
+import { Switch } from "@/components/ui/switch";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
 export const CarConfigurator = () => {
   const [values, setValues] = React.useState({
@@ -20,7 +20,7 @@ export const CarConfigurator = () => {
     auspuffanlage: false,
     facherkrummer: false,
     akSound: false,
-  })
+  });
 
   return (
     <div className="min-h-screen bg-transparent text-white pt-36">
@@ -36,7 +36,11 @@ export const CarConfigurator = () => {
                 <SelectItem value="audi">Audi</SelectItem>
               </SelectContent>
             </Select>
-            <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-[#0066ff] shadow-[0_0_5px_#0066ff,0_0_10px_#0066ff,0_0_20px_#0066ff,0_0_30px_#0066ff,0_0_40px_#0066ff]" />
+            {/* Gradients */}
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-full blur-sm" />
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-full" />
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-full blur-sm" />
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-full" />
           </div>
 
           <div className="relative">
@@ -48,19 +52,29 @@ export const CarConfigurator = () => {
                 <SelectItem value="rs6">RS6</SelectItem>
               </SelectContent>
             </Select>
-            <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-[#0066ff] shadow-[0_0_5px_#0066ff,0_0_10px_#0066ff,0_0_20px_#0066ff,0_0_30px_#0066ff,0_0_40px_#0066ff]" />
+            {/* Gradients */}
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-full blur-sm" />
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-full" />
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-full blur-sm" />
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-full" />
           </div>
 
           <div className="relative">
             <Select defaultValue="600ps">
               <SelectTrigger className="border-0 bg-transparent p-0 text-xl font-medium hover:bg-transparent">
-                <SelectValue placeholder="Select engine">4.0l TFSI 600PS</SelectValue>
+                <SelectValue placeholder="Select engine">
+                  4.0l TFSI 600PS
+                </SelectValue>
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="600ps">4.0l TFSI 600PS</SelectItem>
               </SelectContent>
             </Select>
-            <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-[#0066ff] shadow-[0_0_5px_#0066ff,0_0_10px_#0066ff,0_0_20px_#0066ff,0_0_30px_#0066ff,0_0_40px_#0066ff]" />
+            {/* Gradients */}
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-full blur-sm" />
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-full" />
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-full blur-sm" />
+            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-full" />
           </div>
         </div>
 
@@ -71,21 +85,27 @@ export const CarConfigurator = () => {
               <label className="text-lg">ECU remapping</label>
               <Switch
                 checked={values.chiptuning}
-                onCheckedChange={(checked) => setValues({ ...values, chiptuning: checked })}
+                onCheckedChange={(checked) =>
+                  setValues({ ...values, chiptuning: checked })
+                }
               />
             </div>
             <div className="flex items-center justify-between">
               <label className="text-lg">Catless Kit</label>
               <Switch
                 checked={values.catlessKit}
-                onCheckedChange={(checked) => setValues({ ...values, catlessKit: checked })}
+                onCheckedChange={(checked) =>
+                  setValues({ ...values, catlessKit: checked })
+                }
               />
             </div>
             <div className="flex items-center justify-between">
               <label className="text-lg text-gray-500">Exhaust manifold</label>
               <Switch
                 checked={values.facherkrummer}
-                onCheckedChange={(checked) => setValues({ ...values, facherkrummer: checked })}
+                onCheckedChange={(checked) =>
+                  setValues({ ...values, facherkrummer: checked })
+                }
                 disabled
               />
             </div>
@@ -96,21 +116,27 @@ export const CarConfigurator = () => {
               <label className="text-lg">Turbocharger</label>
               <Switch
                 checked={values.turbolader}
-                onCheckedChange={(checked) => setValues({ ...values, turbolader: checked })}
+                onCheckedChange={(checked) =>
+                  setValues({ ...values, turbolader: checked })
+                }
               />
             </div>
             <div className="flex items-center justify-between">
               <label className="text-lg">Intercooler</label>
               <Switch
                 checked={values.ladeluftKuhler}
-                onCheckedChange={(checked) => setValues({ ...values, ladeluftKuhler: checked })}
+                onCheckedChange={(checked) =>
+                  setValues({ ...values, ladeluftKuhler: checked })
+                }
               />
             </div>
             <div className="flex items-center justify-between">
               <label className="text-lg">AK-47-Sound</label>
               <Switch
                 checked={values.akSound}
-                onCheckedChange={(checked) => setValues({ ...values, akSound: checked })}
+                onCheckedChange={(checked) =>
+                  setValues({ ...values, akSound: checked })
+                }
               />
             </div>
           </div>
@@ -120,14 +146,18 @@ export const CarConfigurator = () => {
               <label className="text-lg">Performance air filter</label>
               <Switch
                 checked={values.rennfilter}
-                onCheckedChange={(checked) => setValues({ ...values, rennfilter: checked })}
+                onCheckedChange={(checked) =>
+                  setValues({ ...values, rennfilter: checked })
+                }
               />
             </div>
             <div className="flex items-center justify-between">
               <label className="text-lg">Exhaust system</label>
               <Switch
                 checked={values.auspuffanlage}
-                onCheckedChange={(checked) => setValues({ ...values, auspuffanlage: checked })}
+                onCheckedChange={(checked) =>
+                  setValues({ ...values, auspuffanlage: checked })
+                }
               />
             </div>
           </div>
@@ -135,33 +165,55 @@ export const CarConfigurator = () => {
 
         {/* Performance Stats */}
         <div className="mt-16">
-          <h2 className="text-center text-5xl font-bold text-neutral-100 pt-10">AUDI RS6 4.0L TFSI 600PS</h2>
+          <h2 className="text-center text-5xl font-bold text-neutral-100 pt-10">
+            AUDI RS6 4.0L TFSI 600PS
+          </h2>
           <p className="mt-4 text-center text-white/70">
-          Compare your stock performance with the optimized output achieved through professional ECU remapping and performance enhancement for your Audi RS6 4.0l TFSI 600HP, delivered by an experienced German premium vehicle tuning specialist focusing on quality and reliability.
+            Compare your stock performance with the optimized output achieved
+            through professional ECU remapping and performance enhancement for
+            your Audi RS6 4.0l TFSI 600HP, delivered by an experienced German
+            premium vehicle tuning specialist focusing on quality and
+            reliability.
           </p>
 
           <div className="mt-8 grid gap-8 md:grid-cols-2 pt-20">
             <div className="text-center">
-              <div className="text-6xl font-light text-white">600<span className="text-white">PS</span></div>
-              <div className="mt-2 text-sm font-medium uppercase tracking-wider">Horsepower</div>
-              <div className="mt-8 text-6xl font-light text-white">800<span className="text-white">Nm</span></div>
-              <div className="mt-2 text-sm font-medium uppercase tracking-wider">Torque</div>
+              <div className="text-6xl font-light text-white">
+                600<span className="text-white">PS</span>
+              </div>
+              <div className="mt-2 text-sm font-medium uppercase tracking-wider">
+                Horsepower
+              </div>
+              <div className="mt-8 text-6xl font-light text-white">
+                800<span className="text-white">Nm</span>
+              </div>
+              <div className="mt-2 text-sm font-medium uppercase tracking-wider">
+                Torque
+              </div>
             </div>
             <div className="text-center">
               <div className="relative inline-block">
-                <div className="absolute inset-0 rounded-full bg-[#0066ff] blur-[55px] opacity-70"></div>
-                <div className="relative text-6xl font-light text-white">600<span className="text-white">PS</span></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 via-sky-500 to-indigo-500 blur-[55px] opacity-70"></div>
+                <div className="relative text-6xl font-light text-white">
+                  600<span className="text-white">PS</span>
+                </div>
               </div>
-              <div className="mt-2 text-sm font-medium uppercase tracking-wider">Horsepower (Turboschmie.de)</div>
+              <div className="mt-2 text-sm font-medium uppercase tracking-wider">
+                Horsepower (Turboschmie.de)
+              </div>
               <div className="mt-8 relative inline-block">
-                <div className="absolute inset-0 rounded-full bg-[#0066ff] blur-[55px] opacity-70"></div>
-                <div className="relative text-6xl font-light text-white">800<span className="text-white">Nm</span></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 via-sky-500 to-indigo-500 blur-[55px] opacity-70"></div>
+                <div className="relative text-6xl font-light text-white">
+                  800<span className="text-white">Nm</span>
+                </div>
               </div>
-              <div className="mt-2 text-sm font-medium uppercase tracking-wider">Torque (Turboschmie.de)</div>
+              <div className="mt-2 text-sm font-medium uppercase tracking-wider">
+                Torque (Turboschmie.de)
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

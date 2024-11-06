@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 interface NavItem {
@@ -18,6 +19,8 @@ export const FloatingNav = ({
   navItems: NavItem[];
   className?: string;
 }) => {
+  const pathname = usePathname();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -35,7 +38,8 @@ export const FloatingNav = ({
           key={`link=${idx}`}
           href={navItem.link}
           className={cn(
-            "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 hover:text-neutral-300"
+            "relative items-center flex space-x-1 hover:text-neutral-300",
+            pathname === navItem.link ? "text-white" : "text-neutral-600"
           )}
         >
           <span className="block sm:hidden">{navItem.icon}</span>
