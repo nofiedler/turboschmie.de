@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { FlipWords } from "../components/ui/flip-words";
-import { BentoGrid, BentoGridItem } from "../components/ui/bento-grid";
-import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
+import { FlipWords } from "@/components/ui/flip-words";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import Image from "next/image";
 import {
   IconClipboardCopy,

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Footer from "../components/ui/footer";
-import { FloatingNav } from "../components/ui/floating-navbar";
+import Footer from "@/components/ui/footer";
+import { FloatingNav } from "@/components/ui/floating-navbar";
 import {
   IconHome,
   IconMessage,

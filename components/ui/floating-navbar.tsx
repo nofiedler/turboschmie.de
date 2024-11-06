@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 interface NavItem {
   name: string;
