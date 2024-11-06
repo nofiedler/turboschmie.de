@@ -29,7 +29,7 @@ export const CarConfigurator = () => {
         <div className="grid gap-12 md:grid-cols-3">
           <div className="relative w-full">
             <Select defaultValue="audi">
-              <SelectTrigger className="border-0 bg-transparent p-0 text-xl font-medium hover:bg-transparent">
+              <SelectTrigger className="border-0 bg-transparent p-0 text-xl font-medium hover:bg-transparent flex justify-center items-center">
                 <SelectValue placeholder="Select make">Audi</SelectValue>
               </SelectTrigger>
               <SelectContent>
@@ -49,7 +49,7 @@ export const CarConfigurator = () => {
 
           <div className="relative">
             <Select defaultValue="rs6">
-              <SelectTrigger className="border-0 bg-transparent p-0 text-xl font-medium hover:bg-transparent">
+              <SelectTrigger className="border-0 bg-transparent p-0 text-xl font-medium hover:bg-transparent flex justify-center items-center">
                 <SelectValue placeholder="Select model">RS6</SelectValue>
               </SelectTrigger>
               <SelectContent>
@@ -69,7 +69,7 @@ export const CarConfigurator = () => {
 
           <div className="relative">
             <Select defaultValue="600ps">
-              <SelectTrigger className="border-0 bg-transparent p-0 text-xl font-medium hover:bg-transparent">
+              <SelectTrigger className="border-0 bg-transparent p-0 text-xl font-medium hover:bg-transparent flex justify-center items-center">
                 <SelectValue placeholder="Select engine">
                   4.0l TFSI 600PS
                 </SelectValue>
