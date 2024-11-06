@@ -27,7 +27,7 @@ export const CarConfigurator = () => {
       <div className="mx-auto max-w-7xl px-4 py-12">
         {/* Car Selection */}
         <div className="grid gap-12 md:grid-cols-3">
-          <div className="relative">
+          <div className="relative w-full">
             <Select defaultValue="audi">
               <SelectTrigger className="border-0 bg-transparent p-0 text-xl font-medium hover:bg-transparent">
                 <SelectValue placeholder="Select make">Audi</SelectValue>
@@ -37,10 +37,14 @@ export const CarConfigurator = () => {
               </SelectContent>
             </Select>
             {/* Gradients */}
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-full blur-sm" />
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-full" />
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-full blur-sm" />
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-full" />
+            <div className="absolute left-0 right-0 top-full w-full">
+              <div className="relative h-[5px] w-full">
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-indigo-500 via-50% to-transparent h-[2px] w-full blur-sm" />
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-indigo-500 via-50% to-transparent h-px w-full" />
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-sky-500 via-50% to-transparent h-[3px] w-1/4 mx-auto blur-sm" />
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-sky-500 via-50% to-transparent h-px w-2/4 mx-auto" />
+              </div>
+            </div>
           </div>
 
           <div className="relative">
@@ -53,10 +57,14 @@ export const CarConfigurator = () => {
               </SelectContent>
             </Select>
             {/* Gradients */}
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-full blur-sm" />
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-full" />
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-full blur-sm" />
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-full" />
+            <div className="absolute left-0 right-0 top-full w-full">
+              <div className="relative h-[5px] w-full">
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-indigo-500 via-50% to-transparent h-[2px] w-full blur-sm" />
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-indigo-500 via-50% to-transparent h-px w-full" />
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-sky-500 via-50% to-transparent h-[3px] w-1/4 mx-auto blur-sm" />
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-sky-500 via-50% to-transparent h-px w-2/4 mx-auto" />
+              </div>
+            </div>
           </div>
 
           <div className="relative">
@@ -71,10 +79,14 @@ export const CarConfigurator = () => {
               </SelectContent>
             </Select>
             {/* Gradients */}
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-full blur-sm" />
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-full" />
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-full blur-sm" />
-            <div className="absolute bottom-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-full" />
+            <div className="absolute left-0 right-0 top-full w-full">
+              <div className="relative h-[5px] w-full">
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-indigo-500 via-50% to-transparent h-[2px] w-full blur-sm" />
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-indigo-500 via-50% to-transparent h-px w-full" />
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-sky-500 via-50% to-transparent h-[3px] w-1/4 mx-auto blur-sm" />
+                <div className="absolute inset-x-0 bg-gradient-to-r from-transparent via-sky-500 via-50% to-transparent h-px w-2/4 mx-auto" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -193,7 +205,7 @@ export const CarConfigurator = () => {
             </div>
             <div className="text-center">
               <div className="relative inline-block">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 via-sky-500 to-indigo-500 blur-[55px] opacity-70"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-600 via-sky-700 to-indigo-500 blur-[35px] opacity-50"></div>
                 <div className="relative text-6xl font-light text-white">
                   600<span className="text-white">PS</span>
                 </div>
@@ -202,7 +214,7 @@ export const CarConfigurator = () => {
                 Horsepower (Turboschmie.de)
               </div>
               <div className="mt-8 relative inline-block">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 via-sky-500 to-indigo-500 blur-[55px] opacity-70"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-600 via-sky-700 to-indigo-500 blur-[35px] opacity-50"></div>
                 <div className="relative text-6xl font-light text-white">
                   800<span className="text-white">Nm</span>
                 </div>
