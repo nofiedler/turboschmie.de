@@ -9,7 +9,7 @@ export default function Component() {
     <footer className="w-full bg-transparent text-gray-400">
       <div className="container flex flex-col items-center px-4 py-12 mx-auto space-y-12">
         <nav className="flex flex-wrap justify-center gap-6 text-sm md:gap-8">
-          <Link href="/home" className="hover:text-gray-200 transition-colors">
+          <Link href="/" className="hover:text-gray-200 transition-colors">
             Home
           </Link>
           <Link href="/about" className="hover:text-gray-200 transition-colors">
