@@ -479,6 +479,15 @@ export const CarTuningConfigurator = () => {
       ? (carData.performanceData as PerformanceData)[model]?.[engine]
       : null;
 
+  const engineOptions =
+    model && manufacturer
+      ? carData.engines[`${manufacturer} ${model}` as keyof typeof carData.engines]?.map((e) => (
+          <SelectItem key={e} value={e}>
+            {e}
+          </SelectItem>
+        ))
+      : null;
+
   return (
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6 text-white">
@@ -529,13 +538,7 @@ export const CarTuningConfigurator = () => {
             />
           </SelectTrigger>
           <SelectContent>
-            {model &&
-              manufacturer &&
-              carData.engines[`${manufacturer} ${model}`]?.map((e) => (
-                <SelectItem key={e} value={e}>
-                  {e}
-                </SelectItem>
-              ))}
+            {engineOptions}
           </SelectContent>
         </Select>
       </div>
