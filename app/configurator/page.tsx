@@ -1,10 +1,13 @@
 "use client";
 
 import React from "react";
-import { CarConfigurator } from "@/components/ui/car_configurator";
+import { CarTuningConfigurator } from "@/components/ui/car-tuning-configurator";
 
 export default function Configurator() {
   return (
-    <CarConfigurator />
+    <div className="pt-36">
+      <CarTuningConfigurator />
+    </div>
+    
   );
 }
