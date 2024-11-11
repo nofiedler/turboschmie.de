@@ -494,169 +494,176 @@ export const CarTuningConfigurator = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-white text-center">
+      <h1 className="text-3xl font-bold mb-6 text-center text-white">
         Car Tuning Configurator
       </h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <Select
-          onValueChange={(value: Manufacturer | "") => setManufacturer(value)}
-        >
-          <SelectTrigger className="text-white">
-            <SelectValue placeholder="Select Manufacturer" />
-          </SelectTrigger>
-          <SelectContent>
-            {carData.manufacturers.map((m) => (
-              <SelectItem key={m} value={m}>
-                {m}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-
-        <Select
-          onValueChange={(value) => setModel(value as ModelKeys | "")}
-          disabled={!manufacturer}
-        >
-          <SelectTrigger className="text-white">
-            <SelectValue
-              placeholder={
-                manufacturer ? "Select Model" : "Select Manufacturer first"
-              }
-            />
-          </SelectTrigger>
-          <SelectContent>
-            {manufacturer &&
-              carData.models[manufacturer as Manufacturer]?.map((m) => (
+      <div className="bg-white rounded-xl p-6 mb-6">
+        <h2 className="text-xl font-semibold mb-3 text-center">
+          Model selection
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Select
+            onValueChange={(value: Manufacturer | "") => setManufacturer(value)}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select Manufacturer" />
+            </SelectTrigger>
+            <SelectContent>
+              {carData.manufacturers.map((m) => (
                 <SelectItem key={m} value={m}>
                   {m}
                 </SelectItem>
               ))}
-          </SelectContent>
-        </Select>
+            </SelectContent>
+          </Select>
 
-        <Select onValueChange={setEngine} disabled={!model || !manufacturer}>
-          <SelectTrigger className="text-white">
-            <SelectValue
-              placeholder={model ? "Select Engine" : "Select Model first"}
-            />
-          </SelectTrigger>
-          <SelectContent>{engineOptions}</SelectContent>
-        </Select>
+          <Select
+            onValueChange={(value) => setModel(value as ModelKeys | "")}
+            disabled={!manufacturer}
+          >
+            <SelectTrigger>
+              <SelectValue
+                placeholder={
+                  manufacturer ? "Select Model" : "Select Manufacturer first"
+                }
+              />
+            </SelectTrigger>
+            <SelectContent>
+              {manufacturer &&
+                carData.models[manufacturer as Manufacturer]?.map((m) => (
+                  <SelectItem key={m} value={m}>
+                    {m}
+                  </SelectItem>
+                ))}
+            </SelectContent>
+          </Select>
+
+          <Select onValueChange={setEngine} disabled={!model || !manufacturer}>
+            <SelectTrigger>
+              <SelectValue
+                placeholder={model ? "Select Engine" : "Select Model first"}
+              />
+            </SelectTrigger>
+            <SelectContent>{engineOptions}</SelectContent>
+          </Select>
+        </div>
+        </div>
+
+        <div className="bg-white rounded-xl p-6">
+        {engine && (
+          <div>
+            <h2 className="text-xl font-semibold mb-3 text-center">
+              Tuning Options
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {carData.tuningOptions.map((option) => (
+                <div key={option} className="flex items-center space-x-2">
+                  <Switch
+                    id={option}
+                    checked={tuningOptions.includes(option)}
+                    onCheckedChange={() => handleTuningOptionChange(option)}
+                  />
+                  <Label htmlFor={option}>{option}</Label>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
-      {engine && (
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-3 text-white text-center pt-5">
-            Tuning Options
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
-            {carData.tuningOptions.map((option) => (
-              <div key={option} className="flex items-center space-x-2">
-                <Switch
-                  className="border border-white"
-                  id={option}
-                  checked={tuningOptions.includes(option)}
-                  onCheckedChange={() => handleTuningOptionChange(option)}
-                />
-                <Label className="text-white" htmlFor={option}>
-                  {option}
-                </Label>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
       {performanceData && (
-         <>
-         {model && engine && (
-           <h2 className="text-3xl font-bold mb-6 text-white text-center pt-20">
-             {manufacturer} {model} - {engine}
-           </h2>
-         )}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Original Performance</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-2xl font-bold">
-                    {performanceData.original.power}HP
-                  </p>
-                  <p className="text-sm text-muted-foreground">POWER</p>
+        <>
+          {model && engine && (
+            <h2 className="text-3xl font-bold mb-6 text-white text-center pt-20">
+              {manufacturer} {model} - {engine}
+            </h2>
+          )}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold">Original Performance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-2xl font-bold">
+                      {performanceData.original.power}HP
+                    </p>
+                    <p className="text-sm text-muted-foreground">POWER</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">
+                      {performanceData.original.torque}Nm
+                    </p>
+                    <p className="text-sm text-muted-foreground">TORQUE</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">
+                      {performanceData.original.vmax}km/h
+                    </p>
+                    <p className="text-sm text-muted-foreground">VMAX</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">
+                      {performanceData.original.acceleration}s
+                    </p>
+                    <p className="text-sm text-muted-foreground">0-100</p>
+                  </div>
+                  <div className="col-span-2">
+                    <p className="text-2xl font-bold">
+                      {performanceData.original.displacement}cm³
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      DISPLACEMENT
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-2xl font-bold">
-                    {performanceData.original.torque}Nm
-                  </p>
-                  <p className="text-sm text-muted-foreground">TORQUE</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold">
-                    {performanceData.original.vmax}km/h
-                  </p>
-                  <p className="text-sm text-muted-foreground">VMAX</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold">
-                    {performanceData.original.acceleration}s
-                  </p>
-                  <p className="text-sm text-muted-foreground">0-100</p>
-                </div>
-                <div className="col-span-2">
-                  <p className="text-2xl font-bold">
-                    {performanceData.original.displacement}cm³
-                  </p>
-                  <p className="text-sm text-muted-foreground">DISPLACEMENT</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Tuned Performance</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-2xl font-bold">
-                    {performanceData.tuned.power}HP
-                  </p>
-                  <p className="text-sm text-muted-foreground">POWER (PP)</p>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold">Tuned Performance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-2xl font-bold">
+                      {performanceData.tuned.power}HP
+                    </p>
+                    <p className="text-sm text-muted-foreground">POWER (PP)</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">
+                      {performanceData.tuned.torque}Nm
+                    </p>
+                    <p className="text-sm text-muted-foreground">TORQUE (PP)</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">
+                      {performanceData.tuned.vmax}km/h
+                    </p>
+                    <p className="text-sm text-muted-foreground">VMAX (PP)</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">
+                      {performanceData.tuned.acceleration}s
+                    </p>
+                    <p className="text-sm text-muted-foreground">0-100 (PP)</p>
+                  </div>
+                  <div className="col-span-2">
+                    <p className="text-2xl font-bold">
+                      {performanceData.tuned.displacement}cm³
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      DISPLACEMENT
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-2xl font-bold">
-                    {performanceData.tuned.torque}Nm
-                  </p>
-                  <p className="text-sm text-muted-foreground">TORQUE (PP)</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold">
-                    {performanceData.tuned.vmax}km/h
-                  </p>
-                  <p className="text-sm text-muted-foreground">VMAX (PP)</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold">
-                    {performanceData.tuned.acceleration}s
-                  </p>
-                  <p className="text-sm text-muted-foreground">0-100 (PP)</p>
-                </div>
-                <div className="col-span-2">
-                  <p className="text-2xl font-bold">
-                    {performanceData.tuned.displacement}cm³
-                  </p>
-                  <p className="text-sm text-muted-foreground">DISPLACEMENT</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </>
+              </CardContent>
+            </Card>
+          </div>
+        </>
       )}
     </div>
   );
