@@ -547,11 +547,10 @@ export const CarTuningConfigurator = () => {
             <SelectContent>{engineOptions}</SelectContent>
           </Select>
         </div>
-        </div>
+      </div>
 
+      {engine && (
         <div className="bg-white rounded-xl p-6">
-        {engine && (
-          <div>
             <h2 className="text-xl font-semibold mb-3 text-center">
               Tuning Options
             </h2>
@@ -568,8 +567,7 @@ export const CarTuningConfigurator = () => {
               ))}
             </div>
           </div>
-        )}
-      </div>
+      )}
 
       {performanceData && (
         <>
@@ -581,7 +579,9 @@ export const CarTuningConfigurator = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl font-semibold">Original Performance</CardTitle>
+                <CardTitle className="text-xl font-semibold">
+                  Original Performance
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
@@ -623,7 +623,9 @@ export const CarTuningConfigurator = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl font-semibold">Tuned Performance</CardTitle>
+                <CardTitle className="text-xl font-semibold">
+                  Tuned Performance
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
