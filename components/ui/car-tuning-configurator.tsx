@@ -498,7 +498,7 @@ export const CarTuningConfigurator = () => {
         Car Tuning Configurator
       </h1>
       <div className="bg-white rounded-xl p-6 mb-6">
-        <h2 className="text-xl font-semibold mb-3 text-center">
+        <h2 className="text-xl font-semibold mb-6">
           Model selection
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -551,7 +551,7 @@ export const CarTuningConfigurator = () => {
 
       {engine && (
         <div className="bg-white rounded-xl p-6">
-            <h2 className="text-xl font-semibold mb-3 text-center">
+            <h2 className="text-xl font-semibold mb-6">
               Tuning Options
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
