@@ -476,12 +476,16 @@ export const CarTuningConfigurator = () => {
 
   const performanceData =
     model && engine
-      ? (carData.performanceData as PerformanceData)[model]?.[engine]
+      ? (carData.performanceData as PerformanceData)[
+          `${manufacturer} ${model}`
+        ]?.[engine]
       : null;
 
   const engineOptions =
     model && manufacturer
-      ? carData.engines[`${manufacturer} ${model}` as keyof typeof carData.engines]?.map((e) => (
+      ? carData.engines[
+          `${manufacturer} ${model}` as keyof typeof carData.engines
+        ]?.map((e) => (
           <SelectItem key={e} value={e}>
             {e}
           </SelectItem>
@@ -537,15 +541,15 @@ export const CarTuningConfigurator = () => {
               placeholder={model ? "Select Engine" : "Select Model first"}
             />
           </SelectTrigger>
-          <SelectContent>
-            {engineOptions}
-          </SelectContent>
+          <SelectContent>{engineOptions}</SelectContent>
         </Select>
       </div>
 
       {engine && (
         <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-3 text-white">Tuning Options</h2>
+          <h2 className="text-xl font-semibold mb-3 text-white">
+            Tuning Options
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {carData.tuningOptions.map((option) => (
               <div key={option} className="flex items-center space-x-2">
@@ -555,7 +559,9 @@ export const CarTuningConfigurator = () => {
                   checked={tuningOptions.includes(option)}
                   onCheckedChange={() => handleTuningOptionChange(option)}
                 />
-                <Label className="text-white" htmlFor={option}>{option}</Label>
+                <Label className="text-white" htmlFor={option}>
+                  {option}
+                </Label>
               </div>
             ))}
           </div>
@@ -563,9 +569,9 @@ export const CarTuningConfigurator = () => {
       )}
 
       {performanceData && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-10">
           <Card>
-            <CardHeader className="text-white">
+            <CardHeader>
               <CardTitle>Original Performance</CardTitle>
             </CardHeader>
             <CardContent>
@@ -605,7 +611,7 @@ export const CarTuningConfigurator = () => {
           </Card>
 
           <Card>
-            <CardHeader className="text-white">
+            <CardHeader>
               <CardTitle>Tuned Performance</CardTitle>
             </CardHeader>
             <CardContent>
