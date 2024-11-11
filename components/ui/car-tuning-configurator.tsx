@@ -9,6 +9,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -494,7 +495,7 @@ export const CarTuningConfigurator = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-white">
+      <h1 className="text-3xl font-bold mb-6 text-white text-center">
         Car Tuning Configurator
       </h1>
 
@@ -547,13 +548,13 @@ export const CarTuningConfigurator = () => {
 
       {engine && (
         <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-3 text-white">
+          <h2 className="text-xl font-semibold mb-3 text-white text-center pt-5">
             Tuning Options
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
             {carData.tuningOptions.map((option) => (
               <div key={option} className="flex items-center space-x-2">
-                <Checkbox
+                <Switch
                   className="border border-white"
                   id={option}
                   checked={tuningOptions.includes(option)}
@@ -569,7 +570,13 @@ export const CarTuningConfigurator = () => {
       )}
 
       {performanceData && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-10">
+         <>
+         {model && engine && (
+           <h2 className="text-3xl font-bold mb-6 text-white text-center pt-20">
+             {manufacturer} {model} - {engine}
+           </h2>
+         )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
             <CardHeader>
               <CardTitle>Original Performance</CardTitle>
@@ -617,25 +624,25 @@ export const CarTuningConfigurator = () => {
             <CardContent>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-2xl font-bold text-green-600">
+                  <p className="text-2xl font-bold">
                     {performanceData.tuned.power}HP
                   </p>
                   <p className="text-sm text-muted-foreground">POWER (PP)</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-green-600">
+                  <p className="text-2xl font-bold">
                     {performanceData.tuned.torque}Nm
                   </p>
                   <p className="text-sm text-muted-foreground">TORQUE (PP)</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-green-600">
+                  <p className="text-2xl font-bold">
                     {performanceData.tuned.vmax}km/h
                   </p>
                   <p className="text-sm text-muted-foreground">VMAX (PP)</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-green-600">
+                  <p className="text-2xl font-bold">
                     {performanceData.tuned.acceleration}s
                   </p>
                   <p className="text-sm text-muted-foreground">0-100 (PP)</p>
@@ -650,6 +657,7 @@ export const CarTuningConfigurator = () => {
             </CardContent>
           </Card>
         </div>
+      </>
       )}
     </div>
   );
