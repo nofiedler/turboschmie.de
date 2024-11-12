@@ -1,492 +1,497 @@
 {
-    "manufacturers": ["Alpina"],
+    "manufacturers": [
+        "Alpina"
+    ],
     "models": {
-      "Alpina": ["B3/B3S", "B4"]
+        "Alpina": [
+            "B3/B3S",
+            "B4"
+        ]
     },
     "engines": {
-      "Alpina B3/B3S": [
-        "N54 Biturbo 360PS", 
-        "N54 Biturbo 400PS", 
-        "N55 Biturbo 410PS", 
-        "S58 Biturbo 462PS", 
-        "S58 Biturbo 495PS"
-      ],
-      "Alpina B4": [
-        "N55 Biturbo 410PS", 
-        "N55 Biturbo S 440PS", 
-        "N55 Biturbo S Edition99 452PS", 
-        "S58 Biturbo 495PS"
-      ]
+        "Alpina B3/B3S": [
+            "N54 Biturbo 360PS",
+            "N54 Biturbo 400PS",
+            "N55 Biturbo 410PS",
+            "S58 Biturbo 462PS",
+            "S58 Biturbo 495PS"
+        ],
+        "Alpina B4": [
+            "N55 Biturbo 410PS",
+            "N55 Biturbo S 440PS",
+            "N55 Biturbo S Edition99 452PS",
+            "S58 Biturbo 495PS"
+        ]
     },
     "tuningOptions": [
-      "ECU Remapping", 
-      "Catless Kit", 
-      "Exhaust Manifold", 
-      "Turbocharger", 
-      "Intercooler", 
-      "AK-47-Sound", 
-      "Performance Air Filter", 
-      "Exhaust System"
+        "ECU Remapping",
+        "Catless Kit",
+        "Exhaust Manifold",
+        "Turbocharger",
+        "Intercooler",
+        "AK-47-Sound",
+        "Performance Air Filter",
+        "Exhaust System"
     ],
     "performanceData": {
-      "Alpina B3/B3S": {
-        "N54 Biturbo 360PS": {
-          "original": {
-            "power": 359,
-            "torque": 498,
-            "vmax": 284,
-            "acceleration": 4.78,
-            "displacement": 2979
-          },
-          "Chiptuning": {
-            "power": 61,
-            "torque": 82,
-            "vmax": 11,
-            "acceleration": -0.18,
-            "displacement": 0
-          },
-          "Turbolader": {
-            "power": 60,
-            "torque": 70,
-            "vmax": 8,
-            "acceleration": -0.2,
-            "displacement": 0
-          },
-          "Rennfilter": {
-            "power": 5,
-            "torque": 5,
-            "vmax": 2,
-            "acceleration": -0.05,
-            "displacement": 0
-          },
-          "Downpipes": {
-            "power": 20,
-            "torque": 15,
-            "vmax": 2,
-            "acceleration": -0.1,
-            "displacement": 0
-          },
-          "Ladeluftkuehler": {
-            "power": 10,
-            "torque": 10,
-            "vmax": 3,
-            "acceleration": -0.02,
-            "displacement": 0
-          },
-          "Auspuffanlage": {
-            "power": 20,
-            "torque": 20,
-            "vmax": 4,
-            "acceleration": -0.1,
-            "displacement": 0
-          },
-          "Faecherkruemmer": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "AK47": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          }
+        "Alpina B3/B3S": {
+            "N54 Biturbo 360PS": {
+                "original": {
+                    "power": 359,
+                    "torque": 498,
+                    "vmax": 284,
+                    "acceleration": 4.78,
+                    "displacement": 2979
+                },
+                "Chiptuning": {
+                    "power": 61,
+                    "torque": 82,
+                    "vmax": 11,
+                    "acceleration": -0.18,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 60,
+                    "torque": 70,
+                    "vmax": 8,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 5,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 20,
+                    "torque": 15,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 20,
+                    "torque": 20,
+                    "vmax": 4,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "N54 Biturbo 400PS": {
+                "original": {
+                    "power": 398,
+                    "torque": 538,
+                    "vmax": 299,
+                    "acceleration": 4.18,
+                    "displacement": 2979
+                },
+                "Chiptuning": {
+                    "power": 32,
+                    "torque": 62,
+                    "vmax": 11,
+                    "acceleration": -0.18,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 60,
+                    "torque": 70,
+                    "vmax": 8,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 5,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 20,
+                    "torque": 15,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 20,
+                    "torque": 20,
+                    "vmax": 4,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "N55 Biturbo 410PS": {
+                "original": {
+                    "power": 408,
+                    "torque": 597,
+                    "vmax": 304,
+                    "acceleration": 4.18,
+                    "displacement": 2979
+                },
+                "Chiptuning": {
+                    "power": 42,
+                    "torque": 73,
+                    "vmax": 11,
+                    "acceleration": -0.18,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0.0,
+                    "displacement": 0
+                }
+            },
+            "S58 Biturbo 462PS": {
+                "original": {
+                    "power": 460,
+                    "torque": 697,
+                    "vmax": 302,
+                    "acceleration": 3.78,
+                    "displacement": 2993
+                },
+                "Chiptuning": {
+                    "power": 190,
+                    "torque": 103,
+                    "vmax": 13,
+                    "acceleration": -0.48,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 2,
+                    "vmax": 0,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 30,
+                    "torque": 25,
+                    "vmax": 4,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0.0,
+                    "displacement": 0
+                }
+            },
+            "S58 Biturbo 495PS": {
+                "original": {
+                    "power": 493,
+                    "torque": 727,
+                    "vmax": 304,
+                    "acceleration": 3.59,
+                    "displacement": 2993
+                },
+                "Chiptuning": {
+                    "power": 157,
+                    "torque": 73,
+                    "vmax": 11,
+                    "acceleration": -0.29,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 2,
+                    "vmax": 0,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 30,
+                    "torque": 25,
+                    "vmax": 4,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0.0,
+                    "displacement": 0
+                }
+            }
         },
-        "N54 Biturbo 400PS": {
-          "original": {
-            "power": 398,
-            "torque": 538,
-            "vmax": 299,
-            "acceleration": 4.18,
-            "displacement": 2979
-          },
-          "Chiptuning": {
-            "power": 32,
-            "torque": 62,
-            "vmax": 11,
-            "acceleration": -0.18,
-            "displacement": 0
-          },
-          "Turbolader": {
-            "power": 60,
-            "torque": 70,
-            "vmax": 8,
-            "acceleration": -0.2,
-            "displacement": 0
-          },
-          "Rennfilter": {
-            "power": 5,
-            "torque": 5,
-            "vmax": 2,
-            "acceleration": -0.05,
-            "displacement": 0
-          },
-          "Downpipes": {
-            "power": 20,
-            "torque": 15,
-            "vmax": 2,
-            "acceleration": -0.1,
-            "displacement": 0
-          },
-          "Ladeluftkuehler": {
-            "power": 10,
-            "torque": 10,
-            "vmax": 3,
-            "acceleration": -0.02,
-            "displacement": 0
-          },
-          "Auspuffanlage": {
-            "power": 20,
-            "torque": 20,
-            "vmax": 4,
-            "acceleration": -0.1,
-            "displacement": 0
-          },
-          "Faecherkruemmer": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "AK47": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          }
-        },
-        "N55 Biturbo 410PS": {
-          "original": {
-            "power": 408,
-            "torque": 597,
-            "vmax": 304,
-            "acceleration": 4.18,
-            "displacement": 2979
-          },
-          "Chiptuning": {
-            "power": 42,
-            "torque": 73,
-            "vmax": 11,
-            "acceleration": -0.18,
-            "displacement": 0
-          },
-          "Turbolader": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Rennfilter": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Downpipes": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Ladeluftkuehler": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Auspuffanlage": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Faecherkruemmer": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "AK47": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          }
-        },
-        "S58 Biturbo 462PS": {
-          "original": {
-            "power": 460,
-            "torque": 697,
-            "vmax": 302,
-            "acceleration": 3.78,
-            "displacement": 2993
-          },
-          "Chiptuning": {
-            "power": 190,
-            "torque": 103,
-            "vmax": 13,
-            "acceleration": -0.48,
-            "displacement": 0
-          },
-          "Turbolader": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Rennfilter": {
-            "power": 2,
-            "torque": 2,
-            "vmax": 0,
-            "acceleration": -0.01,
-            "displacement": 0
-          },
-          "Downpipes": {
-            "power": 30,
-            "torque": 25,
-            "vmax": 4,
-            "acceleration": -0.05,
-            "displacement": 0
-          },
-          "Ladeluftkuehler": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Auspuffanlage": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Faecherkruemmer": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "AK47": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          }
-        },
-        "S58 Biturbo 495PS": {
-          "original": {
-            "power": 493,
-            "torque": 727,
-            "vmax": 304,
-            "acceleration": 3.59,
-            "displacement": 2993
-          },
-          "Chiptuning": {
-            "power": 157,
-            "torque": 73,
-            "vmax": 11,
-            "acceleration": -0.29,
-            "displacement": 0
-          },
-          "Turbolader": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Rennfilter": {
-            "power": 2,
-            "torque": 2,
-            "vmax": 0,
-            "acceleration": -0.01,
-            "displacement": 0
-          },
-          "Downpipes": {
-            "power": 30,
-            "torque": 25,
-            "vmax": 4,
-            "acceleration": -0.05,
-            "displacement": 0
-          },
-          "Ladeluftkuehler": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Auspuffanlage": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Faecherkruemmer": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "AK47": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          }
+        "Alpina B4": {
+            "N55 Biturbo 410PS": {
+                "original": {
+                    "power": 408,
+                    "torque": 597,
+                    "vmax": 303,
+                    "acceleration": 4.18,
+                    "displacement": 2979
+                },
+                "Chiptuning": {
+                    "power": 42,
+                    "torque": 73,
+                    "vmax": 12,
+                    "acceleration": -0.18,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0.0,
+                    "displacement": 0
+                }
+            },
+            "N55 Biturbo S 440PS": {
+                "original": {
+                    "power": 438,
+                    "torque": 657,
+                    "vmax": 305,
+                    "acceleration": 3.88,
+                    "displacement": 2979
+                },
+                "Chiptuning": {
+                    "power": 52,
+                    "torque": 53,
+                    "vmax": 8,
+                    "acceleration": -0.18,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            }
         }
-      },
-      "Alpina B4": {
-        "N55 Biturbo 410PS": {
-          "original": {
-            "power": 408,
-            "torque": 597,
-            "vmax": 303,
-            "acceleration": 4.18,
-            "displacement": 2979
-          },
-          "Chiptuning": {
-            "power": 42,
-            "torque": 73,
-            "vmax": 12,
-            "acceleration": -0.18,
-            "displacement": 0
-          },
-          "Turbolader": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Rennfilter": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Downpipes": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Ladeluftkuehler": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Auspuffanlage": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Faecherkruemmer": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "AK47": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          }
-        },
-        "N55 Biturbo S 440PS": {
-          "original": {
-            "power": 438,
-            "torque": 657,
-            "vmax": 305,
-            "acceleration": 3.88,
-            "displacement": 2979
-          },
-          "Chiptuning": {
-            "power": 52,
-            "torque": 53,
-            "vmax": 8,
-            "acceleration": -0.18,
-            "displacement": 0
-          },
-          "Turbolader": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Rennfilter": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Downpipes": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Ladeluftkuehler": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Auspuffanlage": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "Faecherkruemmer": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          },
-          "AK47": {
-            "power": 0,
-            "torque": 0,
-            "vmax": 0,
-            "acceleration": 0,
-            "displacement": 0
-          }
-        }
-      }
     }
-  }
+}
