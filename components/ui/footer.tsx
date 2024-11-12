@@ -10,28 +10,28 @@ export default function Component() {
       <div className="container flex flex-col items-center px-4 py-12 mx-auto space-y-12">
         <nav className="flex flex-wrap justify-center gap-6 text-sm md:gap-8">
           <Link href="/" className="hover:text-gray-200 transition-colors">
-            Home
+            Startseite
           </Link>
           <Link href="/about" className="hover:text-gray-200 transition-colors">
-            About
+            Über uns
           </Link>
           <Link
             href="/projects"
             className="hover:text-gray-200 transition-colors"
           >
-            Projects
+            Projekte
           </Link>
           <Link
             href="/contact"
             className="hover:text-gray-200 transition-colors"
           >
-            Contact
+            Kontakt
           </Link>
           <Link
             href="/configurator"
             className="hover:text-gray-200 transition-colors"
           >
-            Configurator
+            Konfigurator
           </Link>
         </nav>
         <div className="flex justify-center gap-6">

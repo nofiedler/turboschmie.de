@@ -52,7 +52,7 @@ export const FloatingNav = ({
           as="button"
           className="bg-black text-white flex items-center space-x-2"
         >
-          <span>Configurator</span>
+          <span>Konfigurator</span>
         </HoverBorderGradient>
       </Link>
     </motion.div>

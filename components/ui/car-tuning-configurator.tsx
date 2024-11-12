@@ -16,11 +16,11 @@ import CountUp from "react-countup";
 
 const tuningOptionsMapping: { [key: string]: string } = {
   "ECU Remapping": "Chiptuning",
-  "Catless Kit": "Downpipes",
-  "Exhaust Manifold": "Faecherkruemmer",
+  "Catless Kit": "Catless Kit",
+  "Exhaust Manifold": "Fächerkrümmer",
   Turbocharger: "Turbolader",
-  Intercooler: "Ladeluftkuehler",
-  "AK-47-Sound": "AK47",
+  Intercooler: "Ladeluftkühler",
+  "AK-47-Sound": "AK-47-Sound",
   "Performance Air Filter": "Rennfilter",
   "Exhaust System": "Auspuffanlage",
 };
@@ -146,13 +146,13 @@ export const CarTuningConfigurator = () => {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6 text-center text-white">
-        Car Tuning Configurator
+        Tuning Konfigurator
       </h1>
 
       <Card className="mb-6">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">
-            Model Selection
+            Modell Auswahl
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -163,7 +163,7 @@ export const CarTuningConfigurator = () => {
               }
             >
               <SelectTrigger>
-                <SelectValue placeholder="Select Manufacturer" />
+                <SelectValue placeholder="Hersteller auswählen" />
               </SelectTrigger>
               <SelectContent>
                 {carData.manufacturers.map((m) => (
@@ -181,7 +181,9 @@ export const CarTuningConfigurator = () => {
               <SelectTrigger>
                 <SelectValue
                   placeholder={
-                    manufacturer ? "Select Model" : "Select Manufacturer first"
+                    manufacturer
+                      ? "Modell auswählen"
+                      : "Bitte zuerst Hersteller wählen"
                   }
                 />
               </SelectTrigger>
@@ -201,7 +203,9 @@ export const CarTuningConfigurator = () => {
             >
               <SelectTrigger>
                 <SelectValue
-                  placeholder={model ? "Select Engine" : "Select Model first"}
+                  placeholder={
+                    model ? "Motor auswählen" : "Bitte zuerst Modell wählen"
+                  }
                 />
               </SelectTrigger>
               <SelectContent>
@@ -224,7 +228,7 @@ export const CarTuningConfigurator = () => {
         <Card>
           <CardHeader>
             <CardTitle className="text-xl font-semibold">
-              Tuning Options
+              Tuning Optionen
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -241,7 +245,7 @@ export const CarTuningConfigurator = () => {
                       !isTuningOptionApplicable(option, performanceData)
                     }
                   />
-                  <Label htmlFor={option}>{option}</Label>
+                  <Label htmlFor={option}>{tuningOptionsMapping[option]}</Label>
                 </div>
               ))}
             </div>
@@ -267,15 +271,15 @@ export const CarTuningConfigurator = () => {
                 <div className="">
                   <div>
                     <p className="text-2xl font-bold">
-                      {originalPerformance.power}HP
+                      {originalPerformance.power}PS
                     </p>
-                    <p className="text-sm text-muted-foreground">POWER</p>
+                    <p className="text-sm text-muted-foreground">LEISTUNG</p>
                   </div>
                   <div>
                     <p className="text-2xl font-bold">
                       {originalPerformance.torque}Nm
                     </p>
-                    <p className="text-sm text-muted-foreground">TORQUE</p>
+                    <p className="text-sm text-muted-foreground">DREHMOMENT</p>
                   </div>
                   <div>
                     <p className="text-2xl font-bold">
@@ -293,9 +297,7 @@ export const CarTuningConfigurator = () => {
                     <p className="text-2xl font-bold">
                       {originalPerformance.displacement}cm³
                     </p>
-                    <p className="text-sm text-muted-foreground">
-                      DISPLACEMENT
-                    </p>
+                    <p className="text-sm text-muted-foreground">HUBRAUM</p>
                   </div>
                 </div>
               </CardContent>
@@ -322,13 +324,13 @@ export const CarTuningConfigurator = () => {
                         duration={2}
                         decimals={0}
                         separator="."
-                        suffix="HP"
+                        suffix="PS"
                         easingFn={(t, b, c, d) => {
                           return c * (-Math.pow(2, (-10 * t) / d) + 1) + b;
                         }}
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">POWER (PP)</p>
+                    <p className="text-sm text-muted-foreground">LEISTUNG</p>
                   </div>
                   <div>
                     <p
@@ -350,7 +352,7 @@ export const CarTuningConfigurator = () => {
                         }}
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">TORQUE (PP)</p>
+                    <p className="text-sm text-muted-foreground">DREHMOMENT</p>
                   </div>
                   <div>
                     <p
@@ -372,7 +374,7 @@ export const CarTuningConfigurator = () => {
                         }}
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">VMAX (PP)</p>
+                    <p className="text-sm text-muted-foreground">VMAX</p>
                   </div>
                   <div>
                     <p
@@ -395,7 +397,7 @@ export const CarTuningConfigurator = () => {
                         }}
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">0-100 (PP)</p>
+                    <p className="text-sm text-muted-foreground">0-100</p>
                   </div>
                   <div className="col-span-2">
                     <p className="text-2xl font-bold">
@@ -407,9 +409,7 @@ export const CarTuningConfigurator = () => {
                         suffix="cm³"
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">
-                      DISPLACEMENT
-                    </p>
+                    <p className="text-sm text-muted-foreground">HUBRAUM</p>
                   </div>
                 </div>
               </CardContent>
