@@ -24,7 +24,6 @@ const tuningOptionsMapping: { [key: string]: string } = {
   "Exhaust System": "Auspuffanlage",
 };
 
-
 type PerformanceMetrics = {
   power: number;
   torque: number;
@@ -54,6 +53,7 @@ export const CarTuningConfigurator = () => {
     useState<PerformanceMetrics | null>(null);
   const [tunedPerformance, setTunedPerformance] =
     useState<PerformanceMetrics | null>(null);
+  const [performanceData, setPerformanceData] = useState<any>(null);
 
   const calculateTunedPerformance = useCallback(
     (performanceData: {
@@ -65,9 +65,7 @@ export const CarTuningConfigurator = () => {
         const mappedOption = tuningOptionsMapping[option];
         const tuningEffect = performanceData[mappedOption];
         if (tuningEffect) {
-          tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(
-            2
-          );
+          tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(2);
           tunedValues.torque = +(
             tunedValues.torque + tuningEffect.torque
           ).toFixed(2);
@@ -81,6 +79,21 @@ export const CarTuningConfigurator = () => {
     },
     [tuningOptions]
   );
+
+  const isTuningOptionApplicable = (option: string, performanceData: any) => {
+    const mappedOption = tuningOptionsMapping[option];
+    const tuningEffect = performanceData[mappedOption];
+    if (tuningEffect) {
+      // Check if any performance metric changes
+      return (
+        tuningEffect.power !== 0 ||
+        tuningEffect.torque !== 0 ||
+        tuningEffect.vmax !== 0 ||
+        tuningEffect.acceleration !== 0
+      );
+    }
+    return false;
+  };
 
   useEffect(() => {
     setModel("");
@@ -99,12 +112,13 @@ export const CarTuningConfigurator = () => {
 
   useEffect(() => {
     if (manufacturer && model && engine) {
-      const performanceData = (
-        carData.performanceData as unknown as PerformanceData
-      )[`${manufacturer} ${model}`]?.[engine];
-      if (performanceData) {
-        setOriginalPerformance(performanceData.original);
-        calculateTunedPerformance(performanceData);
+      const data = (carData.performanceData as unknown as PerformanceData)[
+        `${manufacturer} ${model}`
+      ]?.[engine];
+      if (data) {
+        setOriginalPerformance(data.original);
+        setPerformanceData(data);
+        calculateTunedPerformance(data);
       }
     }
   }, [manufacturer, model, engine, tuningOptions, calculateTunedPerformance]);
@@ -193,6 +207,10 @@ export const CarTuningConfigurator = () => {
                   id={option}
                   checked={tuningOptions.includes(option)}
                   onCheckedChange={() => handleTuningOptionChange(option)}
+                  disabled={
+                    !originalPerformance ||
+                    !isTuningOptionApplicable(option, performanceData)
+                  }
                 />
                 <Label htmlFor={option}>{option}</Label>
               </div>
@@ -241,7 +259,7 @@ export const CarTuningConfigurator = () => {
                     </p>
                     <p className="text-sm text-muted-foreground">0-100</p>
                   </div>
-                  <div className="col-span-2">
+ <div className="col-span-2">
                     <p className="text-2xl font-bold">
                       {originalPerformance.displacement}cm³
                     </p>
