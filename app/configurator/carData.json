@@ -1,11 +1,22 @@
 {
     "manufacturers": [
-        "Alpina"
+        "Alpina",
+        "Audi"
     ],
     "models": {
         "Alpina": [
             "B3/B3S",
-            "B4"
+            "B4",
+            "B5",
+            "B6",
+            "B7",
+            "D3",
+            "D4",
+            "D5",
+            "XD3"
+        ],
+        "Audi": [
+            "A1"
         ]
     },
     "engines": {
@@ -21,6 +32,60 @@
             "N55 Biturbo S 440PS",
             "N55 Biturbo S Edition99 452PS",
             "S58 Biturbo 495PS"
+        ],
+        "Alpina B5": [
+            "B5 Biturbo 507PS",
+            "B5 Biturbo 540PS",
+            "B5 Biturbo 600PS",
+            "B5 Biturbo 608PS",
+            "B5 Biturbo 621PS",
+            "B5 Kompressor 500PS",
+            "B5S Kompressor 530PS"
+        ],
+        "Alpina B6": [
+            "B6 Biturbo 540PS",
+            "B6 Biturbo 600PS",
+            "B6 Biturbo 608PS",
+            "B6 Biturbo 621PS",
+            "B6 Kompressor 500PS",
+            "B6S Kompressor 530PS"
+        ],
+        "Alpina B7": [
+            "B7 Biturbo 507PS",
+            "B7 Biturbo 540PS",
+            "B7 Biturbo 608PS",
+            "B7 Kompressor 500PS"
+        ],
+        "Alpina D3": [
+            "D3 200PS",
+            "D3 Biturbo 214PS",
+            "D3 Biturbo 350PS"
+        ],
+        "Alpina D4": [
+            "D4 Biturbo 350PS"
+        ],
+        "Alpina D5": [
+            "D5 Biturbo 350PS"
+        ],
+        "Alpina XD3": [
+            "XD3 Biturbo 350PS"
+        ],
+        "Audi A1": [
+            "1.2l TFSI 86PS",
+            "1.4l TFSI 122PS",
+            "1.4l TFSI 125PS",
+            "1.4l TFSI 140PS",
+            "1.4l TFSI 150PS",
+            "1.4l TFSI 185PS",
+            "1.6l TDI 105PS",
+            "1.6l TDI 116PS",
+            "1.6l TDI 90PS",
+            "1.8l TFSI 192PS",
+            "2.0l TDI 143PS",
+            "2.0l TFSI 256PS",
+            "35 TFSI 150PS",
+            "40 TFSI 200PS",
+            "40 TFSI 207PS"
         ]
     },
     "tuningOptions": [
@@ -37,17 +102,17 @@
         "Alpina B3/B3S": {
             "N54 Biturbo 360PS": {
                 "original": {
-                    "power": 359,
-                    "torque": 498,
-                    "vmax": 284,
-                    "acceleration": 4.78,
+                    "power": 360,
+                    "torque": 500,
+                    "vmax": 285,
+                    "acceleration": 4.8,
                     "displacement": 2979
                 },
                 "Chiptuning": {
-                    "power": 61,
-                    "torque": 82,
-                    "vmax": 11,
-                    "acceleration": -0.18,
+                    "power": 60,
+                    "torque": 80,
+                    "vmax": 10,
+                    "acceleration": -0.2,
                     "displacement": 0
                 },
                 "Turbolader": {
@@ -102,17 +167,17 @@
             },
             "N54 Biturbo 400PS": {
                 "original": {
-                    "power": 398,
-                    "torque": 538,
-                    "vmax": 299,
-                    "acceleration": 4.18,
+                    "power": 400,
+                    "torque": 540,
+                    "vmax": 300,
+                    "acceleration": 4.2,
                     "displacement": 2979
                 },
                 "Chiptuning": {
-                    "power": 32,
-                    "torque": 62,
-                    "vmax": 11,
-                    "acceleration": -0.18,
+                    "power": 30,
+                    "torque": 60,
+                    "vmax": 10,
+                    "acceleration": -0.2,
                     "displacement": 0
                 },
                 "Turbolader": {
@@ -167,17 +232,17 @@
             },
             "N55 Biturbo 410PS": {
                 "original": {
-                    "power": 408,
-                    "torque": 597,
-                    "vmax": 304,
-                    "acceleration": 4.18,
+                    "power": 410,
+                    "torque": 600,
+                    "vmax": 305,
+                    "acceleration": 4.2,
                     "displacement": 2979
                 },
                 "Chiptuning": {
-                    "power": 42,
-                    "torque": 73,
-                    "vmax": 11,
-                    "acceleration": -0.18,
+                    "power": 40,
+                    "torque": 70,
+                    "vmax": 10,
+                    "acceleration": -0.2,
                     "displacement": 0
                 },
                 "Turbolader": {
@@ -232,17 +297,17 @@
             },
             "S58 Biturbo 462PS": {
                 "original": {
-                    "power": 460,
-                    "torque": 697,
-                    "vmax": 302,
-                    "acceleration": 3.78,
+                    "power": 462,
+                    "torque": 700,
+                    "vmax": 303,
+                    "acceleration": 3.8,
                     "displacement": 2993
                 },
                 "Chiptuning": {
-                    "power": 190,
-                    "torque": 103,
-                    "vmax": 13,
-                    "acceleration": -0.48,
+                    "power": 188,
+                    "torque": 100,
+                    "vmax": 12,
+                    "acceleration": -0.5,
                     "displacement": 0
                 },
                 "Turbolader": {
@@ -297,17 +362,17 @@
             },
             "S58 Biturbo 495PS": {
                 "original": {
-                    "power": 493,
-                    "torque": 727,
-                    "vmax": 304,
-                    "acceleration": 3.59,
+                    "power": 495,
+                    "torque": 730,
+                    "vmax": 305,
+                    "acceleration": 3.6,
                     "displacement": 2993
                 },
                 "Chiptuning": {
-                    "power": 157,
-                    "torque": 73,
-                    "vmax": 11,
-                    "acceleration": -0.29,
+                    "power": 155,
+                    "torque": 70,
+                    "vmax": 10,
+                    "acceleration": -0.3,
                     "displacement": 0
                 },
                 "Turbolader": {
@@ -364,17 +429,17 @@
         "Alpina B4": {
             "N55 Biturbo 410PS": {
                 "original": {
-                    "power": 408,
-                    "torque": 597,
-                    "vmax": 303,
-                    "acceleration": 4.18,
+                    "power": 410,
+                    "torque": 600,
+                    "vmax": 305,
+                    "acceleration": 4.2,
                     "displacement": 2979
                 },
                 "Chiptuning": {
-                    "power": 42,
-                    "torque": 73,
-                    "vmax": 12,
-                    "acceleration": -0.18,
+                    "power": 40,
+                    "torque": 70,
+                    "vmax": 10,
+                    "acceleration": -0.2,
                     "displacement": 0
                 },
                 "Turbolader": {
@@ -429,17 +494,17 @@
             },
             "N55 Biturbo S 440PS": {
                 "original": {
-                    "power": 438,
-                    "torque": 657,
-                    "vmax": 305,
-                    "acceleration": 3.88,
+                    "power": 440,
+                    "torque": 660,
+                    "vmax": 306,
+                    "acceleration": 3.9,
                     "displacement": 2979
                 },
                 "Chiptuning": {
-                    "power": 52,
-                    "torque": 53,
-                    "vmax": 8,
-                    "acceleration": -0.18,
+                    "power": 50,
+                    "torque": 50,
+                    "vmax": 7,
+                    "acceleration": -0.2,
                     "displacement": 0
                 },
                 "Turbolader": {
@@ -489,6 +554,2557 @@
                     "torque": 0,
                     "vmax": 0,
                     "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "N55 Biturbo S Edition99 452PS": {
+                "original": {
+                    "power": 452,
+                    "torque": 680,
+                    "vmax": 306,
+                    "acceleration": 3.9,
+                    "displacement": 2979
+                },
+                "Chiptuning": {
+                    "power": 38,
+                    "torque": 30,
+                    "vmax": 7,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "S58 Biturbo 495PS": {
+                "original": {
+                    "power": 495,
+                    "torque": 730,
+                    "vmax": 305,
+                    "acceleration": 3.6,
+                    "displacement": 2993
+                },
+                "Chiptuning": {
+                    "power": 155,
+                    "torque": 70,
+                    "vmax": 10,
+                    "acceleration": -0.3,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 2,
+                    "vmax": 0,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 30,
+                    "torque": 25,
+                    "vmax": 4,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0.0,
+                    "displacement": 0
+                }
+            }
+        },
+        "Alpina B5": {
+            "B5 Biturbo 507PS": {
+                "original": {
+                    "power": 507,
+                    "torque": 700,
+                    "vmax": 307,
+                    "acceleration": 4.7,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 70,
+                    "torque": 100,
+                    "vmax": 7,
+                    "acceleration": -0.8,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 15,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B5 Biturbo 540PS": {
+                "original": {
+                    "power": 540,
+                    "torque": 730,
+                    "vmax": 323,
+                    "acceleration": 4.3,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 40,
+                    "torque": 70,
+                    "vmax": 4,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 15,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B5 Biturbo 600PS": {
+                "original": {
+                    "power": 600,
+                    "torque": 800,
+                    "vmax": 324,
+                    "acceleration": 4.2,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 50,
+                    "torque": 70,
+                    "vmax": 7,
+                    "acceleration": -0.3,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 15,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B5 Biturbo 608PS": {
+                "original": {
+                    "power": 608,
+                    "torque": 800,
+                    "vmax": 330,
+                    "acceleration": 3.5,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 62,
+                    "torque": 70,
+                    "vmax": 6,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 3,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 20,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B5 Biturbo 621PS": {
+                "original": {
+                    "power": 621,
+                    "torque": 800,
+                    "vmax": 330,
+                    "acceleration": 3.4,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 49,
+                    "torque": 70,
+                    "vmax": 6,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 3,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 20,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B5 Kompressor 500PS": {
+                "original": {
+                    "power": 500,
+                    "torque": 700,
+                    "vmax": 314,
+                    "acceleration": 4.7,
+                    "displacement": 4398
+                },
+                "Chiptuning": {
+                    "power": 30,
+                    "torque": 50,
+                    "vmax": 4,
+                    "acceleration": -0.3,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 4,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 7,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B5S Kompressor 530PS": {
+                "original": {
+                    "power": 530,
+                    "torque": 725,
+                    "vmax": 317,
+                    "acceleration": 4.6,
+                    "displacement": 4398
+                },
+                "Chiptuning": {
+                    "power": 20,
+                    "torque": 30,
+                    "vmax": 4,
+                    "acceleration": -0.3,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 4,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 7,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            }
+        },
+        "Alpina B6": {
+            "B6 Biturbo 540PS": {
+                "original": {
+                    "power": 540,
+                    "torque": 730,
+                    "vmax": 323,
+                    "acceleration": 4.3,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 40,
+                    "torque": 70,
+                    "vmax": 4,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 15,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B6 Biturbo 600PS": {
+                "original": {
+                    "power": 600,
+                    "torque": 800,
+                    "vmax": 324,
+                    "acceleration": 4.2,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 50,
+                    "torque": 70,
+                    "vmax": 7,
+                    "acceleration": -0.3,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 15,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B6 Biturbo 608PS": {
+                "original": {
+                    "power": 608,
+                    "torque": 800,
+                    "vmax": 330,
+                    "acceleration": 3.5,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 62,
+                    "torque": 70,
+                    "vmax": 6,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 3,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 20,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B6 Biturbo 621PS": {
+                "original": {
+                    "power": 621,
+                    "torque": 799,
+                    "vmax": 330,
+                    "acceleration": 3.4,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 49,
+                    "torque": 71,
+                    "vmax": 6,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 3,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 20,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B6 Kompressor 500PS": {
+                "original": {
+                    "power": 500,
+                    "torque": 700,
+                    "vmax": 314,
+                    "acceleration": 4.7,
+                    "displacement": 4398
+                },
+                "Chiptuning": {
+                    "power": 30,
+                    "torque": 50,
+                    "vmax": 4,
+                    "acceleration": -0.3,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 4,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 7,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B6S Kompressor 530PS": {
+                "original": {
+                    "power": 530,
+                    "torque": 725,
+                    "vmax": 317,
+                    "acceleration": 4.6,
+                    "displacement": 4398
+                },
+                "Chiptuning": {
+                    "power": 20,
+                    "torque": 30,
+                    "vmax": 4,
+                    "acceleration": -0.3,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 4,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 7,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            }
+        },
+        "Alpina B7": {
+            "B7 Biturbo 507PS": {
+                "original": {
+                    "power": 507,
+                    "torque": 700,
+                    "vmax": 307,
+                    "acceleration": 5.1,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 70,
+                    "torque": 100,
+                    "vmax": 7,
+                    "acceleration": -0.8,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B7 Biturbo 540PS": {
+                "original": {
+                    "power": 540,
+                    "torque": 730,
+                    "vmax": 323,
+                    "acceleration": 4.6,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 40,
+                    "torque": 70,
+                    "vmax": 4,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B7 Biturbo 608PS": {
+                "original": {
+                    "power": 608,
+                    "torque": 800,
+                    "vmax": 330,
+                    "acceleration": 3.7,
+                    "displacement": 4395
+                },
+                "Chiptuning": {
+                    "power": 62,
+                    "torque": 70,
+                    "vmax": 6,
+                    "acceleration": -0.2,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 3,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 20,
+                    "torque": 20,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "B7 Kompressor 500PS": {
+                "original": {
+                    "power": 500,
+                    "torque": 700,
+                    "vmax": 314,
+                    "acceleration": 4.7,
+                    "displacement": 4398
+                },
+                "Chiptuning": {
+                    "power": 30,
+                    "torque": 50,
+                    "vmax": 4,
+                    "acceleration": -0.3,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 4,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 7,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            }
+        },
+        "Alpina D3": {
+            "D3 200PS": {
+                "original": {
+                    "power": 200,
+                    "torque": 410,
+                    "vmax": 238,
+                    "acceleration": 7.4,
+                    "displacement": 1995
+                },
+                "Chiptuning": {
+                    "power": 35,
+                    "torque": 70,
+                    "vmax": 8,
+                    "acceleration": -0.9,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 4,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "D3 Biturbo 214PS": {
+                "original": {
+                    "power": 214,
+                    "torque": 450,
+                    "vmax": 244,
+                    "acceleration": 6.9,
+                    "displacement": 1995
+                },
+                "Chiptuning": {
+                    "power": 35,
+                    "torque": 70,
+                    "vmax": 8,
+                    "acceleration": -0.9,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 4,
+                    "torque": 5,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "D3 Biturbo 350PS": {
+                "original": {
+                    "power": 350,
+                    "torque": 700,
+                    "vmax": 278,
+                    "acceleration": 4.6,
+                    "displacement": 2993
+                },
+                "Chiptuning": {
+                    "power": 30,
+                    "torque": 80,
+                    "vmax": 4,
+                    "acceleration": -0.6,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 3,
+                    "torque": 5,
+                    "vmax": 1,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            }
+        },
+        "Alpina D4": {
+            "D4 Biturbo 350PS": {
+                "original": {
+                    "power": 350,
+                    "torque": 700,
+                    "vmax": 278,
+                    "acceleration": 4.6,
+                    "displacement": 2993
+                },
+                "Chiptuning": {
+                    "power": 30,
+                    "torque": 80,
+                    "vmax": 4,
+                    "acceleration": -0.6,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 3,
+                    "torque": 5,
+                    "vmax": 1,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            }
+        },
+        "Alpina D5": {
+            "D5 Biturbo 350PS": {
+                "original": {
+                    "power": 350,
+                    "torque": 700,
+                    "vmax": 257,
+                    "acceleration": 5.1,
+                    "displacement": 2993
+                },
+                "Chiptuning": {
+                    "power": 30,
+                    "torque": 80,
+                    "vmax": 23,
+                    "acceleration": -0.6,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 3,
+                    "torque": 5,
+                    "vmax": 1,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            }
+        },
+        "Alpina XD3": {
+            "XD3 Biturbo 350PS": {
+                "original": {
+                    "power": 350,
+                    "torque": 700,
+                    "vmax": 253,
+                    "acceleration": 4.9,
+                    "displacement": 2993
+                },
+                "Chiptuning": {
+                    "power": 30,
+                    "torque": 80,
+                    "vmax": 23,
+                    "acceleration": -0.6,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 3,
+                    "torque": 5,
+                    "vmax": 1,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            }
+        },
+        "Audi A1": {
+            "1.2l TFSI 86PS": {
+                "original": {
+                    "power": 86,
+                    "torque": 160,
+                    "vmax": 180,
+                    "acceleration": 11.7,
+                    "displacement": 1197
+                },
+                "Chiptuning": {
+                    "power": 31,
+                    "torque": 40,
+                    "vmax": 10,
+                    "acceleration": -0.5,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "1.4l TFSI 122PS": {
+                "original": {
+                    "power": 122,
+                    "torque": 200,
+                    "vmax": 200,
+                    "acceleration": 9.2,
+                    "displacement": 1390
+                },
+                "Chiptuning": {
+                    "power": 38,
+                    "torque": 55,
+                    "vmax": 9,
+                    "acceleration": -0.5,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "1.4l TFSI 125PS": {
+                "original": {
+                    "power": 125,
+                    "torque": 200,
+                    "vmax": 204,
+                    "acceleration": 8.8,
+                    "displacement": 1390
+                },
+                "Chiptuning": {
+                    "power": 35,
+                    "torque": 55,
+                    "vmax": 9,
+                    "acceleration": -0.5,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "1.4l TFSI 140PS": {
+                "original": {
+                    "power": 140,
+                    "torque": 250,
+                    "vmax": 212,
+                    "acceleration": 7.9,
+                    "displacement": 1390
+                },
+                "Chiptuning": {
+                    "power": 30,
+                    "torque": 40,
+                    "vmax": 9,
+                    "acceleration": -0.7,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "1.4l TFSI 150PS": {
+                "original": {
+                    "power": 150,
+                    "torque": 250,
+                    "vmax": 215,
+                    "acceleration": 7.8,
+                    "displacement": 1390
+                },
+                "Chiptuning": {
+                    "power": 20,
+                    "torque": 40,
+                    "vmax": 9,
+                    "acceleration": -0.7,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "1.4l TFSI 185PS": {
+                "original": {
+                    "power": 185,
+                    "torque": 250,
+                    "vmax": 227,
+                    "acceleration": 6.9,
+                    "displacement": 1390
+                },
+                "Chiptuning": {
+                    "power": 15,
+                    "torque": 25,
+                    "vmax": 8,
+                    "acceleration": -0.4,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 2,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "1.6l TDI 105PS": {
+                "original": {
+                    "power": 105,
+                    "torque": 249,
+                    "vmax": 189,
+                    "acceleration": 10.77,
+                    "displacement": 1598
+                },
+                "Chiptuning": {
+                    "power": 25,
+                    "torque": 41,
+                    "vmax": 9,
+                    "acceleration": -0.47,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "1.6l TDI 116PS": {
+                "original": {
+                    "power": 116,
+                    "torque": 250,
+                    "vmax": 200,
+                    "acceleration": 9.4,
+                    "displacement": 1598
+                },
+                "Chiptuning": {
+                    "power": 20,
+                    "torque": 35,
+                    "vmax": 8,
+                    "acceleration": -0.5,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "1.6l TDI 90PS": {
+                "original": {
+                    "power": 90,
+                    "torque": 230,
+                    "vmax": 179,
+                    "acceleration": 12.2,
+                    "displacement": 1598
+                },
+                "Chiptuning": {
+                    "power": 35,
+                    "torque": 50,
+                    "vmax": 8,
+                    "acceleration": -0.8,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "1.8l TFSI 192PS": {
+                "original": {
+                    "power": 192,
+                    "torque": 250,
+                    "vmax": 234,
+                    "acceleration": 6.8,
+                    "displacement": 1798
+                },
+                "Chiptuning": {
+                    "power": 38,
+                    "torque": 60,
+                    "vmax": 12,
+                    "acceleration": -0.8,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "2.0l TDI 143PS": {
+                "original": {
+                    "power": 143,
+                    "torque": 320,
+                    "vmax": 210,
+                    "acceleration": 8.2,
+                    "displacement": 1968
+                },
+                "Chiptuning": {
+                    "power": 37,
+                    "torque": 60,
+                    "vmax": 23,
+                    "acceleration": -0.9,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "2.0l TFSI 256PS": {
+                "original": {
+                    "power": 256,
+                    "torque": 350,
+                    "vmax": 245,
+                    "acceleration": 5.7,
+                    "displacement": 1984
+                },
+                "Chiptuning": {
+                    "power": 44,
+                    "torque": 70,
+                    "vmax": 15,
+                    "acceleration": -0.6,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 4,
+                    "vmax": 1,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "35 TFSI 150PS": {
+                "original": {
+                    "power": 150,
+                    "torque": 250,
+                    "vmax": 222,
+                    "acceleration": 7.7,
+                    "displacement": 1498
+                },
+                "Chiptuning": {
+                    "power": 25,
+                    "torque": 50,
+                    "vmax": 11,
+                    "acceleration": -0.7,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 2,
+                    "torque": 2,
+                    "vmax": 1,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 15,
+                    "torque": 10,
+                    "vmax": 8,
+                    "acceleration": 0.0,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 10,
+                    "torque": 10,
+                    "vmax": 5,
+                    "acceleration": -0.15,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                }
+            },
+            "40 TFSI 200PS": {
+                "original": {
+                    "power": 200,
+                    "torque": 320,
+                    "vmax": 235,
+                    "acceleration": 6.5,
+                    "displacement": 1984
+                },
+                "Chiptuning": {
+                    "power": 50,
+                    "torque": 70,
+                    "vmax": 26,
+                    "acceleration": -0.8,
+                    "displacement": 0
+                },
+                "Turbolader": {
+                    "power": 35,
+                    "torque": 20,
+                    "vmax": 7,
+                    "acceleration": -0.1,
+                    "displacement": 0
+                },
+                "Rennfilter": {
+                    "power": 1,
+                    "torque": 1,
+                    "vmax": 1,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Downpipes": {
+                    "power": 20,
+                    "torque": 10,
+                    "vmax": 3,
+                    "acceleration": -0.05,
+                    "displacement": 0
+                },
+                "Ladeluftkuehler": {
+                    "power": 10,
+                    "torque": 5,
+                    "vmax": 3,
+                    "acceleration": -0.02,
+                    "displacement": 0
+                },
+                "Auspuffanlage": {
+                    "power": 5,
+                    "torque": 5,
+                    "vmax": 1,
+                    "acceleration": -0.01,
+                    "displacement": 0
+                },
+                "Faecherkruemmer": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0,
+                    "displacement": 0
+                },
+                "AK47": {
+                    "power": 0,
+                    "torque": 0,
+                    "vmax": 0,
+                    "acceleration": 0.0,
                     "displacement": 0
                 }
             }
