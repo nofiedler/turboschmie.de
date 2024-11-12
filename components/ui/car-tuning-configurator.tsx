@@ -32,12 +32,21 @@ type PerformanceMetrics = {
   displacement: number;
 };
 
+type TuningEffect = {
+  power: number;
+  torque: number;
+  vmax: number;
+  acceleration: number;
+};
+
+interface PerformanceDataEntry {
+  original: PerformanceMetrics;
+  [key: string]: PerformanceMetrics | TuningEffect;
+}
+
 type PerformanceData = {
   [key: string]: {
-    [key: string]: {
-      original: PerformanceMetrics;
-      [key: string]: PerformanceMetrics;
-    };
+    [key: string]: PerformanceDataEntry;
   };
 };
 
@@ -49,30 +58,21 @@ export const CarTuningConfigurator = () => {
   const [model, setModel] = useState<ModelKeys | "">("");
   const [engine, setEngine] = useState("");
   const [tuningOptions, setTuningOptions] = useState<string[]>([]);
-  const [originalPerformance, setOriginalPerformance] =
-    useState<PerformanceMetrics | null>(null);
-  const [tunedPerformance, setTunedPerformance] =
-    useState<PerformanceMetrics | null>(null);
-  const [performanceData, setPerformanceData] = useState<any>(null);
+  const [originalPerformance, setOriginalPerformance] = useState<PerformanceMetrics | null>(null);
+  const [tunedPerformance, setTunedPerformance] = useState<PerformanceMetrics | null>(null);
+  const [performanceData, setPerformanceData] = useState<PerformanceDataEntry | null>(null);
 
   const calculateTunedPerformance = useCallback(
-    (performanceData: {
-      original: PerformanceMetrics;
-      [key: string]: PerformanceMetrics;
-    }) => {
+    (performanceData: PerformanceDataEntry) => {
       const tunedValues = { ...performanceData.original };
       tuningOptions.forEach((option) => {
         const mappedOption = tuningOptionsMapping[option];
-        const tuningEffect = performanceData[mappedOption];
+        const tuningEffect = performanceData[mappedOption] as TuningEffect;
         if (tuningEffect) {
           tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(2);
-          tunedValues.torque = +(
-            tunedValues.torque + tuningEffect.torque
-          ).toFixed(2);
+          tunedValues.torque = +(tunedValues.torque + tuningEffect.torque).toFixed(2);
           tunedValues.vmax = +(tunedValues.vmax + tuningEffect.vmax).toFixed(2);
-          tunedValues.acceleration = +(
-            tunedValues.acceleration + tuningEffect.acceleration
-          ).toFixed(2);
+          tunedValues.acceleration = +(tunedValues.acceleration + tuningEffect.acceleration).toFixed(2);
         }
       });
       setTunedPerformance(tunedValues);
@@ -80,11 +80,10 @@ export const CarTuningConfigurator = () => {
     [tuningOptions]
   );
 
-  const isTuningOptionApplicable = (option: string, performanceData: any) => {
+  const isTuningOptionApplicable = (option: string, performanceData: PerformanceDataEntry) => {
     const mappedOption = tuningOptionsMapping[option];
-    const tuningEffect = performanceData[mappedOption];
+    const tuningEffect = performanceData[mappedOption] as TuningEffect;
     if (tuningEffect) {
-      // Check if any performance metric changes
       return (
         tuningEffect.power !== 0 ||
         tuningEffect.torque !== 0 ||
@@ -112,9 +111,7 @@ export const CarTuningConfigurator = () => {
 
   useEffect(() => {
     if (manufacturer && model && engine) {
-      const data = (carData.performanceData as unknown as PerformanceData)[
-        `${manufacturer} ${model}`
-      ]?.[engine];
+      const data = (carData.performanceData as PerformanceData)[`${manufacturer} ${model}`]?.[engine];
       if (data) {
         setOriginalPerformance(data.original);
         setPerformanceData(data);
@@ -125,9 +122,7 @@ export const CarTuningConfigurator = () => {
 
   const handleTuningOptionChange = (option: string) => {
     setTuningOptions((prev) =>
-      prev.includes(option)
-        ? prev.filter((item) => item !== option)
-        : [...prev, option]
+      prev.includes(option) ? prev.filter((item) => item !== option) : [...prev, option]
     );
   };
 
@@ -209,6 +204,7 @@ export const CarTuningConfigurator = () => {
                   onCheckedChange={() => handleTuningOptionChange(option)}
                   disabled={
                     !originalPerformance ||
+                    !performanceData ||
                     !isTuningOptionApplicable(option, performanceData)
                   }
                 />
