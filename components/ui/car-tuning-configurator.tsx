@@ -11,7 +11,7 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import carData from '../../app/configurator/carData.json';
+import carData from "../../app/configurator/carData.json";
 
 const tuningOptionsMapping: { [key: string]: string } = {
   "ECU Remapping": "Chiptuning",
@@ -58,9 +58,12 @@ export const CarTuningConfigurator = () => {
   const [model, setModel] = useState<ModelKeys | "">("");
   const [engine, setEngine] = useState("");
   const [tuningOptions, setTuningOptions] = useState<string[]>([]);
-  const [originalPerformance, setOriginalPerformance] = useState<PerformanceMetrics | null>(null);
-  const [tunedPerformance, setTunedPerformance] = useState<PerformanceMetrics | null>(null);
-  const [performanceData, setPerformanceData] = useState<PerformanceDataEntry | null>(null);
+  const [originalPerformance, setOriginalPerformance] =
+    useState<PerformanceMetrics | null>(null);
+  const [tunedPerformance, setTunedPerformance] =
+    useState<PerformanceMetrics | null>(null);
+  const [performanceData, setPerformanceData] =
+    useState<PerformanceDataEntry | null>(null);
 
   const calculateTunedPerformance = useCallback(
     (performanceData: PerformanceDataEntry) => {
@@ -69,10 +72,16 @@ export const CarTuningConfigurator = () => {
         const mappedOption = tuningOptionsMapping[option];
         const tuningEffect = performanceData[mappedOption] as TuningEffect;
         if (tuningEffect) {
-          tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(2);
-          tunedValues.torque = +(tunedValues.torque + tuningEffect.torque).toFixed(2);
+          tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(
+            2
+          );
+          tunedValues.torque = +(
+            tunedValues.torque + tuningEffect.torque
+          ).toFixed(2);
           tunedValues.vmax = +(tunedValues.vmax + tuningEffect.vmax).toFixed(2);
-          tunedValues.acceleration = +(tunedValues.acceleration + tuningEffect.acceleration).toFixed(2);
+          tunedValues.acceleration = +(
+            tunedValues.acceleration + tuningEffect.acceleration
+          ).toFixed(2);
         }
       });
       setTunedPerformance(tunedValues);
@@ -80,7 +89,10 @@ export const CarTuningConfigurator = () => {
     [tuningOptions]
   );
 
-  const isTuningOptionApplicable = (option: string, performanceData: PerformanceDataEntry) => {
+  const isTuningOptionApplicable = (
+    option: string,
+    performanceData: PerformanceDataEntry
+  ) => {
     const mappedOption = tuningOptionsMapping[option];
     const tuningEffect = performanceData[mappedOption] as TuningEffect;
     if (tuningEffect) {
@@ -111,7 +123,9 @@ export const CarTuningConfigurator = () => {
 
   useEffect(() => {
     if (manufacturer && model && engine) {
-      const data = (carData.performanceData as PerformanceData)[`${manufacturer} ${model}`]?.[engine];
+      const data = (carData.performanceData as PerformanceData)[
+        `${manufacturer} ${model}`
+      ]?.[engine];
       if (data) {
         setOriginalPerformance(data.original);
         setPerformanceData(data);
@@ -122,7 +136,9 @@ export const CarTuningConfigurator = () => {
 
   const handleTuningOptionChange = (option: string) => {
     setTuningOptions((prev) =>
-      prev.includes(option) ? prev.filter((item) => item !== option) : [...prev, option]
+      prev.includes(option)
+        ? prev.filter((item) => item !== option)
+        : [...prev, option]
     );
   };
 
@@ -132,97 +148,114 @@ export const CarTuningConfigurator = () => {
         Car Tuning Configurator
       </h1>
 
-      <div className="bg-white rounded-xl p-6 mb-6">
-        <h2 className="text-xl font-semibold mb-6">Model selection</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Select
-            onValueChange={(value: Manufacturer | "") => setManufacturer(value)}
-          >
-            <SelectTrigger>
-              <SelectValue placeholder="Select Manufacturer" />
-            </SelectTrigger>
-            <SelectContent>
-              {carData.manufacturers.map((m) => (
-                <SelectItem key={m} value={m}>
-                  {m}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-
-          <Select
-            onValueChange={(value) => setModel(value as ModelKeys | "")}
-            disabled={!manufacturer}
-          >
-            <SelectTrigger>
-              <SelectValue
-                placeholder={
-                  manufacturer ? "Select Model" : "Select Manufacturer first"
-                }
-              />
-            </SelectTrigger>
-            <SelectContent>
-              {manufacturer &&
-                carData.models[manufacturer]?.map((m) => (
+      <Card className="mb-10">
+        <CardHeader>
+          <CardTitle className="text-xl font-semibold">
+            Model Selection
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Select
+              onValueChange={(value: Manufacturer | "") =>
+                setManufacturer(value)
+              }
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="Select Manufacturer" />
+              </SelectTrigger>
+              <SelectContent>
+                {carData.manufacturers.map((m) => (
                   <SelectItem key={m} value={m}>
                     {m}
                   </SelectItem>
                 ))}
-            </SelectContent>
-          </Select>
+              </SelectContent>
+            </Select>
 
-          <Select onValueChange={setEngine} disabled={!model || !manufacturer}>
-            <SelectTrigger>
-              <SelectValue
-                placeholder={model ? "Select Engine" : "Select Model first"}
-              />
-            </SelectTrigger>
-            <SelectContent>
-              {model &&
-                manufacturer &&
-                carData.engines[`${manufacturer} ${model}` as ModelKeys]?.map(
-                  (e) => (
-                    <SelectItem key={e} value={e}>
-                      {e}
-                    </SelectItem>
-                  )
-                )}
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-
-      {engine && (
-        <div className="bg-white rounded-xl p-6">
-          <h2 className="text-xl font-semibold mb-6">Tuning Options</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {carData.tuningOptions.map((option) => (
-              <div key={option} className="flex items-center space-x-2">
-                <Switch
-                  id={option}
-                  checked={tuningOptions.includes(option)}
-                  onCheckedChange={() => handleTuningOptionChange(option)}
-                  disabled={
-                    !originalPerformance ||
-                    !performanceData ||
-                    !isTuningOptionApplicable(option, performanceData)
+            <Select
+              onValueChange={(value) => setModel(value as ModelKeys | "")}
+              disabled={!manufacturer}
+            >
+              <SelectTrigger>
+                <SelectValue
+                  placeholder={
+                    manufacturer ? "Select Model" : "Select Manufacturer first"
                   }
                 />
-                <Label htmlFor={option}>{option}</Label>
-              </div>
-            ))}
+              </SelectTrigger>
+              <SelectContent>
+                {manufacturer &&
+                  carData.models[manufacturer]?.map((m) => (
+                    <SelectItem key={m} value={m}>
+                      {m}
+                    </SelectItem>
+                  ))}
+              </SelectContent>
+            </Select>
+
+            <Select
+              onValueChange={setEngine}
+              disabled={!model || !manufacturer}
+            >
+              <SelectTrigger>
+                <SelectValue
+                  placeholder={model ? "Select Engine" : "Select Model first"}
+                />
+              </SelectTrigger>
+              <SelectContent>
+                {model &&
+                  manufacturer &&
+                  carData.engines[`${manufacturer} ${model}` as ModelKeys]?.map(
+                    (e) => (
+                      <SelectItem key={e} value={e}>
+                        {e}
+                      </SelectItem>
+                    )
+                  )}
+              </SelectContent>
+            </Select>
           </div>
-        </div>
+        </CardContent>
+      </Card>
+
+      {engine && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold">
+              Tuning Options
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {carData.tuningOptions.map((option) => (
+                <div key={option} className="flex items-center space-x-2">
+                  <Switch
+                    id={option}
+                    checked={tuningOptions.includes(option)}
+                    onCheckedChange={() => handleTuningOptionChange(option)}
+                    disabled={
+                      !originalPerformance ||
+                      !performanceData ||
+                      !isTuningOptionApplicable(option, performanceData)
+                    }
+                  />
+                  <Label htmlFor={option}>{option}</Label>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       )}
 
       {originalPerformance && tunedPerformance && (
         <>
           {model && engine && (
-            <h2 className="text-3xl font-bold mb-6 text-white text-center pt-20">
+            <h2 className="text-3xl font-bold mb-6 text-white text-center pt-10">
               {manufacturer} {model} - {engine}
             </h2>
           )}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6 text-center">
             <Card>
               <CardHeader>
                 <CardTitle className="text-xl font-semibold">
@@ -230,7 +263,7 @@ export const CarTuningConfigurator = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="">
                   <div>
                     <p className="text-2xl font-bold">
                       {originalPerformance.power}HP
@@ -255,7 +288,7 @@ export const CarTuningConfigurator = () => {
                     </p>
                     <p className="text-sm text-muted-foreground">0-100</p>
                   </div>
- <div className="col-span-2">
+                  <div className="col-span-2">
                     <p className="text-2xl font-bold">
                       {originalPerformance.displacement}cm³
                     </p>
@@ -273,7 +306,7 @@ export const CarTuningConfigurator = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="">
                   <div>
                     <p className="text-2xl font-bold">
                       {tunedPerformance.power}HP
