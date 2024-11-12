@@ -12,40 +12,36 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+const tuningOptionsMapping: { [key: string]: string } = {
+  "ECU Remapping": "Chiptuning",
+  "Catless Kit": "Downpipes",
+  "Exhaust Manifold": "Faecherkruemmer",
+  "Turbocharger": "Turbolader",
+  "Intercooler": "Ladeluftkuehler",
+  "AK-47-Sound": "AK47",
+  "Performance Air Filter": "Rennfilter",
+  "Exhaust System": "Auspuffanlage"
+};
 // Mock data structure with more engine options
 const carData = {
-  manufacturers: ["BMW", "Mercedes", "Audi"],
+  manufacturers: ["Alpina"],
   models: {
-    BMW: ["M3", "M4", "M5"],
-    Mercedes: ["AMG C63", "AMG E63", "AMG GT"],
-    Audi: ["RS3", "RS6", "RS7"],
+    Alpina: ["B3/B3S", "B4"],
   },
   engines: {
-    "BMW M3": [
-      "3.0L Twin-Turbo I6",
-      "3.0L Twin-Turbo I6 Competition",
-      "3.0L Twin-Turbo I6 CS",
+    "Alpina B3/B3S": [
+      "N54 Biturbo 360PS",
+      "N54 Biturbo 400PS",
+      "N55 Biturbo 410PS",
+      "S58 Biturbo 462PS",
+      "S58 Biturbo 495PS",
     ],
-    "BMW M4": [
-      "3.0L Twin-Turbo I6",
-      "3.0L Twin-Turbo I6 Competition",
-      "3.0L Twin-Turbo I6 CS",
+    "Alpina B4": [
+      "N55 Biturbo 410PS",
+      "N55 Biturbo S 440PS",
+      "N55 Biturbo S Edition99 452PS",
+      "S58 Biturbo 495PS",
     ],
-    "BMW M5": [
-      "4.4L Twin-Turbo V8",
-      "4.4L Twin-Turbo V8 Competition",
-      "4.4L Twin-Turbo V8 CS",
-    ],
-    "Mercedes AMG C63": ["4.0L Twin-Turbo V8", "2.0L Turbo I4 PHEV"],
-    "Mercedes AMG E63": ["4.0L Twin-Turbo V8", "4.0L Twin-Turbo V8 S"],
-    "Mercedes AMG GT": [
-      "4.0L Twin-Turbo V8",
-      "4.0L Twin-Turbo V8 S",
-      "4.0L Twin-Turbo V8 R",
-    ],
-    "Audi RS3": ["2.5L Turbo I5", "2.5L Turbo I5 Performance"],
-    "Audi RS6": ["4.0L Twin-Turbo V8", "4.0L Twin-Turbo V8 Performance"],
-    "Audi RS7": ["4.0L Twin-Turbo V8", "4.0L Twin-Turbo V8 Performance"],
   },
   tuningOptions: [
     "ECU Remapping",
@@ -58,373 +54,462 @@ const carData = {
     "Exhaust System",
   ],
   performanceData: {
-    "BMW M3": {
-      "3.0L Twin-Turbo I6": {
+    "Alpina B3/B3S": {
+      "N54 Biturbo 360PS": {
         original: {
-          power: 473,
-          torque: 550,
-          vmax: 250,
-          acceleration: 3.9,
-          displacement: 2993,
+          power: 359,
+          torque: 498,
+          vmax: 284,
+          acceleration: 4.78,
+          displacement: 2979,
         },
-        tuned: {
-          power: 530,
-          torque: 650,
-          vmax: 280,
-          acceleration: 3.5,
-          displacement: 2993,
+        Chiptuning: {
+          power: 61,
+          torque: 82,
+          vmax: 11,
+          acceleration: -0.18,
+          displacement: 0,
+        },
+        Turbolader: {
+          power: 60,
+          torque: 70,
+          vmax: 8,
+          acceleration: -0.2,
+          displacement: 0,
+        },
+        Rennfilter: {
+          power: 5,
+          torque: 5,
+          vmax: 2,
+          acceleration: -0.05,
+          displacement: 0,
+        },
+        Downpipes: {
+          power: 20,
+          torque: 15,
+          vmax: 2,
+          acceleration: -0.1,
+          displacement: 0,
+        },
+        Ladeluftkuehler: {
+          power: 10,
+          torque: 10,
+          vmax: 3,
+          acceleration: -0.02,
+          displacement: 0,
+        },
+        Auspuffanlage: {
+          power: 20,
+          torque: 20,
+          vmax: 4,
+          acceleration: -0.1,
+          displacement: 0,
+        },
+        Faecherkruemmer: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        AK47: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
         },
       },
-      "3.0L Twin-Turbo I6 Competition": {
+      "N54 Biturbo 400PS": {
         original: {
-          power: 503,
-          torque: 650,
-          vmax: 290,
-          acceleration: 3.7,
-          displacement: 2993,
+          power: 398,
+          torque: 538,
+          vmax: 299,
+          acceleration: 4.18,
+          displacement: 2979,
         },
-        tuned: {
-          power: 560,
-          torque: 750,
-          vmax: 305,
-          acceleration: 3.3,
-          displacement: 2993,
+        Chiptuning: {
+          power: 32,
+          torque: 62,
+          vmax: 11,
+          acceleration: -0.18,
+          displacement: 0,
+        },
+        Turbolader: {
+          power: 60,
+          torque: 70,
+          vmax: 8,
+          acceleration: -0.2,
+          displacement: 0,
+        },
+        Rennfilter: {
+          power: 5,
+          torque: 5,
+          vmax: 2,
+          acceleration: -0.05,
+          displacement: 0,
+        },
+        Downpipes: {
+          power: 20,
+          torque: 15,
+          vmax: 2,
+          acceleration: -0.1,
+          displacement: 0,
+        },
+        Ladeluftkuehler: {
+          power: 10,
+          torque: 10,
+          vmax: 3,
+          acceleration: -0.02,
+          displacement: 0,
+        },
+        Auspuffanlage: {
+          power: 20,
+          torque: 20,
+          vmax: 4,
+          acceleration: -0.1,
+          displacement: 0,
+        },
+        Faecherkruemmer: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        AK47: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
         },
       },
-      "3.0L Twin-Turbo I6 CS": {
+      "N55 Biturbo 410PS": {
         original: {
-          power: 543,
-          torque: 650,
-          vmax: 307,
-          acceleration: 3.2,
+          power: 408,
+          torque: 597,
+          vmax: 304,
+          acceleration: 4.18,
+          displacement: 2979,
+        },
+        Chiptuning: {
+          power: 42,
+          torque: 73,
+          vmax: 11,
+          acceleration: -0.18,
+          displacement: 0,
+        },
+        Turbolader: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Rennfilter: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Downpipes: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Ladeluftkuehler: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Auspuffanlage: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Faecherkruemmer: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        AK47: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0.0,
+          displacement: 0,
+        },
+      },
+      "S58 Biturbo 462PS": {
+        original: {
+          power: 460,
+          torque: 697,
+          vmax: 302,
+          acceleration: 3.78,
           displacement: 2993,
         },
-        tuned: {
-          power: 600,
-          torque: 750,
-          vmax: 320,
-          acceleration: 2.9,
+        Chiptuning: {
+          power: 190,
+          torque: 103,
+          vmax: 13,
+          acceleration: -0.48,
+          displacement: 0,
+        },
+        Turbolader: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Rennfilter: {
+          power: 2,
+          torque: 2,
+          vmax: 0,
+          acceleration: -0.01,
+          displacement: 0,
+        },
+        Downpipes: {
+          power: 30,
+          torque: 25,
+          vmax: 4,
+          acceleration: -0.05,
+          displacement: 0,
+        },
+        Ladeluftkuehler: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Auspuffanlage: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Faecherkruemmer: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        AK47: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0.0,
+          displacement: 0,
+        },
+      },
+      "S58 Biturbo 495PS": {
+        original: {
+          power: 493,
+          torque: 727,
+          vmax: 304,
+          acceleration: 3.59,
           displacement: 2993,
+        },
+        Chiptuning: {
+          power: 157,
+          torque: 73,
+          vmax: 11,
+          acceleration: -0.29,
+          displacement: 0,
+        },
+        Turbolader: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Rennfilter: {
+          power: 2,
+          torque: 2,
+          vmax: 0,
+          acceleration: -0.01,
+          displacement: 0,
+        },
+        Downpipes: {
+          power: 30,
+          torque: 25,
+          vmax: 4,
+          acceleration: -0.05,
+          displacement: 0,
+        },
+        Ladeluftkuehler: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Auspuffanlage: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Faecherkruemmer: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        AK47: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0.0,
+          displacement: 0,
         },
       },
     },
-    "BMW M4": {
-      "3.0L Twin-Turbo I6": {
+    "Alpina B4": {
+      "N55 Biturbo 410PS": {
         original: {
-          power: 473,
-          torque: 550,
-          vmax: 250,
-          acceleration: 3.9,
-          displacement: 2993,
+          power: 408,
+          torque: 597,
+          vmax: 303,
+          acceleration: 4.18,
+          displacement: 2979,
         },
-        tuned: {
-          power: 530,
-          torque: 650,
-          vmax: 280,
-          acceleration: 3.5,
-          displacement: 2993,
+        Chiptuning: {
+          power: 42,
+          torque: 73,
+          vmax: 12,
+          acceleration: -0.18,
+          displacement: 0,
+        },
+        Turbolader: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Rennfilter: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Downpipes: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Ladeluftkuehler: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Auspuffanlage: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        Faecherkruemmer: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
+        },
+        AK47: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0.0,
+          displacement: 0,
         },
       },
-      "3.0L Twin-Turbo I6 Competition": {
+      "N55 Biturbo S 440PS": {
         original: {
-          power: 503,
-          torque: 650,
-          vmax: 290,
-          acceleration: 3.7,
-          displacement: 2993,
-        },
-        tuned: {
-          power: 560,
-          torque: 750,
+          power: 438,
+          torque: 657,
           vmax: 305,
-          acceleration: 3.3,
-          displacement: 2993,
+          acceleration: 3.88,
+          displacement: 2979,
         },
-      },
-      "3.0L Twin-Turbo I6 CS": {
-        original: {
-          power: 543,
-          torque: 650,
-          vmax: 307,
-          acceleration: 3.2,
-          displacement: 2993,
+        Chiptuning: {
+          power: 52,
+          torque: 53,
+          vmax: 8,
+          acceleration: -0.18,
+          displacement: 0,
         },
-        tuned: {
-          power: 600,
-          torque: 750,
-          vmax: 320,
-          acceleration: 2.9,
-          displacement: 2993,
+        Turbolader: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
         },
-      },
-    },
-    "BMW M5": {
-      "4.4L Twin-Turbo V8": {
-        original: {
-          power: 600,
-          torque: 750,
-          vmax: 305,
-          acceleration: 3.4,
-          displacement: 4395,
+        Rennfilter: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
         },
-        tuned: {
-          power: 700,
-          torque: 850,
-          vmax: 330,
-          acceleration: 3.0,
-          displacement: 4395,
+        Downpipes: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
         },
-      },
-      "4.4L Twin-Turbo V8 Competition": {
-        original: {
-          power: 617,
-          torque: 750,
-          vmax: 305,
-          acceleration: 3.3,
-          displacement: 4395,
+        Ladeluftkuehler: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
         },
-        tuned: {
-          power: 720,
-          torque: 870,
-          vmax: 330,
-          acceleration: 2.9,
-          displacement: 4395,
+        Auspuffanlage: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
         },
-      },
-      "4.4L Twin-Turbo V8 CS": {
-        original: {
-          power: 627,
-          torque: 750,
-          vmax: 305,
-          acceleration: 3.2,
-          displacement: 4395,
+        Faecherkruemmer: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
         },
-        tuned: {
-          power: 730,
-          torque: 880,
-          vmax: 330,
-          acceleration: 2.8,
-          displacement: 4395,
-        },
-      },
-    },
-    "Mercedes AMG C63": {
-      "4.0L Twin-Turbo V8": {
-        original: {
-          power: 503,
-          torque: 700,
-          vmax: 290,
-          acceleration: 3.9,
-          displacement: 3982,
-        },
-        tuned: {
-          power: 550,
-          torque: 800,
-          vmax: 310,
-          acceleration: 3.6,
-          displacement: 3982,
-        },
-      },
-      "2.0L Turbo I4 PHEV": {
-        original: {
-          power: 671,
-          torque: 1020,
-          vmax: 280,
-          acceleration: 3.4,
-          displacement: 1991,
-        },
-        tuned: {
-          power: 720,
-          torque: 1100,
-          vmax: 300,
-          acceleration: 3.1,
-          displacement: 1991,
-        },
-      },
-    },
-    "Mercedes AMG E63": {
-      "4.0L Twin-Turbo V8": {
-        original: {
-          power: 603,
-          torque: 850,
-          vmax: 300,
-          acceleration: 3.4,
-          displacement: 3982,
-        },
-        tuned: {
-          power: 700,
-          torque: 950,
-          vmax: 320,
-          acceleration: 3.1,
-          displacement: 3982,
-        },
-      },
-      "4.0L Twin-Turbo V8 S": {
-        original: {
-          power: 627,
-          torque: 850,
-          vmax: 300,
-          acceleration: 3.3,
-          displacement: 3982,
-        },
-        tuned: {
-          power: 720,
-          torque: 970,
-          vmax: 320,
-          acceleration: 3.0,
-          displacement: 3982,
-        },
-      },
-    },
-    "Mercedes AMG GT": {
-      "4.0L Twin-Turbo V8": {
-        original: {
-          power: 523,
-          torque: 700,
-          vmax: 318,
-          acceleration: 3.7,
-          displacement: 3982,
-        },
-        tuned: {
-          power: 600,
-          torque: 800,
-          vmax: 330,
-          acceleration: 3.4,
-          displacement: 3982,
-        },
-      },
-      "4.0L Twin-Turbo V8 S": {
-        original: {
-          power: 577,
-          torque: 800,
-          vmax: 330,
-          acceleration: 3.5,
-          displacement: 3982,
-        },
-        tuned: {
-          power: 650,
-          torque: 900,
-          vmax: 340,
-          acceleration: 3.2,
-          displacement: 3982,
-        },
-      },
-      "4.0L Twin-Turbo V8 R": {
-        original: {
-          power: 577,
-          torque: 800,
-          vmax: 330,
-          acceleration: 3.5,
-          displacement: 3982,
-        },
-        tuned: {
-          power: 650,
-          torque: 900,
-          vmax: 340,
-          acceleration: 3.2,
-          displacement: 3982,
-        },
-      },
-    },
-    "Audi RS3": {
-      "2.5L Turbo I5": {
-        original: {
-          power: 401,
-          torque: 500,
-          vmax: 280,
-          acceleration: 3.8,
-          displacement: 2480,
-        },
-        tuned: {
-          power: 450,
-          torque: 550,
-          vmax: 300,
-          acceleration: 3.5,
-          displacement: 2480,
-        },
-      },
-      "2.5L Turbo I5 Performance": {
-        original: {
-          power: 420,
-          torque: 520,
-          vmax: 290,
-          acceleration: 3.7,
-          displacement: 2480,
-        },
-        tuned: {
-          power: 470,
-          torque: 570,
-          vmax: 310,
-          acceleration: 3.4,
-          displacement: 2480,
-        },
-      },
-    },
-    "Audi RS6": {
-      "4.0L Twin-Turbo V8": {
-        original: {
-          power: 591,
-          torque: 800,
-          vmax: 305,
-          acceleration: 3.6,
-          displacement: 3996,
-        },
-        tuned: {
-          power: 700,
-          torque: 900,
-          vmax: 320,
-          acceleration: 3.3,
-          displacement: 3996,
-        },
-      },
-      "4.0L Twin-Turbo V8 Performance": {
-        original: {
-          power: 621,
-          torque: 850,
-          vmax: 305,
-          acceleration: 3.4,
-          displacement: 3996,
-        },
-        tuned: {
-          power: 730,
-          torque: 950,
-          vmax: 320,
-          acceleration: 3.1,
-          displacement: 3996,
-        },
-      },
-    },
-    "Audi RS7": {
-      "4.0L Twin-Turbo V8": {
-        original: {
-          power: 591,
-          torque: 800,
-          vmax: 305,
-          acceleration: 3.6,
-          displacement: 3996,
-        },
-        tuned: {
-          power: 700,
-          torque: 900,
-          vmax: 320,
-          acceleration: 3.3,
-          displacement: 3996,
-        },
-      },
-      "4.0L Twin-Turbo V8 Performance": {
-        original: {
-          power: 621,
-          torque: 850,
-          vmax: 305,
-          acceleration: 3.4,
-          displacement: 3996,
-        },
-        tuned: {
-          power: 730,
-          torque: 950,
-          vmax: 320,
-          acceleration: 3.1,
-          displacement: 3996,
+        AK47: {
+          power: 0,
+          torque: 0,
+          vmax: 0,
+          acceleration: 0,
+          displacement: 0,
         },
       },
     },
@@ -443,7 +528,7 @@ type PerformanceData = {
   [key: string]: {
     [key: string]: {
       original: PerformanceMetrics;
-      tuned: PerformanceMetrics;
+      [key: string]: PerformanceMetrics;
     };
   };
 };
@@ -456,55 +541,69 @@ export const CarTuningConfigurator = () => {
   const [model, setModel] = useState<ModelKeys | "">("");
   const [engine, setEngine] = useState("");
   const [tuningOptions, setTuningOptions] = useState<string[]>([]);
+  const [originalPerformance, setOriginalPerformance] = useState<PerformanceMetrics | null>(null);
+  const [tunedPerformance, setTunedPerformance] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
     setModel("");
     setEngine("");
+    setTuningOptions([]);
+    setOriginalPerformance(null);
+    setTunedPerformance(null);
   }, [manufacturer]);
 
   useEffect(() => {
     setEngine("");
+    setTuningOptions([]);
+    setOriginalPerformance(null);
+    setTunedPerformance(null);
   }, [model]);
+
+  useEffect(() => {
+    if (manufacturer && model && engine) {
+      const performanceData = (carData.performanceData as unknown as PerformanceData)[
+        `${manufacturer} ${model}`
+      ]?.[engine];
+      if (performanceData) {
+        setOriginalPerformance(performanceData.original);
+        calculateTunedPerformance(performanceData);
+      }
+    }
+  }, [manufacturer, model, engine, tuningOptions]);
 
   const handleTuningOptionChange = (option: string) => {
     setTuningOptions((prev) =>
-      prev.includes(option)
-        ? prev.filter((item) => item !== option)
-        : [...prev, option]
+      prev.includes(option) ? prev.filter((item) => item !== option) : [...prev, option]
     );
   };
 
-  const performanceData =
-    model && engine
-      ? (carData.performanceData as PerformanceData)[
-          `${manufacturer} ${model}`
-        ]?.[engine]
-      : null;
-
-  const engineOptions =
-    model && manufacturer
-      ? carData.engines[
-          `${manufacturer} ${model}` as keyof typeof carData.engines
-        ]?.map((e) => (
-          <SelectItem key={e} value={e}>
-            {e}
-          </SelectItem>
-        ))
-      : null;
+  const calculateTunedPerformance = (performanceData: any) => {
+    const tunedValues = { ...performanceData.original };
+    
+    tuningOptions.forEach((option) => {
+      const mappedOption = tuningOptionsMapping[option];
+      const tuningEffect = performanceData[mappedOption];
+      if (tuningEffect) {
+        tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(2);
+        tunedValues.torque = +(tunedValues.torque + tuningEffect.torque).toFixed(2);
+        tunedValues.vmax = +(tunedValues.vmax + tuningEffect.vmax).toFixed(2);
+        tunedValues.acceleration = +(tunedValues.acceleration + tuningEffect.acceleration).toFixed(2);
+      }
+    });
+    
+    setTunedPerformance(tunedValues);
+  };
 
   return (
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6 text-center text-white">
         Car Tuning Configurator
       </h1>
+      
       <div className="bg-white rounded-xl p-6 mb-6">
-        <h2 className="text-xl font-semibold mb-6">
-          Model selection
-        </h2>
+        <h2 className="text-xl font-semibold mb-6">Model selection</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Select
-            onValueChange={(value: Manufacturer | "") => setManufacturer(value)}
-          >
+          <Select onValueChange={(value: Manufacturer | "") => setManufacturer(value)}>
             <SelectTrigger>
               <SelectValue placeholder="Select Manufacturer" />
             </SelectTrigger>
@@ -523,14 +622,12 @@ export const CarTuningConfigurator = () => {
           >
             <SelectTrigger>
               <SelectValue
-                placeholder={
-                  manufacturer ? "Select Model" : "Select Manufacturer first"
-                }
+                placeholder={manufacturer ? "Select Model" : "Select Manufacturer first"}
               />
             </SelectTrigger>
             <SelectContent>
               {manufacturer &&
-                carData.models[manufacturer as Manufacturer]?.map((m) => (
+                carData.models[manufacturer]?.map((m) => (
                   <SelectItem key={m} value={m}>
                     {m}
                   </SelectItem>
@@ -540,36 +637,40 @@ export const CarTuningConfigurator = () => {
 
           <Select onValueChange={setEngine} disabled={!model || !manufacturer}>
             <SelectTrigger>
-              <SelectValue
-                placeholder={model ? "Select Engine" : "Select Model first"}
-              />
+              <SelectValue placeholder={model ? "Select Engine" : "Select Model first"} />
             </SelectTrigger>
-            <SelectContent>{engineOptions}</SelectContent>
+            <SelectContent>
+              {model &&
+                manufacturer &&
+                carData.engines[`${manufacturer} ${model}` as ModelKeys]?.map((e) => (
+                  <SelectItem key={e} value={e}>
+                    {e}
+                  </SelectItem>
+                ))}
+            </SelectContent>
           </Select>
         </div>
       </div>
 
       {engine && (
         <div className="bg-white rounded-xl p-6">
-            <h2 className="text-xl font-semibold mb-6">
-              Tuning Options
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {carData.tuningOptions.map((option) => (
-                <div key={option} className="flex items-center space-x-2">
-                  <Switch
-                    id={option}
-                    checked={tuningOptions.includes(option)}
-                    onCheckedChange={() => handleTuningOptionChange(option)}
-                  />
-                  <Label htmlFor={option}>{option}</Label>
-                </div>
-              ))}
-            </div>
+          <h2 className="text-xl font-semibold mb-6">Tuning Options</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {carData.tuningOptions.map((option) => (
+              <div key={option} className="flex items-center space-x-2">
+                <Switch
+                  id={option}
+                  checked={tuningOptions.includes(option)}
+                  onCheckedChange={() => handleTuningOptionChange(option)}
+                />
+                <Label htmlFor={option}>{option}</Label>
+              </div>
+            ))}
           </div>
+        </div>
       )}
 
-      {performanceData && (
+      {originalPerformance && tunedPerformance && (
         <>
           {model && engine && (
             <h2 className="text-3xl font-bold mb-6 text-white text-center pt-20">
@@ -586,41 +687,28 @@ export const CarTuningConfigurator = () => {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-2xl font-bold">
-                      {performanceData.original.power}HP
-                    </p>
+                    <p className="text-2xl font-bold">{originalPerformance.power}HP</p>
                     <p className="text-sm text-muted-foreground">POWER</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">
-                      {performanceData.original.torque}Nm
-                    </p>
+                    <p className="text-2xl font-bold">{originalPerformance.torque}Nm</p>
                     <p className="text-sm text-muted-foreground">TORQUE</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">
-                      {performanceData.original.vmax}km/h
-                    </p>
+                    <p className="text-2xl font-bold">{originalPerformance.vmax}km/h</p>
                     <p className="text-sm text-muted-foreground">VMAX</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">
-                      {performanceData.original.acceleration}s
-                    </p>
+                    <p className="text-2xl font-bold">{originalPerformance.acceleration}s</p>
                     <p className="text-sm text-muted-foreground">0-100</p>
                   </div>
                   <div className="col-span-2">
-                    <p className="text-2xl font-bold">
-                      {performanceData.original.displacement}cm³
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      DISPLACEMENT
-                    </p>
+                    <p className="text-2xl font-bold">{originalPerformance.displacement}cm³</p>
+                    <p className="text-sm text-muted-foreground">DISPLACEMENT</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className="text-xl font-semibold">
@@ -630,36 +718,24 @@ export const CarTuningConfigurator = () => {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-2xl font-bold">
-                      {performanceData.tuned.power}HP
-                    </p>
+                    <p className="text-2xl font-bold">{tunedPerformance.power}HP</p>
                     <p className="text-sm text-muted-foreground">POWER (PP)</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">
-                      {performanceData.tuned.torque}Nm
-                    </p>
+                    <p className="text-2xl font-bold">{tunedPerformance.torque}Nm</p>
                     <p className="text-sm text-muted-foreground">TORQUE (PP)</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">
-                      {performanceData.tuned.vmax}km/h
-                    </p>
+                    <p className="text-2xl font-bold">{tunedPerformance.vmax}km/h</p>
                     <p className="text-sm text-muted-foreground">VMAX (PP)</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">
-                      {performanceData.tuned.acceleration}s
-                    </p>
+                    <p className="text-2xl font-bold">{tunedPerformance.acceleration}s</p>
                     <p className="text-sm text-muted-foreground">0-100 (PP)</p>
                   </div>
                   <div className="col-span-2">
-                    <p className="text-2xl font-bold">
-                      {performanceData.tuned.displacement}cm³
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      DISPLACEMENT
-                    </p>
+                    <p className="text-2xl font-bold">{tunedPerformance.displacement}cm³</p>
+                    <p className="text-sm text-muted-foreground">DISPLACEMENT</p>
                   </div>
                 </div>
               </CardContent>
