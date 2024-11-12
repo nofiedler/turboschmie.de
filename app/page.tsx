@@ -64,7 +64,7 @@ const items = [
 export default function Home() {
   return (
     <div className="relative  w-full">
-      <div className="min-h-screen w-full flex flex-col items-center justify-center pt-44">
+      <div className="min-h-screen w-full flex flex-col items-center justify-center pt-24 md:pt-44">
         <div className="flex justify-center">
           <Image
             src={logo}
@@ -74,18 +74,18 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="text-4xl text-center mx-auto text-neutral-600 font-light pt-36">
+        <div className="text-2xl md:text-4xl text-center mx-auto text-neutral-600 font-light pt-10 md:pt-36">
           We deliver{" "}
           <a className="text-neutral-100 underline underline-offset-4 decoration-slate-100 decoration-1">
             expert solutions
           </a>{" "}
           for high-performance sports cars... <br />
           <FlipWords
-            className="text-5xl font-bold text-neutral-100 text-center pt-8"
+            className="text-3xl md:text-5xl font-bold text-neutral-100 text-center pt-4 md:pt-8"
             words={words}
           />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center pt-6">
           <HoverBorderGradient containerClassName="rounded-full" as="button">
             <div className="flex items-center space-x-2">
               <span>&nbsp;Book Your Consultation</span>
