@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Select,
   SelectContent,
@@ -16,11 +16,11 @@ const tuningOptionsMapping: { [key: string]: string } = {
   "ECU Remapping": "Chiptuning",
   "Catless Kit": "Downpipes",
   "Exhaust Manifold": "Faecherkruemmer",
-  "Turbocharger": "Turbolader",
-  "Intercooler": "Ladeluftkuehler",
+  Turbocharger: "Turbolader",
+  Intercooler: "Ladeluftkuehler",
   "AK-47-Sound": "AK47",
   "Performance Air Filter": "Rennfilter",
-  "Exhaust System": "Auspuffanlage"
+  "Exhaust System": "Auspuffanlage",
 };
 // Mock data structure with more engine options
 const carData = {
@@ -541,8 +541,37 @@ export const CarTuningConfigurator = () => {
   const [model, setModel] = useState<ModelKeys | "">("");
   const [engine, setEngine] = useState("");
   const [tuningOptions, setTuningOptions] = useState<string[]>([]);
-  const [originalPerformance, setOriginalPerformance] = useState<PerformanceMetrics | null>(null);
-  const [tunedPerformance, setTunedPerformance] = useState<PerformanceMetrics | null>(null);
+  const [originalPerformance, setOriginalPerformance] =
+    useState<PerformanceMetrics | null>(null);
+  const [tunedPerformance, setTunedPerformance] =
+    useState<PerformanceMetrics | null>(null);
+
+  const calculateTunedPerformance = useCallback(
+    (performanceData: {
+      original: PerformanceMetrics;
+      [key: string]: PerformanceMetrics;
+    }) => {
+      const tunedValues = { ...performanceData.original };
+      tuningOptions.forEach((option) => {
+        const mappedOption = tuningOptionsMapping[option];
+        const tuningEffect = performanceData[mappedOption];
+        if (tuningEffect) {
+          tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(
+            2
+          );
+          tunedValues.torque = +(
+            tunedValues.torque + tuningEffect.torque
+          ).toFixed(2);
+          tunedValues.vmax = +(tunedValues.vmax + tuningEffect.vmax).toFixed(2);
+          tunedValues.acceleration = +(
+            tunedValues.acceleration + tuningEffect.acceleration
+          ).toFixed(2);
+        }
+      });
+      setTunedPerformance(tunedValues);
+    },
+    [tuningOptions]
+  );
 
   useEffect(() => {
     setModel("");
@@ -561,37 +590,22 @@ export const CarTuningConfigurator = () => {
 
   useEffect(() => {
     if (manufacturer && model && engine) {
-      const performanceData = (carData.performanceData as unknown as PerformanceData)[
-        `${manufacturer} ${model}`
-      ]?.[engine];
+      const performanceData = (
+        carData.performanceData as unknown as PerformanceData
+      )[`${manufacturer} ${model}`]?.[engine];
       if (performanceData) {
         setOriginalPerformance(performanceData.original);
         calculateTunedPerformance(performanceData);
       }
     }
-  }, [manufacturer, model, engine, tuningOptions]);
+  }, [manufacturer, model, engine, tuningOptions, calculateTunedPerformance]);
 
   const handleTuningOptionChange = (option: string) => {
     setTuningOptions((prev) =>
-      prev.includes(option) ? prev.filter((item) => item !== option) : [...prev, option]
+      prev.includes(option)
+        ? prev.filter((item) => item !== option)
+        : [...prev, option]
     );
-  };
-
-  const calculateTunedPerformance = (performanceData: any) => {
-    const tunedValues = { ...performanceData.original };
-    
-    tuningOptions.forEach((option) => {
-      const mappedOption = tuningOptionsMapping[option];
-      const tuningEffect = performanceData[mappedOption];
-      if (tuningEffect) {
-        tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(2);
-        tunedValues.torque = +(tunedValues.torque + tuningEffect.torque).toFixed(2);
-        tunedValues.vmax = +(tunedValues.vmax + tuningEffect.vmax).toFixed(2);
-        tunedValues.acceleration = +(tunedValues.acceleration + tuningEffect.acceleration).toFixed(2);
-      }
-    });
-    
-    setTunedPerformance(tunedValues);
   };
 
   return (
@@ -599,11 +613,13 @@ export const CarTuningConfigurator = () => {
       <h1 className="text-3xl font-bold mb-6 text-center text-white">
         Car Tuning Configurator
       </h1>
-      
+
       <div className="bg-white rounded-xl p-6 mb-6">
         <h2 className="text-xl font-semibold mb-6">Model selection</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Select onValueChange={(value: Manufacturer | "") => setManufacturer(value)}>
+          <Select
+            onValueChange={(value: Manufacturer | "") => setManufacturer(value)}
+          >
             <SelectTrigger>
               <SelectValue placeholder="Select Manufacturer" />
             </SelectTrigger>
@@ -622,7 +638,9 @@ export const CarTuningConfigurator = () => {
           >
             <SelectTrigger>
               <SelectValue
-                placeholder={manufacturer ? "Select Model" : "Select Manufacturer first"}
+                placeholder={
+                  manufacturer ? "Select Model" : "Select Manufacturer first"
+                }
               />
             </SelectTrigger>
             <SelectContent>
@@ -637,16 +655,20 @@ export const CarTuningConfigurator = () => {
 
           <Select onValueChange={setEngine} disabled={!model || !manufacturer}>
             <SelectTrigger>
-              <SelectValue placeholder={model ? "Select Engine" : "Select Model first"} />
+              <SelectValue
+                placeholder={model ? "Select Engine" : "Select Model first"}
+              />
             </SelectTrigger>
             <SelectContent>
               {model &&
                 manufacturer &&
-                carData.engines[`${manufacturer} ${model}` as ModelKeys]?.map((e) => (
-                  <SelectItem key={e} value={e}>
-                    {e}
-                  </SelectItem>
-                ))}
+                carData.engines[`${manufacturer} ${model}` as ModelKeys]?.map(
+                  (e) => (
+                    <SelectItem key={e} value={e}>
+                      {e}
+                    </SelectItem>
+                  )
+                )}
             </SelectContent>
           </Select>
         </div>
@@ -687,24 +709,36 @@ export const CarTuningConfigurator = () => {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-2xl font-bold">{originalPerformance.power}HP</p>
+                    <p className="text-2xl font-bold">
+                      {originalPerformance.power}HP
+                    </p>
                     <p className="text-sm text-muted-foreground">POWER</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">{originalPerformance.torque}Nm</p>
+                    <p className="text-2xl font-bold">
+                      {originalPerformance.torque}Nm
+                    </p>
                     <p className="text-sm text-muted-foreground">TORQUE</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">{originalPerformance.vmax}km/h</p>
+                    <p className="text-2xl font-bold">
+                      {originalPerformance.vmax}km/h
+                    </p>
                     <p className="text-sm text-muted-foreground">VMAX</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">{originalPerformance.acceleration}s</p>
+                    <p className="text-2xl font-bold">
+                      {originalPerformance.acceleration}s
+                    </p>
                     <p className="text-sm text-muted-foreground">0-100</p>
                   </div>
                   <div className="col-span-2">
-                    <p className="text-2xl font-bold">{originalPerformance.displacement}cm³</p>
-                    <p className="text-sm text-muted-foreground">DISPLACEMENT</p>
+                    <p className="text-2xl font-bold">
+                      {originalPerformance.displacement}cm³
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      DISPLACEMENT
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -718,24 +752,36 @@ export const CarTuningConfigurator = () => {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-2xl font-bold">{tunedPerformance.power}HP</p>
+                    <p className="text-2xl font-bold">
+                      {tunedPerformance.power}HP
+                    </p>
                     <p className="text-sm text-muted-foreground">POWER (PP)</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">{tunedPerformance.torque}Nm</p>
+                    <p className="text-2xl font-bold">
+                      {tunedPerformance.torque}Nm
+                    </p>
                     <p className="text-sm text-muted-foreground">TORQUE (PP)</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">{tunedPerformance.vmax}km/h</p>
+                    <p className="text-2xl font-bold">
+                      {tunedPerformance.vmax}km/h
+                    </p>
                     <p className="text-sm text-muted-foreground">VMAX (PP)</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">{tunedPerformance.acceleration}s</p>
+                    <p className="text-2xl font-bold">
+                      {tunedPerformance.acceleration}s
+                    </p>
                     <p className="text-sm text-muted-foreground">0-100 (PP)</p>
                   </div>
                   <div className="col-span-2">
-                    <p className="text-2xl font-bold">{tunedPerformance.displacement}cm³</p>
-                    <p className="text-sm text-muted-foreground">DISPLACEMENT</p>
+                    <p className="text-2xl font-bold">
+                      {tunedPerformance.displacement}cm³
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      DISPLACEMENT
+                    </p>
                   </div>
                 </div>
               </CardContent>
