@@ -12,6 +12,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import carData from "../../app/configurator/carData.json";
+import CountUp from "react-countup";
 
 const tuningOptionsMapping: { [key: string]: string } = {
   "ECU Remapping": "Chiptuning",
@@ -148,7 +149,7 @@ export const CarTuningConfigurator = () => {
         Car Tuning Configurator
       </h1>
 
-      <Card className="mb-10">
+      <Card className="mb-6">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">
             Model Selection
@@ -256,7 +257,7 @@ export const CarTuningConfigurator = () => {
             </h2>
           )}
           <div className="grid grid-cols-2 gap-6 text-center">
-            <Card>
+            <Card className="bg-transparent border-transparent text-white">
               <CardHeader>
                 <CardTitle className="text-xl font-semibold">
                   Original Performance
@@ -299,7 +300,7 @@ export const CarTuningConfigurator = () => {
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-transparent border-transparent text-white">
               <CardHeader>
                 <CardTitle className="text-xl font-semibold">
                   Tuned Performance
@@ -308,32 +309,103 @@ export const CarTuningConfigurator = () => {
               <CardContent>
                 <div className="">
                   <div>
-                    <p className="text-2xl font-bold">
-                      {tunedPerformance.power}HP
+                    <p
+                      className={`text-2xl font-bold ${
+                        tunedPerformance.power !== originalPerformance.power
+                          ? "text-green-500"
+                          : ""
+                      }`}
+                    >
+                      <CountUp
+                        start={originalPerformance.power}
+                        end={tunedPerformance.power}
+                        duration={2}
+                        decimals={0}
+                        separator="."
+                        suffix="HP"
+                        easingFn={(t, b, c, d) => {
+                          return c * (-Math.pow(2, (-10 * t) / d) + 1) + b;
+                        }}
+                      />
                     </p>
                     <p className="text-sm text-muted-foreground">POWER (PP)</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">
-                      {tunedPerformance.torque}Nm
+                    <p
+                      className={`text-2xl font-bold ${
+                        tunedPerformance.torque !== originalPerformance.torque
+                          ? "text-green-500"
+                          : ""
+                      }`}
+                    >
+                      <CountUp
+                        start={originalPerformance.torque}
+                        end={tunedPerformance.torque}
+                        duration={2}
+                        decimals={0}
+                        separator="."
+                        suffix="Nm"
+                        easingFn={(t, b, c, d) => {
+                          return c * (-Math.pow(2, (-10 * t) / d) + 1) + b;
+                        }}
+                      />
                     </p>
                     <p className="text-sm text-muted-foreground">TORQUE (PP)</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">
-                      {tunedPerformance.vmax}km/h
+                    <p
+                      className={`text-2xl font-bold ${
+                        tunedPerformance.vmax !== originalPerformance.vmax
+                          ? "text-green-500"
+                          : ""
+                      }`}
+                    >
+                      <CountUp
+                        start={originalPerformance.vmax}
+                        end={tunedPerformance.vmax}
+                        duration={2}
+                        decimals={0}
+                        separator="."
+                        suffix="km/h"
+                        easingFn={(t, b, c, d) => {
+                          return c * (-Math.pow(2, (-10 * t) / d) + 1) + b;
+                        }}
+                      />
                     </p>
                     <p className="text-sm text-muted-foreground">VMAX (PP)</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">
-                      {tunedPerformance.acceleration}s
+                    <p
+                      className={`text-2xl font-bold ${
+                        tunedPerformance.acceleration !==
+                        originalPerformance.acceleration
+                          ? "text-green-500"
+                          : ""
+                      }`}
+                    >
+                      <CountUp
+                        start={originalPerformance.acceleration}
+                        end={tunedPerformance.acceleration}
+                        duration={2}
+                        decimals={2}
+                        separator="."
+                        suffix="s"
+                        easingFn={(t, b, c, d) => {
+                          return c * (-Math.pow(2, (-10 * t) / d) + 1) + b;
+                        }}
+                      />
                     </p>
                     <p className="text-sm text-muted-foreground">0-100 (PP)</p>
                   </div>
                   <div className="col-span-2">
                     <p className="text-2xl font-bold">
-                      {tunedPerformance.displacement}cm³
+                      <CountUp
+                        start={originalPerformance.displacement}
+                        end={tunedPerformance.displacement}
+                        duration={2}
+                        separator="."
+                        suffix="cm³"
+                      />
                     </p>
                     <p className="text-sm text-muted-foreground">
                       DISPLACEMENT
