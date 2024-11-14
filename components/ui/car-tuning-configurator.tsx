@@ -16,11 +16,11 @@ import CountUp from "react-countup";
 
 const tuningOptionsMapping: { [key: string]: string } = {
   "ECU Remapping": "Chiptuning",
-  "Catless Kit": "Catless Kit",
-  "Exhaust Manifold": "Fächerkrümmer",
-  Turbocharger: "Turbolader",
-  Intercooler: "Ladeluftkühler",
-  "AK-47-Sound": "AK-47-Sound",
+  "Catless Kit": "Downpipes",
+  "Exhaust Manifold": "Faecherkruemmer",
+  "Turbocharger": "Turbolader",
+  "Intercooler": "Ladeluftkuehler",
+  "AK-47-Sound": "AK47",
   "Performance Air Filter": "Rennfilter",
   "Exhaust System": "Auspuffanlage",
 };
