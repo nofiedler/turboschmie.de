@@ -13,13 +13,21 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import carData from "../../app/configurator/carData.json";
 import CountUp from "react-countup";
+import {
+  Select_with_icon,
+  SelectContent_with_icon,
+  SelectItem_with_icon,
+  SelectTrigger_with_icon,
+  SelectValue_with_icon,
+} from "./select_with_icon";
 
+// TODO: Den nachfolgenden Code muss ich noch anpassen
 const tuningOptionsMapping: { [key: string]: string } = {
   "ECU Remapping": "Chiptuning",
   "Catless Kit": "Downpipes",
   "Exhaust Manifold": "Faecherkruemmer",
-  "Turbocharger": "Turbolader",
-  "Intercooler": "Ladeluftkuehler",
+  Turbocharger: "Turbolader",
+  Intercooler: "Ladeluftkuehler",
   "AK-47-Sound": "AK47",
   "Performance Air Filter": "Rennfilter",
   "Exhaust System": "Auspuffanlage",
@@ -157,22 +165,26 @@ export const CarTuningConfigurator = () => {
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Select
+            <Select_with_icon
               onValueChange={(value: Manufacturer | "") =>
                 setManufacturer(value)
               }
             >
-              <SelectTrigger>
-                <SelectValue placeholder="Hersteller auswählen" />
-              </SelectTrigger>
-              <SelectContent>
+              <SelectTrigger_with_icon>
+                <SelectValue_with_icon placeholder="Hersteller auswählen" />
+              </SelectTrigger_with_icon>
+              <SelectContent_with_icon>
                 {carData.manufacturers.map((m) => (
-                  <SelectItem key={m} value={m}>
+                  <SelectItem_with_icon
+                    key={m}
+                    value={m}
+                    logo={`/${m}_Logo.png`}
+                  >
                     {m}
-                  </SelectItem>
+                  </SelectItem_with_icon>
                 ))}
-              </SelectContent>
-            </Select>
+              </SelectContent_with_icon>
+            </Select_with_icon>
 
             <Select
               onValueChange={(value) => setModel(value as ModelKeys | "")}
