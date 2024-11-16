@@ -327,7 +327,7 @@ export const CarTuningConfigurator = () => {
                     <p
                       className={`text-2xl font-bold ${
                         tunedPerformance.power !== originalPerformance.power
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]" 
+                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" 
                           : ""
                       }`}
                     >
@@ -349,7 +349,7 @@ export const CarTuningConfigurator = () => {
                     <p
                       className={`text-2xl font-bold ${
                         tunedPerformance.torque !== originalPerformance.torque
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
                           : ""
                       }`}
                     >
@@ -371,7 +371,7 @@ export const CarTuningConfigurator = () => {
                     <p
                       className={`text-2xl font-bold ${
                         tunedPerformance.vmax !== originalPerformance.vmax
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
                           : ""
                       }`}
                     >
@@ -394,7 +394,7 @@ export const CarTuningConfigurator = () => {
                       className={`text-2xl font-bold ${
                         tunedPerformance.acceleration !==
                         originalPerformance.acceleration
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
                           : ""
                       }`}
                     >
