@@ -65,7 +65,7 @@ export default function RootLayout({
         <FloatingNav navItems={navItems} />
         <main className="relative z-10">
           {children}
-          <Footer />
+          <Footer/>
         </main>
         <SpeedInsights />
       </body>
