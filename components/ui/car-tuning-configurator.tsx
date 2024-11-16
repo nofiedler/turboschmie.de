@@ -238,7 +238,7 @@ export const CarTuningConfigurator = () => {
       </Card>
 
       {engine && (
-        <Card>
+        <Card className="sticky top-6 z-100">
           <CardHeader>
             <CardTitle className="text-xl font-semibold">
               Tuning Optionen
