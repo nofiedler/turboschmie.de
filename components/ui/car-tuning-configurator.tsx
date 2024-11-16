@@ -25,13 +25,13 @@ import {
 // rechte Seite bitte nicht ändern!
 const tuningOptionsMapping: { [key: string]: string } = {
   "Chiptuning": "Chiptuning",
-  "Catless Kit": "Downpipes",
-  "Fächerkrümmer": "Faecherkruemmer",
   "Turbolader": "Turbolader",
-  "Ladeluftkühler": "Ladeluftkuehler",
-  "Pops & Bangs": "AK47",
   "Rennfilter": "Rennfilter",
+  "Catless Kit": "Downpipes",
+  "Ladeluftkühler": "Ladeluftkuehler",
   "Auspuffanlage": "Auspuffanlage",
+  "Fächerkrümmer": "Faecherkruemmer",
+  "Pops & Bangs": "AK47",
 };
 
 type PerformanceMetrics = {
