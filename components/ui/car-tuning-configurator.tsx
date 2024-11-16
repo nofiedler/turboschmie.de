@@ -21,16 +21,17 @@ import {
   SelectValue_with_icon,
 } from "./select_with_icon";
 
-// TODO: Den nachfolgenden Code muss ich noch anpassen
+// linke Seite ändert die angezeigten Namen der Optionen
+// rechte Seite bitte nicht ändern!
 const tuningOptionsMapping: { [key: string]: string } = {
-  "ECU Remapping": "Chiptuning",
+  "Chiptuning": "Chiptuning",
   "Catless Kit": "Downpipes",
-  "Exhaust Manifold": "Faecherkruemmer",
-  Turbocharger: "Turbolader",
-  Intercooler: "Ladeluftkuehler",
-  "AK-47-Sound": "AK47",
-  "Performance Air Filter": "Rennfilter",
-  "Exhaust System": "Auspuffanlage",
+  "Fächerkrümmer": "Faecherkruemmer",
+  "Turbolader": "Turbolader",
+  "Ladeluftkühler": "Ladeluftkuehler",
+  "Pops & Bangs": "AK47",
+  "Rennfilter": "Rennfilter",
+  "Auspuffanlage": "Auspuffanlage",
 };
 
 type PerformanceMetrics = {
@@ -245,7 +246,7 @@ export const CarTuningConfigurator = () => {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {carData.tuningOptions.map((option) => (
+              {Object.keys(tuningOptionsMapping).map((option) => (
                 <div key={option} className="flex items-center space-x-2">
                   <Switch
                     id={option}
@@ -257,7 +258,7 @@ export const CarTuningConfigurator = () => {
                       !isTuningOptionApplicable(option, performanceData)
                     }
                   />
-                  <Label htmlFor={option}>{tuningOptionsMapping[option]}</Label>
+                  <Label htmlFor={option}>{option}</Label>
                 </div>
               ))}
             </div>
