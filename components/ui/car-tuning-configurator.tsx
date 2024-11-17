@@ -157,7 +157,7 @@ export const CarTuningConfigurator = () => {
       <h1 className="text-3xl font-bold mb-6 text-center text-white">
         Tuning Konfigurator
       </h1>
-
+  
       <Card className="mb-6">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">
@@ -167,9 +167,7 @@ export const CarTuningConfigurator = () => {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Select_with_icon
-              onValueChange={(value: Manufacturer | "") =>
-                setManufacturer(value)
-              }
+              onValueChange={(value: Manufacturer | "") => setManufacturer(value)}
             >
               <SelectTrigger_with_icon>
                 <SelectValue_with_icon placeholder="Hersteller auswählen" />
@@ -186,7 +184,7 @@ export const CarTuningConfigurator = () => {
                 ))}
               </SelectContent_with_icon>
             </Select_with_icon>
-
+  
             <Select
               onValueChange={(value) => setModel(value as ModelKeys | "")}
               disabled={!manufacturer}
@@ -209,7 +207,7 @@ export const CarTuningConfigurator = () => {
                   ))}
               </SelectContent>
             </Select>
-
+  
             <Select
               onValueChange={setEngine}
               disabled={!model || !manufacturer}
@@ -236,9 +234,9 @@ export const CarTuningConfigurator = () => {
           </div>
         </CardContent>
       </Card>
-
+  
       {engine && (
-        <Card className="sticky top-6 z-100">
+        <Card className="sticky top-6 z-10">
           <CardHeader>
             <CardTitle className="text-xl font-semibold">
               Tuning Optionen
@@ -265,9 +263,9 @@ export const CarTuningConfigurator = () => {
           </CardContent>
         </Card>
       )}
-
+  
       {originalPerformance && tunedPerformance && (
-        <>
+        <div className="relative z-1">
           {model && engine && (
             <h2 className="text-3xl font-bold mb-6 text-white text-center pt-10">
               {manufacturer} {model} - {engine}
@@ -327,7 +325,7 @@ export const CarTuningConfigurator = () => {
                     <p
                       className={`text-2xl font-bold ${
                         tunedPerformance.power !== originalPerformance.power
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" 
+                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
                           : ""
                       }`}
                     >
@@ -428,7 +426,7 @@ export const CarTuningConfigurator = () => {
               </CardContent>
             </Card>
           </div>
-        </>
+        </div>
       )}
     </div>
   );
