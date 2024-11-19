@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import carData from "../../app/configurator/carData.json";
 import CountUp from "react-countup";
+import { Separator } from "@/components/ui/separator"
 import {
   Select_with_icon,
   SelectContent_with_icon,
@@ -271,57 +272,61 @@ export const CarTuningConfigurator = () => {
               {manufacturer} {model} - {engine}
             </h2>
           )}
-          <div className="grid grid-cols-2 gap-6 text-center">
+          <div className="grid grid-cols-2 gap-4 text-center">
             <Card className="bg-transparent border-transparent text-white">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold">
+                <CardTitle className="text-xl font-bold">
                   Original Performance
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="">
-                  <div>
+                <div className="flex flex-col items-center">
+                  <div className="pt-2">
                     <p className="text-2xl font-bold">
                       {originalPerformance.power}PS
                     </p>
-                    <p className="text-sm text-muted-foreground">LEISTUNG</p>
+                    <p className="text-sm text-muted-foreground pb-2">LEISTUNG</p>
+                    <Separator className="w-32"/>
                   </div>
-                  <div>
+                  <div className="pt-2">
                     <p className="text-2xl font-bold">
                       {originalPerformance.torque}Nm
                     </p>
-                    <p className="text-sm text-muted-foreground">DREHMOMENT</p>
+                    <p className="text-sm text-muted-foreground pb-2">DREHMOMENT</p>
+                    <Separator className="w-32"/>
                   </div>
-                  <div>
+                  <div className="pt-2">
                     <p className="text-2xl font-bold">
                       {originalPerformance.vmax}km/h
                     </p>
-                    <p className="text-sm text-muted-foreground">VMAX</p>
+                    <p className="text-sm text-muted-foreground pb-2">VMAX</p>
+                    <Separator className="w-32"/>
                   </div>
-                  <div>
+                  <div className="pt-2">
                     <p className="text-2xl font-bold">
                       {originalPerformance.acceleration}s
                     </p>
-                    <p className="text-sm text-muted-foreground">0-100</p>
+                    <p className="text-sm text-muted-foreground pb-2">0-100</p>
+                    <Separator className="w-32"/>
                   </div>
-                  <div className="col-span-2">
+                  <div className="pt-2">
                     <p className="text-2xl font-bold">
                       {originalPerformance.displacement}cm³
                     </p>
-                    <p className="text-sm text-muted-foreground">HUBRAUM</p>
+                    <p className="text-sm text-muted-foreground pb-2">HUBRAUM</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
             <Card className="bg-transparent border-transparent text-white">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold">
+                <CardTitle className="text-xl font-bold">
                   Tuned Performance
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="">
-                  <div>
+                <div className="flex flex-col items-center">
+                  <div className="pt-2">
                     <p
                       className={`text-2xl font-bold ${
                         tunedPerformance.power !== originalPerformance.power
@@ -341,9 +346,10 @@ export const CarTuningConfigurator = () => {
                         }}
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">LEISTUNG</p>
+                    <p className="text-sm text-muted-foreground pb-2">LEISTUNG</p>
+                    <Separator className="w-32"/>
                   </div>
-                  <div>
+                  <div className="pt-2">
                     <p
                       className={`text-2xl font-bold ${
                         tunedPerformance.torque !== originalPerformance.torque
@@ -363,9 +369,10 @@ export const CarTuningConfigurator = () => {
                         }}
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">DREHMOMENT</p>
+                    <p className="text-sm text-muted-foreground pb-2">DREHMOMENT</p>
+                    <Separator className="w-32"/>
                   </div>
-                  <div>
+                  <div className="pt-2">
                     <p
                       className={`text-2xl font-bold ${
                         tunedPerformance.vmax !== originalPerformance.vmax
@@ -385,9 +392,10 @@ export const CarTuningConfigurator = () => {
                         }}
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">VMAX</p>
+                    <p className="text-sm text-muted-foreground pb-2">VMAX</p>
+                    <Separator className="w-32"/>
                   </div>
-                  <div>
+                  <div className="pt-2">
                     <p
                       className={`text-2xl font-bold ${
                         tunedPerformance.acceleration !==
@@ -408,9 +416,10 @@ export const CarTuningConfigurator = () => {
                         }}
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">0-100</p>
+                    <p className="text-sm text-muted-foreground pb-2">0-100</p>
+                    <Separator className="w-32"/>
                   </div>
-                  <div className="col-span-2">
+                  <div className="pt-2">
                     <p className="text-2xl font-bold">
                       <CountUp
                         start={originalPerformance.displacement}
@@ -420,7 +429,7 @@ export const CarTuningConfigurator = () => {
                         suffix="cm³"
                       />
                     </p>
-                    <p className="text-sm text-muted-foreground">HUBRAUM</p>
+                    <p className="text-sm text-muted-foreground pb-2">HUBRAUM</p>
                   </div>
                 </div>
               </CardContent>
