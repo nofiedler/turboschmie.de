@@ -131,14 +131,13 @@ export function ContactForm() {
             <FormField
               control={form.control}
               name="file"
-              render={({ field: { onChange, ...rest } }) => (
+              render={({ field: { onChange } }) => (
                 <FormItem>
                   <FormLabel>Vehicle Registration Document</FormLabel>
                   <FormControl>
                     <Input
                       type="file"
                       onChange={(e) => onChange(e.target.files?.[0])}
-                      // Entferne den value-Prop
                     />
                   </FormControl>
                   <FormDescription>
