@@ -12,8 +12,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import carData from "../../app/configurator/carData.json";
-import CountUp from "react-countup";
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator";
 import {
   Select_with_icon,
   SelectContent_with_icon,
@@ -158,7 +157,7 @@ export const CarTuningConfigurator = () => {
       <h1 className="text-3xl font-bold mb-6 text-center text-white">
         Tuning Konfigurator
       </h1>
-  
+
       <Card className="mb-6">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">
@@ -168,7 +167,9 @@ export const CarTuningConfigurator = () => {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Select_with_icon
-              onValueChange={(value: Manufacturer | "") => setManufacturer(value)}
+              onValueChange={(value: Manufacturer | "") =>
+                setManufacturer(value)
+              }
             >
               <SelectTrigger_with_icon>
                 <SelectValue_with_icon placeholder="Hersteller auswählen" />
@@ -185,7 +186,7 @@ export const CarTuningConfigurator = () => {
                 ))}
               </SelectContent_with_icon>
             </Select_with_icon>
-  
+
             <Select
               onValueChange={(value) => setModel(value as ModelKeys | "")}
               disabled={!manufacturer}
@@ -208,7 +209,7 @@ export const CarTuningConfigurator = () => {
                   ))}
               </SelectContent>
             </Select>
-  
+
             <Select
               onValueChange={setEngine}
               disabled={!model || !manufacturer}
@@ -235,7 +236,7 @@ export const CarTuningConfigurator = () => {
           </div>
         </CardContent>
       </Card>
-  
+
       {engine && (
         <Card className="sticky top-6 z-10">
           <CardHeader>
@@ -264,7 +265,7 @@ export const CarTuningConfigurator = () => {
           </CardContent>
         </Card>
       )}
-  
+
       {originalPerformance && tunedPerformance && (
         <div className="relative z-1">
           {model && engine && (
@@ -273,167 +274,52 @@ export const CarTuningConfigurator = () => {
             </h2>
           )}
           <div className="grid grid-cols-2 gap-4 text-center">
-            <Card className="bg-transparent border-transparent text-white">
-              <CardHeader>
-                <CardTitle className="text-xl font-bold">
-                  Original Performance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-col items-center">
-                  <div className="pt-2">
-                    <p className="text-2xl font-bold">
-                      {originalPerformance.power}PS
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">LEISTUNG</p>
-                    <Separator className="w-32"/>
-                  </div>
-                  <div className="pt-2">
-                    <p className="text-2xl font-bold">
-                      {originalPerformance.torque}Nm
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">DREHMOMENT</p>
-                    <Separator className="w-32"/>
-                  </div>
-                  <div className="pt-2">
-                    <p className="text-2xl font-bold">
-                      {originalPerformance.vmax}km/h
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">VMAX</p>
-                    <Separator className="w-32"/>
-                  </div>
-                  <div className="pt-2">
-                    <p className="text-2xl font-bold">
-                      {originalPerformance.acceleration}s
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">0-100</p>
-                    <Separator className="w-32"/>
-                  </div>
-                  <div className="pt-2">
-                    <p className="text-2xl font-bold">
-                      {originalPerformance.displacement}cm³
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">HUBRAUM</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="bg-transparent border-transparent text-white">
-              <CardHeader>
-                <CardTitle className="text-xl font-bold">
-                  Tuned Performance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-col items-center">
-                  <div className="pt-2">
-                    <p
-                      className={`text-2xl font-bold ${
-                        tunedPerformance.power !== originalPerformance.power
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-                          : ""
-                      }`}
-                    >
-                      <CountUp
-                        start={originalPerformance.power}
-                        end={tunedPerformance.power}
-                        duration={2}
-                        decimals={0}
-                        separator="."
-                        suffix="PS"
-                        easingFn={(t, b, c, d) => {
-                          return c * (-Math.pow(2, (-10 * t) / d) + 1) + b;
-                        }}
-                      />
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">LEISTUNG</p>
-                    <Separator className="w-32"/>
-                  </div>
-                  <div className="pt-2">
-                    <p
-                      className={`text-2xl font-bold ${
-                        tunedPerformance.torque !== originalPerformance.torque
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-                          : ""
-                      }`}
-                    >
-                      <CountUp
-                        start={originalPerformance.torque}
-                        end={tunedPerformance.torque}
-                        duration={2}
-                        decimals={0}
-                        separator="."
-                        suffix="Nm"
-                        easingFn={(t, b, c, d) => {
-                          return c * (-Math.pow(2, (-10 * t) / d) + 1) + b;
-                        }}
-                      />
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">DREHMOMENT</p>
-                    <Separator className="w-32"/>
-                  </div>
-                  <div className="pt-2">
-                    <p
-                      className={`text-2xl font-bold ${
-                        tunedPerformance.vmax !== originalPerformance.vmax
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-                          : ""
-                      }`}
-                    >
-                      <CountUp
-                        start={originalPerformance.vmax}
-                        end={tunedPerformance.vmax}
-                        duration={2}
-                        decimals={0}
-                        separator="."
-                        suffix="km/h"
-                        easingFn={(t, b, c, d) => {
-                          return c * (-Math.pow(2, (-10 * t) / d) + 1) + b;
-                        }}
-                      />
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">VMAX</p>
-                    <Separator className="w-32"/>
-                  </div>
-                  <div className="pt-2">
-                    <p
-                      className={`text-2xl font-bold ${
-                        tunedPerformance.acceleration !==
-                        originalPerformance.acceleration
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-                          : ""
-                      }`}
-                    >
-                      <CountUp
-                        start={originalPerformance.acceleration}
-                        end={tunedPerformance.acceleration}
-                        duration={2}
-                        decimals={2}
-                        separator="."
-                        suffix="s"
-                        easingFn={(t, b, c, d) => {
-                          return c * (-Math.pow(2, (-10 * t) / d) + 1) + b;
-                        }}
-                      />
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">0-100</p>
-                    <Separator className="w-32"/>
-                  </div>
-                  <div className="pt-2">
-                    <p className="text-2xl font-bold">
-                      <CountUp
-                        start={originalPerformance.displacement}
-                        end={tunedPerformance.displacement}
-                        duration={2}
-                        separator="."
-                        suffix="cm³"
-                      />
-                    </p>
-                    <p className="text-sm text-muted-foreground pb-2">HUBRAUM</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {[originalPerformance, tunedPerformance].map(
+              (performance, index) => (
+                <Card
+                  key={index}
+                  className="bg-transparent border-transparent text-white"
+                >
+                  <CardHeader>
+                    <CardTitle className="text-xl font-bold">
+                      {index === 0
+                        ? "Original Performance"
+                        : "Tuned Performance"}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-col items-center">
+                      {[
+                        "power",
+                        "torque",
+                        "vmax",
+                        "acceleration",
+                        "displacement",
+                      ].map((key, idx) => (
+                        <div key={idx} className="pt-2">
+                          <p className="text-2xl font-bold">
+                            {performance[key as keyof PerformanceMetrics]}
+                            {key === "power"
+                              ? "PS"
+                              : key === "torque"
+                              ? "Nm"
+                              : key === "vmax"
+                              ? "km/h"
+                              : key === "acceleration"
+                              ? "s"
+                              : "cm³"}
+                          </p>
+                          <p className="text-sm text-muted-foreground pb-2">
+                            {key.toUpperCase()}
+                          </p>
+                          {idx < 4 && <Separator className="w-32" />}
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            )}
           </div>
         </div>
       )}
