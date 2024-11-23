@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/hooks/use-toast";
 import { submitForm } from "@/app/actions/submit-form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
