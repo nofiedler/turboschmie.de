@@ -10,7 +10,7 @@ export default function Contact() {
     <div className="flex flex-col items-center md:pt-28">
       <div className="container mx-auto">
         <div className="pt-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
             <Card className="mb-6 bg-transparent border-transparent">
               <CardHeader>
                 <CardTitle className="text-xl font-semibold"></CardTitle>
@@ -18,9 +18,7 @@ export default function Contact() {
               <CardContent>
                 <div className="text-white flex items-center justify-center p-4">
                   <div className="max-w-2xl w-full space-y-6 text-center">
-                    <h1 className="text-3xl font-bold">
-                      Kontaktiere uns!
-                    </h1>
+                    <h1 className="text-3xl font-bold">Kontaktiere uns!</h1>
 
                     <div className="space-y-2">
                       <p className="text-xl">Turboschmiede</p>
