@@ -6,9 +6,6 @@ export const MapView = () => {
 
   return (
     <div className="w-full">
-      <h1 className="text-3xl font-bold mb-6 text-center text-white">
-        Anfahrt
-      </h1>
       <iframe
         className="w-full h-[450px] border-0"
         loading="lazy"

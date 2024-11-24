@@ -73,11 +73,11 @@ export function ContactForm() {
   return (
     <Card className="mb-6">
       <CardHeader>
-        <CardTitle className="text-xl font-semibold"></CardTitle>
+        <CardTitle className="text-xl font-semibold">Kontaktformular</CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="mb:space-y-6 space-y-2">
             <FormField
               control={form.control}
               name="name"
