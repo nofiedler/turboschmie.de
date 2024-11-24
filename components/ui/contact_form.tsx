@@ -50,6 +50,7 @@ export function ContactForm() {
     form.setValue("file", file);
   }, [form]);
 
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     const formData = new FormData();
