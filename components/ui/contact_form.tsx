@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -21,20 +21,20 @@ import { submitForm } from "@/app/actions/submit-form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileUpload } from "@/components/ui/file-upload";
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  message: z
-    .string()
-    .min(10, { message: "Message must be at least 10 characters." }),
-  file: z
-    .instanceof(File)
-    .refine((file) => file.size > 0, "Please upload a file."),
-});
-
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  const formSchema = useMemo(() => z.object({
+    name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+    email: z.string().email({ message: "Please enter a valid email address." }),
+    message: z
+      .string()
+      .min(10, { message: "Message must be at least 10 characters." }),
+    file: z
+      .instanceof(File)
+      .refine((file) => file.size > 0, "Please upload a file."),
+  }), []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -45,11 +45,10 @@ export function ContactForm() {
     },
   });
 
-  function handleFileUpload(files: File[]) {
+  const handleFileUpload = useCallback((files: File[]) => {
     const file = files[0];
     form.setValue("file", file);
-  }
-  
+  }, [form]);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
@@ -140,7 +139,7 @@ export function ContactForm() {
             <FormField
               control={form.control}
               name="file"
-              render={({ }) => (
+              render={() => (
                 <FormItem>
                   <FormLabel>Vehicle Registration Document</FormLabel>
                   <FormDescription>

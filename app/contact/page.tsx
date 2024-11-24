@@ -18,7 +18,7 @@ export default function Contact() {
               <CardContent>
                 <div className="text-white flex items-center justify-center p-4">
                   <div className="max-w-2xl w-full space-y-6 text-center">
-                    <h1 className="text-3xl font-bold">Kontaktiere uns!</h1>
+                    <h1 className="text-3xl font-bold">Kontaktieren Sie uns!</h1>
 
                     <div className="space-y-2">
                       <p className="text-xl">Turboschmiede</p>
