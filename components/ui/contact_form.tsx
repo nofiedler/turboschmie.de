@@ -36,12 +36,6 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const [files, setFiles] = useState<File[]>([]);
-  const handleFileUpload = (files: File[]) => {
-    setFiles(files);
-    console.log(files);
-  };
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -50,6 +44,12 @@ export function ContactForm() {
       message: "",
     },
   });
+
+  function handleFileUpload(files: File[]) {
+    const file = files[0];
+    form.setValue("file", file);
+  }
+  
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
@@ -140,7 +140,7 @@ export function ContactForm() {
             <FormField
               control={form.control}
               name="file"
-              render={({ field: { onChange } }) => (
+              render={({ }) => (
                 <FormItem>
                   <FormLabel>Vehicle Registration Document</FormLabel>
                   <FormDescription>
