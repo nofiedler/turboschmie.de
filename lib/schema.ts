@@ -3,19 +3,22 @@ import { z } from 'zod'
 export const contactFormSchema = z.object({
   name: z
     .string()
-    .min(2, { message: 'Name must be at least 2 characters' })
-    .max(32, { message: 'Name must be at most 32 characters' }),
-  email: z.string().email({ message: 'Invalid email address' }),
+    .min(2, { message: 'Name muss mindestens 2 Zeichen lang sein' })
+    .max(32, { message: 'Name darf höchstens 32 Zeichen lang sein' }),
+  email: z.string().email({ message: 'Ungültige E-Mail-Adresse' }),
   message: z
     .string()
-    .min(2, { message: 'Message must be at least 2 characters' })
-    .max(1000, { message: 'Message must be at most 1000 characters' }),
+    .min(2, { message: 'Nachricht muss mindestens 2 Zeichen lang sein' })
+    .max(1000, { message: 'Nachricht darf höchstens 1000 Zeichen lang sein' }),
   file: z
     .instanceof(File)
-    .refine((file) => file.size <= 5000000, `Max file size is 5MB.`)
+    .refine((file) => file.size <= 4 * 1024 * 1024, {
+      message: 'Dateigröße muss 4MB oder weniger sein',
+    })
     .refine(
       (file) => ['image/jpeg', 'image/png', 'application/pdf'].includes(file.type),
-      "Only .jpg, .png, and .pdf files are accepted."
+      {
+        message: 'Datei muss JPG, JPEG, PNG oder PDF sein',
+      }
     ),
 })
-

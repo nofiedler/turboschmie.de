@@ -7,12 +7,18 @@ export async function contactFormAction(
   _prevState: unknown,
   formData: FormData
 ) {
-  const defaultValues = Object.fromEntries(formData.entries())
+  const file = formData.get('file') as File | null
+  const defaultValues = {
+    name: formData.get('name') as string,
+    email: formData.get('email') as string,
+    message: formData.get('message') as string,
+    fileName: file ? file.name : '',
+  }
 
   try {
     const data = contactFormSchema.parse({
-      ...defaultValues,
-      file: formData.get('file') as File | null,
+      ...Object.fromEntries(formData),
+      file: file,
     })
 
     // This simulates a slow response like a form submission.
@@ -21,19 +27,12 @@ export async function contactFormAction(
 
     console.log(data)
 
-    // Handle file upload here
-    if (data.file) {
-      // Example: Save the file to a storage service
-      // const fileUrl = await uploadFile(data.file)
-      console.log(`File uploaded: ${data.file.name}`)
-    }
-
     return {
       defaultValues: {
         name: '',
         email: '',
         message: '',
-        file: null,
+        fileName: '',
       },
       success: true,
       errors: null,
@@ -59,4 +58,3 @@ export async function contactFormAction(
     }
   }
 }
-

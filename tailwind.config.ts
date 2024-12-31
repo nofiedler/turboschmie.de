@@ -1,11 +1,10 @@
-import type { Config } from "tailwindcss"
-import type { PluginAPI } from 'tailwindcss/types/config'
-const defaultTheme = require("tailwindcss/defaultTheme")
-const svgToDataUri = require("mini-svg-data-uri")
-const colors = require("tailwindcss/colors")
+import type { Config } from "tailwindcss";
+import { withUt } from "uploadthing/tw";
+const svgToDataUri = require("mini-svg-data-uri");
+
 const {
   default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette")
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 // Interface für die addVariablesForColors Funktion
 interface ColorVariablesConfig {
@@ -24,7 +23,7 @@ function addVariablesForColors({ addBase, theme }: ColorVariablesConfig) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
@@ -33,10 +32,10 @@ function addVariablesForColors({ addBase, theme }: ColorVariablesConfig) {
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -131,6 +130,6 @@ const config = {
       );
     },
   ],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default withUt(config);
