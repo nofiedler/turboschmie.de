@@ -1,5 +1,3 @@
-//app/api/maps/route.ts
-
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest) {
@@ -7,7 +5,11 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const q = searchParams.get('q');
 
-  const url = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(q || '')}`;
+  if (!q) {
+    return NextResponse.json({ error: 'Location query parameter is required' }, { status: 400 });
+  }
+
+  const url = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(q)}`;
 
   return NextResponse.redirect(url);
 }

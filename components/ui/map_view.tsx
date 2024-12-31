@@ -1,16 +1,21 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 export const MapView = () => {
   const [isVisible, setIsVisible] = useState(false);
   const location = "Turboschmiede, Gustav-Heinemann-Straße 25, 96215 Lichtenfels";
 
+  const mapUrl = useMemo(() => {
+    return `/api/maps?q=${encodeURIComponent(location)}`;
+  }, [location]);
+
   useEffect(() => {
-    // Intersection Observer für Lazy Loading
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        setIsVisible(true);
+        requestAnimationFrame(() => {
+          setIsVisible(true);
+        });
         observer.disconnect();
       }
     });
@@ -22,17 +27,21 @@ export const MapView = () => {
   }, []);
 
   return (
-    <div id="map-container" className="w-full h-full rounded-xl">
+    <div id="map-container" className="w-full h-full rounded-xl overflow-hidden">
       {isVisible ? (
         <iframe
-          className="w-full h-full rounded-xl border"
+          className="w-full h-full border-none"
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          src={`/api/maps?q=${encodeURIComponent(location)}`}
+          src={mapUrl}
         />
       ) : (
-        <div className="w-full h-full bg-gray-100 animate-pulse" />
+        <img
+          src={`https://maps.googleapis.com/maps/api/staticmap?center=${encodeURIComponent(location)}&zoom=14&size=600x300&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
+          alt="Map placeholder"
+          className="w-full h-full object-cover"
+        />
       )}
     </div>
   );
