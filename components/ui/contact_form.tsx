@@ -55,7 +55,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
     }
   }
 
-  const fileProgress = file ? (file.size / (4 * 1024 * 1024)) * 100 : 0
+  //const fileProgress = file ? (file.size / (4 * 1024 * 1024)) * 100 : 0
   const isFileTooLarge = file && file.size > 4 * 1024 * 1024;
 
   const toggleDarkMode = () => {
