@@ -9,7 +9,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Location query parameter is required' }, { status: 400 });
   }
 
-  const url = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(q)}`;
+  // Add zoom parameter to the URL to zoom out the map
+  const zoomLevel = 12; // Adjust this value to zoom out further
+  const url = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(q)}&zoom=${zoomLevel}`;
 
   return NextResponse.redirect(url);
 }
