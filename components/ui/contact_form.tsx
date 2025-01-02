@@ -16,7 +16,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import { Check, Moon, Sun } from "lucide-react";
+import { Check } from "lucide-react";
 
 export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
   const [formData, setFormData] = React.useState({
@@ -25,7 +25,6 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
     message: "",
   });
   const [fileUrl, setFileUrl] = React.useState<string>("");
-  const [isDarkMode, setIsDarkMode] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitStatus, setSubmitStatus] = React.useState<
     "idle" | "success" | "error"
