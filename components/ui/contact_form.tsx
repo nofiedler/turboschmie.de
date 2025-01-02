@@ -70,7 +70,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
       <form onSubmit={handleSubmit}>
         <CardContent className="flex flex-col gap-6">
           {submitStatus === "success" && (
-            <p className="text-muted-foreground flex items-center gap-2 text-sm dark:text-gray-300">
+            <p className="text-muted-foreground flex items-center gap-2 text-sm dark:text-green-400">
               <Check className="size-4" />
               Ihre Nachricht wurde gesendet. Vielen Dank.
             </p>
