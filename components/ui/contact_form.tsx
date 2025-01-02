@@ -47,7 +47,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "" });
       setFileUrl("");
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -143,7 +143,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
                   setUploadError(null); // Clear error on successful upload
                 }
               }}
-              onUploadError={(error: any) => {
+              onUploadError={(error: Error) => {
                 console.error("Upload Error:", error); // Log the entire error object
                 const detailedMessage = error?.cause || error.message || "Unbekannter Fehler";
                 setUploadError(`Fehler beim Hochladen: ${detailedMessage}`);
