@@ -54,8 +54,9 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
     }
   };
 
+  // add "dark" to the class names to enable dark mode ("" -> "dark")
   return (
-    <Card className={cn("w-full max-w-md", className, "dark")}>
+    <Card className={cn("w-full max-w-md", className, "")}> 
       <CardHeader className="relative">
         <CardTitle className="dark:text-white">
           Wie können wir helfen?
