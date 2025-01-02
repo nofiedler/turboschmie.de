@@ -10,7 +10,12 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import carData from "../../app/configurator/carData.json";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -21,8 +26,6 @@ import {
   SelectValue_with_icon,
 } from "./select_with_icon";
 
-// linke Seite ändert die angezeigten Namen der Optionen
-// rechte Seite bitte nicht ändern!
 const tuningOptionsMapping: { [key: string]: string } = {
   "Chiptuning": "Chiptuning",
   "Turbolader": "Turbolader",
@@ -68,12 +71,9 @@ export const CarTuningConfigurator = () => {
   const [model, setModel] = useState<ModelKeys | "">("");
   const [engine, setEngine] = useState("");
   const [tuningOptions, setTuningOptions] = useState<string[]>([]);
-  const [originalPerformance, setOriginalPerformance] =
-    useState<PerformanceMetrics | null>(null);
-  const [tunedPerformance, setTunedPerformance] =
-    useState<PerformanceMetrics | null>(null);
-  const [performanceData, setPerformanceData] =
-    useState<PerformanceDataEntry | null>(null);
+  const [originalPerformance, setOriginalPerformance] = useState<PerformanceMetrics | null>(null);
+  const [tunedPerformance, setTunedPerformance] = useState<PerformanceMetrics | null>(null);
+  const [performanceData, setPerformanceData] = useState<PerformanceDataEntry | null>(null);
 
   const calculateTunedPerformance = useCallback(
     (performanceData: PerformanceDataEntry) => {
@@ -82,16 +82,10 @@ export const CarTuningConfigurator = () => {
         const mappedOption = tuningOptionsMapping[option];
         const tuningEffect = performanceData[mappedOption] as TuningEffect;
         if (tuningEffect) {
-          tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(
-            2
-          );
-          tunedValues.torque = +(
-            tunedValues.torque + tuningEffect.torque
-          ).toFixed(2);
+          tunedValues.power = +(tunedValues.power + tuningEffect.power).toFixed(2);
+          tunedValues.torque = +(tunedValues.torque + tuningEffect.torque).toFixed(2);
           tunedValues.vmax = +(tunedValues.vmax + tuningEffect.vmax).toFixed(2);
-          tunedValues.acceleration = +(
-            tunedValues.acceleration + tuningEffect.acceleration
-          ).toFixed(2);
+          tunedValues.acceleration = +(tunedValues.acceleration + tuningEffect.acceleration).toFixed(2);
         }
       });
       setTunedPerformance(tunedValues);
@@ -133,9 +127,7 @@ export const CarTuningConfigurator = () => {
 
   useEffect(() => {
     if (manufacturer && model && engine) {
-      const data = (carData.performanceData as PerformanceData)[
-        `${manufacturer} ${model}`
-      ]?.[engine];
+      const data = (carData.performanceData as PerformanceData)[`${manufacturer} ${model}`]?.[engine];
       if (data) {
         setOriginalPerformance(data.original);
         setPerformanceData(data);
@@ -146,40 +138,37 @@ export const CarTuningConfigurator = () => {
 
   const handleTuningOptionChange = (option: string) => {
     setTuningOptions((prev) =>
-      prev.includes(option)
-        ? prev.filter((item) => item !== option)
-        : [...prev, option]
+      prev.includes(option) ? prev.filter((item) => item !== option) : [...prev, option]
     );
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center text-white">
+    <div className="w-full max-w-4xl mx-auto p-6 dark">
+      <h1 className="text-3xl font-bold mb-6 text-center dark:text-white">
         Tuning Konfigurator
       </h1>
-
-      <Card className="mb-6">
-        <CardHeader>
-          <CardTitle className="text-xl font-semibold">
+      
+      <Card className="mb-6 dark">
+        <CardHeader className="relative">
+          <CardTitle className="text-xl font-semibold dark:text-white">
             Modell Auswahl
           </CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="flex flex-col gap-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Select_with_icon
-              onValueChange={(value: Manufacturer | "") =>
-                setManufacturer(value)
-              }
+              onValueChange={(value: Manufacturer | "") => setManufacturer(value)}
             >
-              <SelectTrigger_with_icon>
+              <SelectTrigger_with_icon className="dark:bg-gray-700 dark:text-white dark:border-gray-600">
                 <SelectValue_with_icon placeholder="Hersteller auswählen" />
               </SelectTrigger_with_icon>
-              <SelectContent_with_icon>
+              <SelectContent_with_icon className="dark:bg-gray-700 dark:text-white">
                 {carData.manufacturers.map((m) => (
                   <SelectItem_with_icon
                     key={m}
                     value={m}
                     logo={`/${m}_Logo.png`}
+                    className="dark:text-white dark:hover:bg-gray-600"
                   >
                     {m}
                   </SelectItem_with_icon>
@@ -191,7 +180,7 @@ export const CarTuningConfigurator = () => {
               onValueChange={(value) => setModel(value as ModelKeys | "")}
               disabled={!manufacturer}
             >
-              <SelectTrigger>
+              <SelectTrigger className="dark:bg-gray-700 dark:text-white dark:border-gray-600">
                 <SelectValue
                   placeholder={
                     manufacturer
@@ -200,10 +189,14 @@ export const CarTuningConfigurator = () => {
                   }
                 />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="dark:bg-gray-700 dark:text-white">
                 {manufacturer &&
                   carData.models[manufacturer]?.map((m) => (
-                    <SelectItem key={m} value={m}>
+                    <SelectItem
+                      key={m}
+                      value={m}
+                      className="dark:text-white dark:hover:bg-gray-600"
+                    >
                       {m}
                     </SelectItem>
                   ))}
@@ -214,19 +207,23 @@ export const CarTuningConfigurator = () => {
               onValueChange={setEngine}
               disabled={!model || !manufacturer}
             >
-              <SelectTrigger>
+              <SelectTrigger className="dark:bg-gray-700 dark:text-white dark:border-gray-600">
                 <SelectValue
                   placeholder={
                     model ? "Motor auswählen" : "Bitte zuerst Modell wählen"
                   }
                 />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="dark:bg-gray-700 dark:text-white">
                 {model &&
                   manufacturer &&
                   carData.engines[`${manufacturer} ${model}` as ModelKeys]?.map(
                     (e) => (
-                      <SelectItem key={e} value={e}>
+                      <SelectItem
+                        key={e}
+                        value={e}
+                        className="dark:text-white dark:hover:bg-gray-600"
+                      >
                         {e}
                       </SelectItem>
                     )
@@ -238,13 +235,13 @@ export const CarTuningConfigurator = () => {
       </Card>
 
       {engine && (
-        <Card className="sticky top-6 z-10 md:top-36">
+        <Card className="sticky top-6 z-10 md:top-36 dark">
           <CardHeader>
-            <CardTitle className="text-xl font-semibold">
+            <CardTitle className="text-xl font-semibold dark:text-white">
               Tuning Optionen
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex flex-col gap-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {Object.keys(tuningOptionsMapping).map((option) => (
                 <div key={option} className="flex items-center space-x-2">
@@ -257,8 +254,11 @@ export const CarTuningConfigurator = () => {
                       !performanceData ||
                       !isTuningOptionApplicable(option, performanceData)
                     }
+                    className=""
                   />
-                  <Label htmlFor={option}>{option}</Label>
+                  <Label htmlFor={option} className="dark:text-white">
+                    {option}
+                  </Label>
                 </div>
               ))}
             </div>
@@ -269,57 +269,55 @@ export const CarTuningConfigurator = () => {
       {originalPerformance && tunedPerformance && (
         <div className="relative z-1">
           {model && engine && (
-            <h2 className="text-3xl font-bold mb-6 text-white text-center pt-10">
+            <h2 className="text-3xl font-bold mb-6 text-center dark:text-white pt-10">
               {manufacturer} {model} - {engine}
             </h2>
           )}
           <div className="grid grid-cols-2 gap-4 text-center">
-            {[originalPerformance, tunedPerformance].map(
-              (performance, index) => (
-                <Card
-                  key={index}
-                  className="bg-transparent border-transparent text-white"
-                >
-                  <CardHeader>
-                    <CardTitle className="text-xl font-bold">
-                      {index === 0
-                        ? "Original Performance"
-                        : "Tuned Performance"}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-col items-center">
-                      {[
-                        "power",
-                        "torque",
-                        "vmax",
-                        "acceleration",
-                        "displacement",
-                      ].map((key, idx) => (
-                        <div key={idx} className="pt-2">
-                          <p className="text-2xl font-bold">
-                            {performance[key as keyof PerformanceMetrics]}
-                            {key === "power"
-                              ? "PS"
-                              : key === "torque"
-                              ? "Nm"
-                              : key === "vmax"
-                              ? "km/h"
-                              : key === "acceleration"
-                              ? "s"
-                              : "cm³"}
-                          </p>
-                          <p className="text-sm text-muted-foreground pb-2">
-                            {key.toUpperCase()}
-                          </p>
-                          {idx < 4 && <Separator className="w-32" />}
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            )}
+            {[originalPerformance, tunedPerformance].map((performance, index) => (
+              <Card
+                key={index}
+                className="bg-transparent border-transparent dark:text-white"
+              >
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold dark:text-white">
+                    {index === 0 ? "Original Performance" : "Tuned Performance"}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-col items-center">
+                    {[
+                      "power",
+                      "torque",
+                      "vmax",
+                      "acceleration",
+                      "displacement",
+                    ].map((key, idx) => (
+                      <div key={idx} className="pt-2">
+                        <p className="text-2xl font-bold dark:text-white">
+                          {performance[key as keyof PerformanceMetrics]}{" "}
+                          {key === "power"
+                            ? "PS"
+                            : key === "torque"
+                            ? "Nm"
+                            : key === "vmax"
+                            ? "km/h"
+                            : key === "acceleration"
+                            ? "s"
+                            : "cm³"}
+                        </p>
+                        <p className="text-sm dark:text-gray-400 pb-2">
+                          {key.toUpperCase()}
+                        </p>
+                        {idx < 4 && (
+                          <Separator className="w-32 dark:bg-gray-600" />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       )}
