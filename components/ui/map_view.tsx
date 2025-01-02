@@ -36,13 +36,7 @@ export const MapView = () => {
           referrerPolicy="no-referrer-when-downgrade"
           src={mapUrl}
         />
-      ) : (
-        <img
-          src={`https://maps.googleapis.com/maps/api/staticmap?center=${encodeURIComponent(location)}&zoom=14&size=600x300&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
-          alt="Map placeholder"
-          className="w-full h-full object-cover"
-        />
-      )}
+      ) : null}
     </div>
   );
 };
