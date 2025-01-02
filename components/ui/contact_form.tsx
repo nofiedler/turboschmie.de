@@ -29,6 +29,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
   const [submitStatus, setSubmitStatus] = React.useState<
     "idle" | "success" | "error"
   >("idle");
+  const [uploadError, setUploadError] = React.useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,9 +55,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
   };
 
   return (
-    <Card
-      className={cn("w-full max-w-md", className, "dark")}
-    >
+    <Card className={cn("w-full max-w-md", className, "dark")}>
       <CardHeader className="relative">
         <CardTitle className="dark:text-white">
           Wie können wir helfen?
@@ -74,6 +73,12 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
             <p className="text-muted-foreground flex items-center gap-2 text-sm dark:text-gray-300">
               <Check className="size-4" />
               Ihre Nachricht wurde gesendet. Vielen Dank.
+            </p>
+          )}
+
+          {uploadError && (
+            <p className="text-sm text-red-600 dark:text-red-400">
+              {uploadError}
             </p>
           )}
 
@@ -133,10 +138,15 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
             <UploadButton<OurFileRouter, "contactUploader">
               endpoint="contactUploader"
               onClientUploadComplete={(res) => {
-                if (res?.[0]) setFileUrl(res[0].url);
+                if (res?.[0]) {
+                  setFileUrl(res[0].url);
+                  setUploadError(null); // Clear error on successful upload
+                }
               }}
-              onUploadError={(error: Error) => {
-                console.error(error);
+              onUploadError={(error: any) => {
+                console.error("Upload Error:", error); // Log the entire error object
+                const detailedMessage = error?.cause || error.message || "Unbekannter Fehler";
+                setUploadError(`Fehler beim Hochladen: ${detailedMessage}`);
               }}
               className="dark:ut-button:bg-gray-700 dark:ut-button:text-white"
             />
