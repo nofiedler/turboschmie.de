@@ -58,7 +58,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
   return (
     <Card className={cn("w-full max-w-md", className, "")}> 
       <CardHeader className="relative">
-        <CardTitle className="dark:text-white">
+        <CardTitle className="text-xl dark:text-white">
           Wie können wir helfen?
         </CardTitle>
         <CardDescription className="dark:text-gray-300">
