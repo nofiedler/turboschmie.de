@@ -6,13 +6,11 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
-// Interface für die addVariablesForColors Funktion
 interface ColorVariablesConfig {
   addBase: (base: Record<string, any>) => void;
   theme: (path: string) => any;
 }
 
-// Interface für die Plugin-Funktion
 interface PluginUtils {
   matchUtilities: (utilities: Record<string, any>, options?: any) => void;
   theme: (path: string) => any;
@@ -47,6 +45,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        satoshi: ['var(--font-satoshi)', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

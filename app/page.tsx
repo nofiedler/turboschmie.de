@@ -63,7 +63,7 @@ const items = [
 
 export default function Home() {
   return (
-    <div className="relative  w-full">
+    <div className="relative w-full font-satoshi">
       <div className="min-h-screen w-full flex flex-col items-center justify-center pt-24 md:pt-60">
         <div className="flex justify-center">
           <Image
@@ -74,20 +74,20 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="text-2xl md:text-4xl text-center mx-auto text-neutral-600 font-light pt-10 md:pt-20">
+        <div className="text-2xl md:text-4xl text-center mx-auto text-neutral-600 font-satoshi font-light pt-10 md:pt-20">
           Wir liefern{" "}
           <a className="text-neutral-100 underline underline-offset-4 decoration-slate-100 decoration-1">
             Expertenlösungen
           </a>{" "}
           für Hochleistungssportwagen... <br />
           <FlipWords
-            className="text-3xl md:text-5xl font-bold text-neutral-100 text-center pt-4"
+            className="text-3xl md:text-5xl font-satoshi font-black text-neutral-100 text-center pt-4"
             words={words}
           />
         </div>
         <div className="flex justify-center pt-6">
           <HoverBorderGradient containerClassName="rounded-full" as="button">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 font-satoshi">
               <span>&nbsp;Zu unseren Leistungen</span>
               <IconChevronRight className="h-4 w-4 text-white" />
             </div>
@@ -101,7 +101,7 @@ export default function Home() {
               title={item.title}
               description={item.description}
               header={item.header}
-              className={item.className}
+              className={`${item.className} font-satoshi`}
               icon={item.icon}
             />
           ))}

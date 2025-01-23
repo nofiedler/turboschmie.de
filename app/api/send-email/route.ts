@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     const { name, email, message, fileUrl } = await request.json();
 
     const data = await resend.emails.send({
-      from: 'Turboschmie Contact <onboarding@resend.dev>',
+      from: 'Turboschmiede Contact <onboarding@resend.dev>',
       to: 'nofiedler1@outlook.de',
       subject: `Neue Kontaktanfrage von ${name}`,
       html: `

@@ -9,45 +9,45 @@ export default function Component() {
     <footer className="w-full bg-transparent text-gray-400 md:mb-0 mb-12">
       <div className="container flex flex-col items-center px-4 py-12 mx-auto space-y-12">
         <nav className="flex flex-wrap justify-center gap-6 text-sm md:gap-8">
-          <Link href="/" className="hover:text-gray-200 transition-colors">
+          <Link href="/" className="hover:text-white transition-colors">
             Startseite
           </Link>
-          <Link href="/about" className="hover:text-gray-200 transition-colors">
+          <Link href="/about" className="hover:text-white transition-colors">
             Über uns
           </Link>
           <Link
             href="/projects"
-            className="hover:text-gray-200 transition-colors"
+            className="hover:text-white transition-colors"
           >
             Projekte
           </Link>
           <Link
             href="/contact"
-            className="hover:text-gray-200 transition-colors"
+            className="hover:text-white transition-colors"
           >
             Kontakt
           </Link>
           <Link
             href="/configurator"
-            className="hover:text-gray-200 transition-colors"
+            className="hover:text-white transition-colors"
           >
             Konfigurator
           </Link>
         </nav>
         <div className="flex justify-center gap-6">
-          <Link href="#" className="hover:text-gray-200 transition-colors">
+          <Link href="#" className="hover:text-white transition-colors">
             <Facebook className="h-6 w-6" />
             <span className="sr-only">Facebook</span>
           </Link>
-          <Link href="#" className="hover:text-gray-200 transition-colors">
+          <Link href="#" className="hover:text-white transition-colors">
             <Instagram className="h-6 w-6" />
             <span className="sr-only">Instagram</span>
           </Link>
-          <Link href="#" className="hover:text-gray-200 transition-colors">
+          <Link href="#" className="hover:text-white transition-colors">
             <Twitter className="h-6 w-6" />
             <span className="sr-only">Twitter</span>
           </Link>
-          <Link href="#" className="hover:text-gray-200 transition-colors">
+          <Link href="#" className="hover:text-white transition-colors">
             <Youtube className="h-6 w-6" />
             <span className="sr-only">YouTube</span>
           </Link>
