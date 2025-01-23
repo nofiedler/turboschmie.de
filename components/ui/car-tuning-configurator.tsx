@@ -276,9 +276,9 @@ export const CarTuningConfigurator = () => {
           <div className="grid grid-cols-2 gap-4 text-center">
             {[originalPerformance, tunedPerformance].map(
               (performance, index) => (
-                <Card
+                <Card 
                   key={index}
-                  className="bg-transparent border-transparent text-white"
+                  className=" border-transparent "
                 >
                   <CardHeader>
                     <CardTitle className="text-xl font-bold">
