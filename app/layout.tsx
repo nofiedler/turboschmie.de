@@ -15,12 +15,12 @@ import {
 const satoshi = localFont({
   src: [
     {
-      path: '../public/fonts/satoshi-regular.woff2',
+      path: './fonts/Satoshi-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/satoshi-black.woff2',
+      path: './fonts/Satoshi-Black.woff2',
       weight: '900',
       style: 'normal',
     },
