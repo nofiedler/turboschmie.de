@@ -30,7 +30,7 @@ export const MapView = () => {
     <div id="map-container" className="w-full h-full rounded-xl overflow-hidden">
       {isVisible ? (
         <iframe
-          className="w-full h-full border-none"
+          className="w-full md:h-full h-96 border-none"
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
