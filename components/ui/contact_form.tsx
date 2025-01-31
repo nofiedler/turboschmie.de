@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 
@@ -56,9 +57,9 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
 
   // add "dark" to the class names to enable dark mode ("" -> "dark")
   return (
-    <Card className={cn("w-full max-w-md", className, "")}> 
+    <Card className={cn("w-full max-w-md", className, "")}>
       <CardHeader className="relative">
-        <CardTitle className="text-xl dark:text-white">
+        <CardTitle className="text-2xl dark:text-white">
           Wie können wir helfen?
         </CardTitle>
         <CardDescription className="dark:text-gray-300">
@@ -70,19 +71,6 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
 
       <form onSubmit={handleSubmit}>
         <CardContent className="flex flex-col gap-6">
-          {submitStatus === "success" && (
-            <p className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
-              <Check className="size-4" />
-              Ihre Nachricht wurde erfolgreich gesendet. Vielen Dank.
-            </p>
-          )}
-
-          {uploadError && (
-            <p className="text-sm text-red-600 dark:text-red-400">
-              {uploadError}
-            </p>
-          )}
-
           <div className="group/field grid gap-2">
             <Label htmlFor="name" className="dark:text-white">
               Name <span aria-hidden="true">*</span>
@@ -128,7 +116,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               required
             />
           </div>
-
+              
           <div className="group/field grid gap-2">
             <Label className="dark:text-white">
               Datei Upload - Fahrzeugbrief
@@ -146,27 +134,44 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               }}
               onUploadError={(error: Error) => {
                 console.error("Upload Error:", error); // Log the entire error object
-                const detailedMessage = error?.cause || error.message || "Unbekannter Fehler";
+                const detailedMessage =
+                  error?.cause || error.message || "Unbekannter Fehler";
                 setUploadError(`Fehler beim Hochladen: ${detailedMessage}`);
               }}
-              className="dark:ut-button:bg-gray-700 dark:ut-button:text-white"
+              className="text-sm ut-button:bg-blue-600 ut-button:text-white ut-button:hover:bg-blue-700 ut-button:h-10 ut-button:w-full"
             />
             {fileUrl && (
-              <p className="text-sm text-green-600 dark:text-green-400">
+              <p className="text-sm text-green-600 dark:text-green-400 text-center">
                 Datei erfolgreich hochgeladen
               </p>
             )}
           </div>
         </CardContent>
 
-        <CardFooter>
+        <CardFooter className="flex flex-col gap-4">
+          <Separator />
           <Button
             type="submit"
             disabled={isSubmitting || !fileUrl}
-            className="dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700"
+            className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full"
           >
             {isSubmitting ? "Senden..." : "Nachricht senden"}
           </Button>
+
+          <div>
+            {submitStatus === "success" && (
+              <p className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
+                <Check className="size-4" />
+                Ihre Nachricht wurde erfolgreich gesendet. Vielen Dank.
+              </p>
+            )}
+
+            {uploadError && (
+              <p className="text-sm text-red-600 dark:text-red-400">
+                {uploadError}
+              </p>
+            )}
+          </div>
         </CardFooter>
       </form>
     </Card>

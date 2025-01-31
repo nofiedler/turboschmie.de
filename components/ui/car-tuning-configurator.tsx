@@ -160,7 +160,7 @@ export const CarTuningConfigurator = () => {
 
       <Card className="mb-6">
         <CardHeader>
-          <CardTitle className="text-xl font-semibold">
+          <CardTitle className="text-2xl font-semibold">
             Modell Auswahl
           </CardTitle>
         </CardHeader>
@@ -240,7 +240,7 @@ export const CarTuningConfigurator = () => {
       {engine && (
         <Card className="sticky top-6 z-10 md:top-36">
           <CardHeader>
-            <CardTitle className="text-xl font-semibold">
+            <CardTitle className="text-2xl font-semibold">
               Tuning Optionen
             </CardTitle>
           </CardHeader>
@@ -278,7 +278,7 @@ export const CarTuningConfigurator = () => {
               (performance, index) => (
                 <Card 
                   key={index}
-                  className=" border-transparent "
+                  className="md:bg-white md:border-white md:text-black bg-transparent text-white border-transparent" 
                 >
                   <CardHeader>
                     <CardTitle className="text-xl font-bold">
@@ -297,7 +297,7 @@ export const CarTuningConfigurator = () => {
                         "displacement",
                       ].map((key, idx) => (
                         <div key={idx} className="pt-2">
-                          <p className="text-2xl font-bold">
+                          <p className="text-xl font-semibold">
                             {performance[key as keyof PerformanceMetrics]}
                             {key === "power"
                               ? "PS"
