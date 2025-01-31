@@ -12,7 +12,6 @@ export async function POST(request: Request) {
       to: 'nofiedler1@outlook.de',
       subject: `Neue Kontaktanfrage von ${name}`,
       html: `
-        <h2>Neue Kontaktanfrage</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>E-Mail:</strong> ${email}</p>
         <p><strong>Nachricht:</strong> ${message}</p>

@@ -15,8 +15,18 @@ import {
 const satoshi = localFont({
   src: [
     {
+      path: './fonts/Satoshi-Light.woff2',
+      weight: '200',
+      style: 'normal',
+    },
+    {
       path: './fonts/Satoshi-Regular.woff2',
       weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Satoshi-Bold.woff2',
+      weight: '700',
       style: 'normal',
     },
     {
@@ -66,7 +76,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={satoshi.variable}>
-      <body className="antialiased min-h-screen bg-black bg-dot-white/[0.4] relative font-satoshi">
+      <body className="antialiased min-h-screen bg-black bg-dot-white/[0.1] relative font-satoshi">
         <div className="fixed pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
         <FloatingNav navItems={navItems} />
         <main className="relative z-10">

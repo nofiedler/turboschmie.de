@@ -4,6 +4,7 @@ import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { Spotlight } from "@/components/ui/spotlight-new";
 import Image from "next/image";
 import {
   IconClipboardCopy,
@@ -65,6 +66,10 @@ export default function Home() {
   return (
     <div className="relative w-full font-satoshi">
       <div className="min-h-screen w-full flex flex-col items-center justify-center pt-24 md:pt-60">
+      <div className="h-screen">
+      <div className="hidden md:block">
+        <Spotlight />
+      </div>
         <div className="flex justify-center">
           <Image
             src={logo}
@@ -85,7 +90,7 @@ export default function Home() {
             words={words}
           />
         </div>
-        <div className="flex justify-center pt-6">
+        <div className="flex flex-col items-center pt-6 space-y-4">
           <HoverBorderGradient containerClassName="rounded-full" as="button">
             <div className="flex items-center space-x-2 font-satoshi">
               <span>&nbsp;Zu unseren Leistungen</span>
@@ -93,8 +98,15 @@ export default function Home() {
             </div>
           </HoverBorderGradient>
         </div>
-        <div className="h-96"></div>
-        <BentoGrid className="pt-96 max-w-4xl mx-auto md:auto-rows-[20rem] mb-20">
+      </div>
+      <div className="flex flex-col items-center pt-6 space-y-4">
+          <div className="md:w-2/6 w-10/12 text-center text-white mx-auto">
+            <p className="text-4xl font-light">Unsere Philosophie</p><br /><br />
+            <p className="text-3xl font-black">"Perfektion ist nicht erreichbar, aber wenn wir Perfektion anstreben, können wir Exzellenz erreichen." - Vince Lombardi</p><br /><br />
+            <p className="text-xl font-light">Bereits seit 2017 sind wir umfassend mit dem Thema der Kennfeldapplikation vertraut. Durch die Faszination für aufgeladene Verbrennungskraftmaschinen, haben wir es uns zur Hauptaufgabe gemacht ein kompetenter, transparenter & zuverlässiger Ansprechpartner im Thema Leistungssteigerung & Modifikation zu sein, mit dem Schwerpunkt Deutscher Premiumhersteller. Durch unsere Erfahrung der letzten 8 Jahre in dieser Branche, bieten wir unsere Kompetenzen nun unteranderem auch für Lamborghini, McLaren, Aston Marton, Ferrari, Porsche & Bugatti an. Durch inzwischen langjährige Partnerschaften in die Industrie, sind wir optimal vernetzt und können für jeden Kundenwunsch das passende Ergebnis erzielen. Qualität ist bei uns keine Aufgabe, sondern ein Standard.</p>
+          </div>
+        </div>
+        <BentoGrid className="pt-52 max-w-4xl mx-auto md:auto-rows-[20rem] mb-20">
           {items.map((item, i) => (
             <BentoGridItem
               key={i}

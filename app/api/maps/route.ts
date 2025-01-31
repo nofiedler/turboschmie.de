@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
   }
 
   // Add zoom parameter to the URL to zoom out the map
-  const zoomLevel = 12; // Adjust this value to zoom out further
+  const zoomLevel = 15; // Adjust this value to zoom out further
   const url = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(q)}&zoom=${zoomLevel}`;
 
   return NextResponse.redirect(url);
