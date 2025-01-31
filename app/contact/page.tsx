@@ -21,7 +21,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div id="map" className="flex-1 md:max-w-md">
+        <div id="map" className="flex-1 md:max-w-md md:pt-0 pt-12">
           <div className="h-full flex flex-col">
             <h1 className="pt-6 text-3xl font-bold mb-6 text-center text-white">
               Anfahrt
