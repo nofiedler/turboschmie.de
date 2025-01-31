@@ -102,7 +102,7 @@ export default function Home() {
       <div className="flex flex-col items-center pt-6 space-y-4">
           <div className="md:w-2/6 w-10/12 text-center text-white mx-auto">
             <p className="text-4xl font-light">Unsere Philosophie</p><br /><br />
-            <p className="text-3xl font-black">"Perfektion ist nicht erreichbar, aber wenn wir Perfektion anstreben, können wir Exzellenz erreichen." - Vince Lombardi</p><br /><br />
+            <p className="text-3xl font-black">&ldquo;Perfektion ist nicht erreichbar, aber wenn wir Perfektion anstreben, können wir Exzellenz erreichen.&rdquo; - Vince Lombardi</p><br />
             <p className="text-xl font-light">Bereits seit 2017 sind wir umfassend mit dem Thema der Kennfeldapplikation vertraut. Durch die Faszination für aufgeladene Verbrennungskraftmaschinen, haben wir es uns zur Hauptaufgabe gemacht ein kompetenter, transparenter & zuverlässiger Ansprechpartner im Thema Leistungssteigerung & Modifikation zu sein, mit dem Schwerpunkt Deutscher Premiumhersteller. Durch unsere Erfahrung der letzten 8 Jahre in dieser Branche, bieten wir unsere Kompetenzen nun unteranderem auch für Lamborghini, McLaren, Aston Marton, Ferrari, Porsche & Bugatti an. Durch inzwischen langjährige Partnerschaften in die Industrie, sind wir optimal vernetzt und können für jeden Kundenwunsch das passende Ergebnis erzielen. Qualität ist bei uns keine Aufgabe, sondern ein Standard.</p>
           </div>
         </div>
