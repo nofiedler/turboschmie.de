@@ -61,7 +61,7 @@ export default function About() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto relative flex h-auto w-full flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto relative flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service1.jpg"
@@ -144,7 +144,7 @@ export default function About() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto relative flex h-auto w-full flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto relative flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service2.jpg"
@@ -219,7 +219,7 @@ export default function About() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto relative flex h-auto w-full flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto relative flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service3.jpg"
@@ -244,14 +244,15 @@ export default function About() {
                   <p className="mt-2 text-muted-foreground">
                     Bedi steht eigentlich für die Benzin-Direkteinspritzung
                     eines Ottomotors. Da durch dieses System die Ansaugkanäle
-                    nicht mehr wie früher durch Kraftstoff selbst &quot;mitgespült&quot;
-                    werden, entstehen durch moderne System wie der
-                    Abgasrückführung, mit der Zeit Ruß- & Ölkohleablagerungen,
-                    die schlussendlich den Ansaugtrakt verkoken und so eine
-                    Verlustleistung zur Folge haben. Hier können wir durch eine
-                    Kombination aus chemischer & mechanischer Reinigung die
-                    Ansaugwege von diesen Rückstanden restlos befreien und die
-                    ursprüngliche Leistung zurückgewinnen.
+                    nicht mehr wie früher durch Kraftstoff selbst
+                    &quot;mitgespült&quot; werden, entstehen durch moderne
+                    System wie der Abgasrückführung, mit der Zeit Ruß- &
+                    Ölkohleablagerungen, die schlussendlich den Ansaugtrakt
+                    verkoken und so eine Verlustleistung zur Folge haben. Hier
+                    können wir durch eine Kombination aus chemischer &
+                    mechanischer Reinigung die Ansaugwege von diesen Rückstanden
+                    restlos befreien und die ursprüngliche Leistung
+                    zurückgewinnen.
                     <br />
                     Dieses Verfahren findet genauso Anwendung bei Dieselmotoren
                     wie z.B. den Common-Rail Generationen der VAG Gruppe.
@@ -301,7 +302,7 @@ export default function About() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto relative flex h-auto w-full flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto relative flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service4.jpg"
@@ -392,7 +393,7 @@ export default function About() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto relative flex h-auto w-full flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto relative flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service5.jpg"

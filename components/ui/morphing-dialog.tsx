@@ -208,7 +208,7 @@ function MorphingDialogContent({
     <motion.div
       ref={containerRef}
       layoutId={`dialog-${uniqueId}`}
-      className={cn('overflow-hidden', className)}
+      className={cn('overflow-y-auto max-h-[80vh]', className)} // Ändere overflow-auto zu overflow-y-auto
       style={style}
       role='dialog'
       aria-modal='true'
