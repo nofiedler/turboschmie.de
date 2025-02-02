@@ -21,8 +21,8 @@ export default function About() {
       <h1 className="pt-6 text-3xl font-bold mb-6 text-center text-white">
         Unsere Leistungen
       </h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="md:w-1/2 w-5/6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
         <MorphingDialog
           transition={{
             type: "spring",
@@ -34,7 +34,7 @@ export default function About() {
             style={{
               borderRadius: "12px",
             }}
-            className="flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
+            className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
           >
             <MorphingDialogImage
               src="Service1.jpg"
@@ -117,7 +117,7 @@ export default function About() {
             style={{
               borderRadius: "12px",
             }}
-            className="flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
+            className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
           >
             <MorphingDialogImage
               src="Service2.jpg"
@@ -192,7 +192,7 @@ export default function About() {
             style={{
               borderRadius: "12px",
             }}
-            className="flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
+            className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
           >
             <MorphingDialogImage
               src="Service3.jpg"
@@ -275,7 +275,7 @@ export default function About() {
             style={{
               borderRadius: "12px",
             }}
-            className="flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
+            className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
           >
             <MorphingDialogImage
               src="Service4.jpg"
@@ -366,7 +366,7 @@ export default function About() {
             style={{
               borderRadius: "12px",
             }}
-            className="flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
+            className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900"
           >
             <MorphingDialogImage
               src="Service5.jpg"
@@ -436,6 +436,7 @@ export default function About() {
             </MorphingDialogContent>
           </MorphingDialogContainer>
         </MorphingDialog>
+        </div>
       </div>
     </div>
   );
