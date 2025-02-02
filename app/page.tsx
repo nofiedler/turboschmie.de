@@ -7,6 +7,7 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import Image from "next/image";
 import Link from "next/link";
+import { InViewImagesGrid } from "@/components/ui/image_grid";
 import {
   IconClipboardCopy,
   IconFileBroken,
@@ -67,60 +68,91 @@ export default function Home() {
   return (
     <div className="relative w-full font-satoshi">
       <div className="min-h-screen w-full flex flex-col items-center justify-center pt-24 md:pt-60">
-      <div className="h-screen">
-      <div className="hidden md:block">
-        <Spotlight />
-      </div>
-        <div className="flex justify-center">
-          <Image
-            src={logo}
-            alt="Company Logo"
-            width={1200}
-            height={300}
-            priority
-          />
-        </div>
-        <div className="text-2xl md:text-4xl text-center mx-auto text-neutral-600 font-satoshi font-light pt-10 md:pt-20">
-          Wir liefern{" "}
-          <a className="text-neutral-100 underline underline-offset-4 decoration-slate-100 decoration-1">
-            Expertenlösungen
-          </a>{" "}
-          für Hochleistungssportwagen... <br />
-          <FlipWords
-            className="text-3xl md:text-5xl font-satoshi font-black text-neutral-100 text-center pt-4"
-            words={words}
-          />
-        </div>
-        <div className="flex flex-col items-center pt-6 space-y-4">
-        <Link href="/services">
-          <HoverBorderGradient containerClassName="rounded-full" as="button">
-            <div className="flex items-center text-sm space-x-2 font-satoshi">
-              <span>&nbsp;Zu unseren Leistungen</span>
-              <IconChevronRight className="h-4 w-4 text-white" />
-            </div>
-          </HoverBorderGradient>
-        </Link>
-        </div>
-      </div>
-      <div className="flex flex-col items-center pt-6 space-y-4">
-          <div className="md:w-2/6 w-10/12 text-center text-white mx-auto">
-            <p className="text-4xl font-light">Unsere Philosophie</p><br /><br />
-            <p className="text-3xl font-black">&ldquo;Perfektion ist nicht erreichbar, aber wenn wir Perfektion anstreben, können wir Exzellenz erreichen.&rdquo; - Vince Lombardi</p><br />
-            <p className="text-xl font-light">Bereits seit 2017 sind wir umfassend mit dem Thema der Kennfeldapplikation vertraut. Durch die Faszination für aufgeladene Verbrennungskraftmaschinen, haben wir es uns zur Hauptaufgabe gemacht ein kompetenter, transparenter & zuverlässiger Ansprechpartner im Thema Leistungssteigerung & Modifikation zu sein, mit dem Schwerpunkt Deutscher Premiumhersteller. Durch unsere Erfahrung der letzten 8 Jahre in dieser Branche, bieten wir unsere Kompetenzen nun unteranderem auch für Lamborghini, McLaren, Aston Marton, Ferrari, Porsche & Bugatti an. Durch inzwischen langjährige Partnerschaften in die Industrie, sind wir optimal vernetzt und können für jeden Kundenwunsch das passende Ergebnis erzielen. Qualität ist bei uns keine Aufgabe, sondern ein Standard.</p>
+        <div className="h-screen">
+          <div className="hidden md:block">
+            <Spotlight />
+          </div>
+          <div className="flex justify-center">
+            <Image
+              src={logo}
+              alt="Company Logo"
+              width={1200}
+              height={300}
+              priority
+            />
+          </div>
+          <div className="text-2xl md:text-4xl text-center mx-auto text-neutral-600 font-satoshi font-light pt-10 md:pt-20">
+            Wir liefern{" "}
+            <a className="text-neutral-100 underline underline-offset-4 decoration-slate-100 decoration-1">
+              Expertenlösungen
+            </a>{" "}
+            für Hochleistungssportwagen... <br />
+            <FlipWords
+              className="text-3xl md:text-5xl font-satoshi font-black text-neutral-100 text-center pt-4"
+              words={words}
+            />
+          </div>
+          <div className="flex flex-col items-center pt-6 space-y-4">
+            <Link href="/services">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+              >
+                <div className="flex items-center text-sm space-x-2 font-satoshi">
+                  <span>&nbsp;Zu unseren Leistungen</span>
+                  <IconChevronRight className="h-4 w-4 text-white" />
+                </div>
+              </HoverBorderGradient>
+            </Link>
           </div>
         </div>
-        <BentoGrid className="pt-52 max-w-4xl mx-auto md:auto-rows-[20rem] mb-20">
-          {items.map((item, i) => (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              className={`${item.className} font-satoshi`}
-              icon={item.icon}
-            />
-          ))}
-        </BentoGrid>
+        <div className="flex flex-col items-center pt-6 space-y-4">
+          <div className="md:w-2/6 w-10/12 text-center text-white mx-auto">
+            <p className="text-4xl font-light">Unsere Philosophie</p>
+            <br />
+            <br />
+            <p className="text-3xl font-black">
+              &ldquo;Perfektion ist nicht erreichbar, aber wenn wir Perfektion
+              anstreben, können wir Exzellenz erreichen.&rdquo; - Vince Lombardi
+            </p>
+            <br />
+            <p className="text-xl font-light">
+              Bereits seit 2017 sind wir umfassend mit dem Thema der
+              Kennfeldapplikation vertraut. Durch die Faszination für
+              aufgeladene Verbrennungskraftmaschinen, haben wir es uns zur
+              Hauptaufgabe gemacht ein kompetenter, transparenter &
+              zuverlässiger Ansprechpartner im Thema Leistungssteigerung &
+              Modifikation zu sein, mit dem Schwerpunkt Deutscher
+              Premiumhersteller. Durch unsere Erfahrung der letzten 8 Jahre in
+              dieser Branche, bieten wir unsere Kompetenzen nun unteranderem
+              auch für Lamborghini, McLaren, Aston Marton, Ferrari, Porsche &
+              Bugatti an. Durch inzwischen langjährige Partnerschaften in die
+              Industrie, sind wir optimal vernetzt und können für jeden
+              Kundenwunsch das passende Ergebnis erzielen. Qualität ist bei uns
+              keine Aufgabe, sondern ein Standard.
+            </p>
+          </div>
+        </div>
+        <div className="pt-48">
+          <h1 className="text-3xl font-bold text-center text-white">
+            Impressionen aus dem vergangenen Jahr
+          </h1>
+          <InViewImagesGrid />
+        </div>
+        <div className="hidden">
+          <BentoGrid className="pt-52 max-w-4xl mx-auto md:auto-rows-[20rem] mb-20">
+            {items.map((item, i) => (
+              <BentoGridItem
+                key={i}
+                title={item.title}
+                description={item.description}
+                header={item.header}
+                className={`${item.className} font-satoshi`}
+                icon={item.icon}
+              />
+            ))}
+          </BentoGrid>
+        </div>
       </div>
     </div>
   );
