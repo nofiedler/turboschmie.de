@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export default function Projects() {
+export default function About() {
   return (
     <div className="h-[40rem] w-full bg-transparent flex flex-col items-center justify-center overflow-hidden rounded-md">
       <h1 className="md:text-4xl text-2xl lg:text-7xl font-bold text-center text-white relative z-20">

@@ -42,9 +42,6 @@ export default function Component() {
           <Link href="/impressum" className="hover:text-white transition-colors">
             Impressum
           </Link>
-          <Link href="/services" className="hover:text-white transition-colors">
-            Kontaktformular
-          </Link>
         </nav>
 
 
