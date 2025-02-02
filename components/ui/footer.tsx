@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram} from "lucide-react";
 import Image from 'next/image'
 
 const logo = "/logo.svg";
