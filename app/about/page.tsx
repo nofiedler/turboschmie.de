@@ -244,7 +244,7 @@ export default function About() {
                   <p className="mt-2 text-muted-foreground">
                     Bedi steht eigentlich für die Benzin-Direkteinspritzung
                     eines Ottomotors. Da durch dieses System die Ansaugkanäle
-                    nicht mehr wie früher durch Kraftstoff selbst "mitgespült"
+                    nicht mehr wie früher durch Kraftstoff selbst &quot;mitgespült&quot;
                     werden, entstehen durch moderne System wie der
                     Abgasrückführung, mit der Zeit Ruß- & Ölkohleablagerungen,
                     die schlussendlich den Ansaugtrakt verkoken und so eine
