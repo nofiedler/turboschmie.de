@@ -231,7 +231,7 @@ export default function Services() {
                   BEDI-Reinigung
                 </MorphingDialogTitle>
                 <MorphingDialogSubtitle className="text-zinc-700 dark:text-zinc-400">
-                  (Reinigung der Ansaugwege)​
+                  Reinigung der Ansaugwege
                 </MorphingDialogSubtitle>
                 <MorphingDialogDescription
                   disableLayoutAnimation
