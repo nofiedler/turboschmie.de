@@ -106,6 +106,7 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
+    require('tailwind-scrollbar-hide'),
     require("tailwindcss-highlights"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: PluginUtils) {

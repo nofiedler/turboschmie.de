@@ -21,7 +21,7 @@ export default function Services() {
       <h1 className="pt-6 text-3xl font-bold mb-6 text-center text-white">
         Unsere Leistungen
       </h1>
-    <div className="md:w-1/2 w-5/6">
+    <div className="md:w-[800px] w-5/6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
         <MorphingDialog
           transition={{
@@ -61,7 +61,7 @@ export default function Services() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto md:overflow-hidden overflow-scroll relative flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service1.jpg"
@@ -144,7 +144,7 @@ export default function Services() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto relative md:overflow-hidden overflow-scroll flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service2.jpg"
@@ -219,7 +219,7 @@ export default function Services() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto relative md:overflow-hidden overflow-scroll flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service3.jpg"
@@ -302,7 +302,7 @@ export default function Services() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto relative overflow-scroll flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service4.jpg"
@@ -393,7 +393,7 @@ export default function Services() {
               style={{
                 borderRadius: "24px",
               }}
-              className="pointer-events-auto relative md:overflow-hidden overflow-scroll flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+              className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
             >
               <MorphingDialogImage
                 src="Service5.jpg"
