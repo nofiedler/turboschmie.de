@@ -39,7 +39,7 @@ export default function Component() {
         </nav>
 
         <nav className="flex flex-wrap justify-center gap-6 text-sm md:gap-8">
-          <Link href="/" className="hover:text-white transition-colors">
+          <Link href="/impressum" className="hover:text-white transition-colors">
             Impressum
           </Link>
           <Link href="/services" className="hover:text-white transition-colors">
@@ -49,21 +49,13 @@ export default function Component() {
 
 
         <div className="flex justify-center gap-6">
-          <Link href="#" className="hover:text-white transition-colors">
+          <Link href="https://www.facebook.com/www.turboschmiede.de/?locale=de_DE" className="hover:text-white transition-colors">
             <Facebook className="h-6 w-6" />
             <span className="sr-only">Facebook</span>
           </Link>
-          <Link href="#" className="hover:text-white transition-colors">
+          <Link href="https://www.instagram.com/turboschmie.de/?hl=de" className="hover:text-white transition-colors">
             <Instagram className="h-6 w-6" />
             <span className="sr-only">Instagram</span>
-          </Link>
-          <Link href="#" className="hover:text-white transition-colors">
-            <Twitter className="h-6 w-6" />
-            <span className="sr-only">Twitter</span>
-          </Link>
-          <Link href="#" className="hover:text-white transition-colors">
-            <Youtube className="h-6 w-6" />
-            <span className="sr-only">YouTube</span>
           </Link>
         </div>
         
