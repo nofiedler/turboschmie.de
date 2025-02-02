@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/morphing-dialog";
 import { PlusIcon } from "lucide-react";
 
-export default function About() {
+export default function Services() {
   return (
     <div className="flex flex-col items-center md:pt-28">
       <h1 className="pt-6 text-3xl font-bold mb-6 text-center text-white">
@@ -202,7 +202,7 @@ export default function About() {
             <div className="flex grow flex-row items-end justify-between px-3 py-2">
               <div>
                 <MorphingDialogTitle className="text-zinc-950 dark:text-zinc-50 text-2xl font-semibold">
-                  BEDI-Reinigung
+                  BEDI- <br /> Reinigung
                 </MorphingDialogTitle>
               </div>
               <button
@@ -285,7 +285,7 @@ export default function About() {
             <div className="flex grow flex-row items-end justify-between px-3 py-2">
               <div>
                 <MorphingDialogTitle className="text-zinc-950 dark:text-zinc-50 text-2xl font-semibold">
-                  KFZ-Einlagerung
+                  KFZ- <br /> Einlagerung
                 </MorphingDialogTitle>
               </div>
               <button

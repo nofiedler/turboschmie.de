@@ -6,6 +6,7 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import Image from "next/image";
+import Link from "next/link";
 import {
   IconClipboardCopy,
   IconFileBroken,
@@ -91,12 +92,14 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col items-center pt-6 space-y-4">
+        <Link href="/services">
           <HoverBorderGradient containerClassName="rounded-full" as="button">
-            <div className="flex items-center space-x-2 font-satoshi">
+            <div className="flex items-center text-sm space-x-2 font-satoshi">
               <span>&nbsp;Zu unseren Leistungen</span>
               <IconChevronRight className="h-4 w-4 text-white" />
             </div>
           </HoverBorderGradient>
+        </Link>
         </div>
       </div>
       <div className="flex flex-col items-center pt-6 space-y-4">

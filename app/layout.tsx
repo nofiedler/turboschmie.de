@@ -48,6 +48,11 @@ const navItems = [
     icon: <IconHome className="h-4 w-4 text-white" />,
   },
   {
+    name: "Leistungen",
+    link: "/services",
+    icon: <IconHome className="h-4 w-4 text-white" />,
+  },
+  {
     name: "Über uns",
     link: "/about",
     icon: <IconUser className="h-4 w-4 text-white" />,

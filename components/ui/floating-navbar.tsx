@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { Separator } from "@/components/ui/separator";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+
+const logo = "/logo.svg";
 
 interface NavItem {
   name: string;
@@ -33,6 +37,16 @@ export const FloatingNav = ({
         className
       )}
     >
+      <div className="flex justify-center">
+          <Image
+            src={logo}
+            alt="Company Logo"
+            width={150}
+            height={300}
+            priority
+          />
+        </div>
+      <Separator className="h-6 w-[1px] bg-white/[0.2]" />
       {navItems.map((navItem: NavItem, idx: number) => (
         <Link
           key={`link=${idx}`}
@@ -50,7 +64,7 @@ export const FloatingNav = ({
         <HoverBorderGradient
           containerClassName="rounded-full"
           as="button"
-          className="bg-black text-white flex items-center space-x-2"
+          className="bg-black text-white text-sm flex items-center space-x-2"
         >
           <span>Konfigurator</span>
         </HoverBorderGradient>
