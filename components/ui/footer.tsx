@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Facebook, Instagram} from "lucide-react";
-import Image from 'next/image'
+import { Instagram } from "lucide-react";
+import Image from "next/image";
 
 const logo = "/logo.svg";
 
@@ -18,16 +18,10 @@ export default function Component() {
           <Link href="/about" className="hover:text-white transition-colors">
             Über uns
           </Link>
-          <Link
-            href="/projects"
-            className="hover:text-white transition-colors"
-          >
+          <Link href="/projects" className="hover:text-white transition-colors">
             Projekte
           </Link>
-          <Link
-            href="/contact"
-            className="hover:text-white transition-colors"
-          >
+          <Link href="/contact" className="hover:text-white transition-colors">
             Kontakt
           </Link>
           <Link
@@ -39,33 +33,35 @@ export default function Component() {
         </nav>
 
         <nav className="flex flex-wrap justify-center gap-6 text-sm md:gap-8">
-          <Link href="/impressum" className="hover:text-white transition-colors">
+          <Link
+            href="/impressum"
+            className="hover:text-white transition-colors"
+          >
             Impressum
           </Link>
         </nav>
 
-
         <div className="flex justify-center gap-6">
-          <Link href="" className="hover:text-white transition-colors">
-            <Facebook className="h-6 w-6" />
-            <span className="sr-only">Facebook</span>
-          </Link>
-          <Link href="https://www.instagram.com/turboschmie.de/?hl=de" className="hover:text-white transition-colors">
+          <Link
+            href="https://www.instagram.com/turboschmie.de/?hl=de"
+            className="hover:text-white transition-colors"
+          >
             <Instagram className="h-6 w-6" />
             <span className="sr-only">Instagram</span>
           </Link>
         </div>
-        
+
         <p className="text-sm flex flex-col items-center">
-        <Image 
-          src={logo}
-          alt="..."
-          width={250}  // Passe die Größe an deine Bedürfnisse an
-          height={300} // Passe die Größe an deine Bedürfnisse an
-          priority  
-          className="pb-5"   // Optional, wenn das Bild above the fold ist
-        />
-          © {new Date().getFullYear()} This is a website for testing purposes only.
+          <Image
+            src={logo}
+            alt="..."
+            width={250} // Passe die Größe an deine Bedürfnisse an
+            height={300} // Passe die Größe an deine Bedürfnisse an
+            priority
+            className="pb-5" // Optional, wenn das Bild above the fold ist
+          />
+          © {new Date().getFullYear()} This is a website for testing purposes
+          only.
         </p>
       </div>
     </footer>
