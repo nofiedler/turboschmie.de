@@ -30,7 +30,7 @@ const words = [
 ];
 
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
 );
 const items = [
   {
@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <div className="relative w-full font-satoshi">
       <div className="min-h-screen w-full flex flex-col items-center justify-center pt-24 md:pt-60">
-        <div className="h-screen">
+        <div className="md:h-screen">
           <div className="hidden md:block">
             <Spotlight />
           </div>
@@ -79,16 +79,17 @@ export default function Home() {
               width={1200}
               height={300}
               priority
+              className="w-full max-w-xs md:max-w-full"
             />
           </div>
-          <div className="text-2xl md:text-4xl text-center mx-auto text-neutral-600 font-satoshi font-light pt-10 md:pt-20">
+          <div className="text-xl md:text-4xl text-center mx-auto text-neutral-600 font-satoshi font-light pt-10 md:pt-20">
             Wir liefern{" "}
             <a className="text-neutral-100 underline underline-offset-4 decoration-slate-100 decoration-1">
               Expertenlösungen
             </a>{" "}
             für Hochleistungssportwagen... <br />
             <FlipWords
-              className="text-3xl md:text-5xl font-satoshi font-black text-neutral-100 text-center pt-4"
+              className="text-2xl md:text-5xl font-satoshi font-black text-neutral-100 text-center pt-4"
               words={words}
             />
           </div>
@@ -106,17 +107,17 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col items-center pt-6 space-y-4 hyphens-auto">
-          <div className="md:w-[600px] w-10/12 text-center text-white mx-auto">
-            <p className="text-4xl font-light hyphens-none">Unsere Philosophie</p>
+        <div className="flex flex-col items-center md:pt-6 pt-32 space-y-4 hyphens-auto">
+          <div className="md:w-[600px] w-11/12 text-center text-white mx-auto">
+            <p className="text-3xl md:text-4xl font-light hyphens-none">Unsere Philosophie</p>
             <br />
             <br />
-            <p className="text-3xl font-black">
+            <p className="text-2xl md:text-3xl font-black">
               &ldquo;Perfektion ist nicht erreichbar, aber wenn wir Perfektion
               anstreben, können wir Exzellenz erreichen.&rdquo; - Vince Lombardi
             </p>
             <br />
-            <p className="text-xl font-light">
+            <p className="text-lg md:text-xl font-light">
               Bereits seit 2017 sind wir umfassend mit dem Thema der
               Kennfeldapplikation vertraut. Durch die Faszination für
               aufgeladene Verbrennungskraftmaschinen, haben wir es uns zur
@@ -133,14 +134,14 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="pt-48">
-          <h1 className="text-3xl font-bold text-center text-white">
-            Impressionen aus dem vergangenen Jahr
+        <div className="pt-24 md:pt-48">
+          <h1 className="text-2xl md:text-3xl font-bold text-center text-white hyphens-auto">
+            Impressionen <br /> aus dem vergangenen Jahr
           </h1>
           <InViewImagesGrid />
         </div>
         <div className="hidden">
-          <BentoGrid className="pt-52 max-w-4xl mx-auto md:auto-rows-[20rem] mb-20">
+          <BentoGrid className="pt-24 md:pt-52 max-w-4xl mx-auto md:auto-rows-[20rem] mb-20">
             {items.map((item, i) => (
               <BentoGridItem
                 key={i}
