@@ -54,7 +54,7 @@ export function Services_() {
                 style={{
                   borderRadius: "24px",
                 }}
-                className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+                className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px] max-w-[90%] mx-auto"
               >
                 <MorphingDialogImage
                   src="Service1.jpg"
@@ -76,7 +76,7 @@ export function Services_() {
                       exit: { opacity: 0, scale: 0.8, y: 100 },
                     }}
                   >
-                    <ul className="mt-2 text-muted-foreground list-disc pl-5">
+                    <ul className="mt-2 text-muted-foreground list-disc pl-5 hyphens-auto">
                       <li>
                         von Stufe 1 bis zur Einzelabstimmung ist hier alles
                         möglich
@@ -137,7 +137,7 @@ export function Services_() {
                 style={{
                   borderRadius: "24px",
                 }}
-                className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+                className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px] max-w-[90%] mx-auto"
               >
                 <MorphingDialogImage
                   src="Service2.jpg"
@@ -213,7 +213,7 @@ export function Services_() {
                 style={{
                   borderRadius: "24px",
                 }}
-                className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+                className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col  border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px] max-w-[90%] mx-auto"
               >
                 <MorphingDialogImage
                   src="Service3.jpg"
@@ -297,7 +297,7 @@ export function Services_() {
                 style={{
                   borderRadius: "24px",
                 }}
-                className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+                className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px] max-w-[90%] mx-auto"
               >
                 <MorphingDialogImage
                   src="Service4.jpg"
@@ -388,7 +388,7 @@ export function Services_() {
                 style={{
                   borderRadius: "24px",
                 }}
-                className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px]"
+                className="pointer-events-auto relative overflow-y-scroll scrollbar-hide flex h-auto w-full flex-col border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[600px] max-w-[90%] mx-auto"
               >
                 <MorphingDialogImage
                   src="Service5.jpg"
