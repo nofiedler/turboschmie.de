@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Impressum() {
   return (
-    <div className="flex flex-col items-center md:pt-28 text-white text-center w-10/12 mx-auto">
+    <div className="flex flex-col items-center md:pt-28 text-white text-center w-10/12 mx-auto hyphens-auto">
       <h1 className="pt-6 text-3xl font-bold mb-6">Impressum</h1>
 
       <section className="w-full text-left">
