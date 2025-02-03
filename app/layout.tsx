@@ -81,7 +81,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={satoshi.variable}>
-      <body className="antialiased min-h-screen bg-black bg-dot-white/[0.1] relative font-satoshi">
+      <body className="antialiased min-h-screen bg-black bg-dot-white/[0.15] relative font-satoshi">
         <div className="fixed pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
         <FloatingNav navItems={navItems} />
         {/* Wrapper mit scrollbar-hide */}
