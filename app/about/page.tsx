@@ -4,23 +4,23 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="md:pt-28 flex flex-col items-center justify-center space-y-4 hyphens-auto">
+    <div className="md:pt-36 flex flex-col items-center justify-center space-y-4 hyphens-auto">
       <div className="pt-6 text-white mx-auto">
-        <h1 className="md:w-[900px] w-10/12 text-4xl text-center font-light mb-6 mx-auto">
-          „Man kann ein Auto nicht wie ein menschliches Wesen behandeln. Ein
-          Auto braucht Liebe!“ - Walter Röhrl
+        <h1 className="md:w-[900px] w-10/12 text-4xl text-center font-light mb-20 mx-auto">
+          &bdquo;Man kann ein Auto nicht wie ein menschliches Wesen behandeln. Ein
+          Auto braucht Liebe!&ldquo; - Walter Röhrl
         </h1>
         
         <div className="flex flex-col md:flex-row justify-center items-start space-x-12">
-          <div className="md:w-5/12">
+          <div className="md:w-5/12 md:max-w-[600px]">
             <h1 className="pt-6 text-3xl font-bold mb-6 text-white">
               Die Entstehung der Turboschmiede
             </h1>
             <p className="text-xl font-light">
-              Bereits in jungen Jahren & diversen kleineren "Hobby-Garagen" entstand
+              Bereits in jungen Jahren & diversen kleineren &bdquo;Hobby-Garagen&ldquo; entstand
               das Verlangen einen Ort zu schaffen, wo das Thema Automobil komplett
               im Vordergrund steht. Nach 7 langen Jahren auf der Suche nach dem
-              passenden Objekt konnten wir 2020 inmitten der CoVid 19´ Pandemie den
+              passenden Objekt konnten wir 2020 inmitten der CoVid 19&acute; Pandemie den
               Schritt wagen dieses Projekt zu realisieren. Seitdem sind unzählige
               Stunden der Renovierung in Eigenleistung und Einrichtung der
               Räumlichkeiten verfallen. Wie jedes Projekt eines Enthusiasten &
@@ -29,7 +29,7 @@ export default function About() {
             </p>
           </div>
           
-          <div className="md:w-5/12">
+          <div className="md:w-5/12 md:max-w-[600px]">
             <h1 className="pt-6 text-3xl font-bold mb-6 text-white">
               Die Vision
             </h1>
