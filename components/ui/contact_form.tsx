@@ -57,7 +57,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
 
   // add "dark" to the class names to enable dark mode ("" -> "dark")
   return (
-    <Card className={cn("w-full bg-zinc-900 max-w-md border-gray-600", className, "")}>
+    <Card className={cn("w-full bg-zinc-900 max-w-md border-zinc-700", className, "")}>
       <CardHeader className="relative">
         <CardTitle className="text-2xl text-white">
           Sende uns eine Anfrage
@@ -81,7 +81,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, name: e.target.value }))
               }
-              className=" text-white border-gray-600"
+              className=" text-white border-zinc-700"
               required
             />
           </div>
@@ -97,7 +97,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, email: e.target.value }))
               }
-              className=" text-white border-gray-600"
+              className=" text-white border-zinc-700"
               required
             />
           </div>
@@ -112,7 +112,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, message: e.target.value }))
               }
-              className=" text-white border-gray-600"
+              className=" text-white border-zinc-700"
               required
             />
           </div>

@@ -24,13 +24,13 @@ import {
 // linke Seite ändert die angezeigten Namen der Optionen
 // rechte Seite bitte nicht ändern!
 const tuningOptionsMapping: { [key: string]: string } = {
-  "Chiptuning": "Chiptuning",
-  "Turbolader": "Turbolader",
-  "Rennfilter": "Rennfilter",
+  Chiptuning: "Chiptuning",
+  Turbolader: "Turbolader",
+  Rennfilter: "Rennfilter",
   "Catless Kit": "Downpipes",
-  "Ladeluftkühler": "Ladeluftkuehler",
-  "Auspuffanlage": "Auspuffanlage",
-  "Fächerkrümmer": "Faecherkruemmer",
+  Ladeluftkühler: "Ladeluftkuehler",
+  Auspuffanlage: "Auspuffanlage",
+  Fächerkrümmer: "Faecherkruemmer",
   "Pops & Bangs": "AK47",
 };
 
@@ -158,7 +158,7 @@ export const CarTuningConfigurator = () => {
         Tuning Konfigurator
       </h1>
 
-      <Card className="mb-6">
+      <Card className="mb-6 bg-zinc-900 border-zinc-800 text-white">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold">
             Modell Auswahl
@@ -238,7 +238,7 @@ export const CarTuningConfigurator = () => {
       </Card>
 
       {engine && (
-        <Card className="sticky top-6 z-10 md:top-36">
+        <Card className="sticky top-6 z-10 md:top-36 bg-zinc-900 border-zinc-800 text-white">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">
               Tuning Optionen
@@ -247,7 +247,7 @@ export const CarTuningConfigurator = () => {
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {Object.keys(tuningOptionsMapping).map((option) => (
-                <div key={option} className="flex items-center space-x-2">
+                <div key={option} className="flex items-center space-x-2 ">
                   <Switch
                     id={option}
                     checked={tuningOptions.includes(option)}
@@ -276,9 +276,9 @@ export const CarTuningConfigurator = () => {
           <div className="grid grid-cols-2 gap-4 text-center">
             {[originalPerformance, tunedPerformance].map(
               (performance, index) => (
-                <Card 
+                <Card
                   key={index}
-                  className="md:bg-white md:border-white md:text-black bg-transparent text-white border-transparent" 
+                  className=" bg-transparent text-white border-transparent md:bg-zinc-900 md:border-zinc-800 "
                 >
                   <CardHeader>
                     <CardTitle className="text-xl font-bold">
@@ -302,12 +302,12 @@ export const CarTuningConfigurator = () => {
                             {key === "power"
                               ? "PS"
                               : key === "torque"
-                              ? "Nm"
-                              : key === "vmax"
-                              ? "km/h"
-                              : key === "acceleration"
-                              ? "s"
-                              : "cm³"}
+                                ? "Nm"
+                                : key === "vmax"
+                                  ? "km/h"
+                                  : key === "acceleration"
+                                    ? "s"
+                                    : "cm³"}
                           </p>
                           <p className="text-sm text-muted-foreground pb-2">
                             {key.toUpperCase()}
