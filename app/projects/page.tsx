@@ -11,7 +11,7 @@ export default function Projects() {
         Unsere Projekte
       </h1>
 
-      <Card className="mb-6 bg-zinc-900 border-zinc-800 text-white">
+      <Card className="mb-12 bg-zinc-900 border-zinc-800 text-white">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold">
             B5 - Eine Liebe die niemals endet.
@@ -51,7 +51,7 @@ export default function Projects() {
         </CardContent>
       </Card>
 
-      <Card className="mb-6 bg-zinc-900 border-zinc-800 text-white">
+      <Card className="mb-12 bg-zinc-900 border-zinc-800 text-white">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold">
             Vorsicht Allzweckwaffe!
