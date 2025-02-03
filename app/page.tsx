@@ -98,7 +98,7 @@ export default function Home() {
             </HoverBorderGradient>
           </Link>
         </div>
-        <div className="relative flex justify-center items-center mt-auto pb-5 text-white text-sm">
+        <div className="relative justify-center items-center mt-auto pb-5 text-white text-sm hidden md:flex">
           <ChevronsUpDownIcon />
         </div>
       </div>
