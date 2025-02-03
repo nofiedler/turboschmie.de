@@ -60,12 +60,12 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
     <Card className={cn("w-full max-w-md", className, "")}>
       <CardHeader className="relative">
         <CardTitle className="text-2xl dark:text-white">
-          Wie können wir helfen?
+          Sende uns eine Anfrage
         </CardTitle>
         <CardDescription className="dark:text-gray-300">
-          Brauchen Sie Hilfe bei Ihrem Projekt?
+          Öffnungszeiten: Montag - Freitag 
           <br />
-          Wir sind hier, um Ihnen zu helfen.
+          Nur nach Terminabsprache
         </CardDescription>
       </CardHeader>
 
@@ -116,7 +116,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               required
             />
           </div>
-              
+
           <div className="group/field grid gap-2">
             <Label className="dark:text-white">
               Datei Upload - Fahrzeugbrief
