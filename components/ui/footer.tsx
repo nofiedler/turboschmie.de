@@ -46,7 +46,7 @@ export default function Component() {
 
 
         <div className="flex justify-center gap-6">
-          <Link href="https://www.facebook.com/www.turboschmiede.de/?locale=de_DE" className="hover:text-white transition-colors">
+          <Link href="" className="hover:text-white transition-colors">
             <Facebook className="h-6 w-6" />
             <span className="sr-only">Facebook</span>
           </Link>
