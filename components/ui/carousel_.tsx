@@ -4,7 +4,7 @@ import {
   CarouselNavigation,
   CarouselItem,
 } from '@/components/ui/carousel';
-import Image from "next/image";
+//import Image from "next/image";
 
 const logo = "/Turboschmiede (2).jpg";
 
