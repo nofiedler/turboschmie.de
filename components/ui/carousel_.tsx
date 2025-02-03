@@ -4,6 +4,9 @@ import {
   CarouselNavigation,
   CarouselItem,
 } from '@/components/ui/carousel';
+import Image from "next/image";
+
+const logo = "/Turboschmiede (2).jpg";
 
 export function CarouselSpacing() {
   return (
@@ -12,7 +15,7 @@ export function CarouselSpacing() {
         <CarouselContent className='-ml-4'>
           <CarouselItem className='basis-1/3 pl-4'>
             <div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
-              1
+            1
             </div>
           </CarouselItem>
           <CarouselItem className='basis-1/3 pl-4'>

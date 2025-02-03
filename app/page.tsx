@@ -8,6 +8,7 @@ import { Spotlight } from "@/components/ui/spotlight-new";
 import Image from "next/image";
 import Link from "next/link";
 import { InViewImagesGrid } from "@/components/ui/image_grid";
+import { ChevronsUpDownIcon } from "@/components/ui/chevrons-up-down";
 import {
   IconClipboardCopy,
   IconFileBroken,
@@ -67,12 +68,11 @@ const items = [
 export default function Home() {
   return (
     <div className="relative w-full font-satoshi">
-      <div className="min-h-screen w-full flex flex-col items-center justify-center pt-24 md:pt-60">
-        <div className="md:h-screen">
+      <div className="md:h-screen w-full flex flex-col items-center justify-center">
           <div className="hidden md:block">
             <Spotlight />
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center pt-24 md:pt-60">
             <Image
               src={logo}
               alt="Company Logo"
@@ -94,22 +94,27 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col items-center pt-6 space-y-4">
-            <Link href="/services">
+            <Link href="/configurator">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 as="button"
               >
                 <div className="flex items-center text-sm space-x-2 font-satoshi">
-                  <span>&nbsp;Zu unseren Leistungen</span>
+                  <span>&nbsp;Tuning konfigurieren</span>
                   <IconChevronRight className="h-4 w-4 text-white" />
                 </div>
               </HoverBorderGradient>
             </Link>
           </div>
+          <div className="relative flex justify-center items-center mt-auto pb-5 text-white text-sm">
+            <ChevronsUpDownIcon />
+          </div>
         </div>
         <div className="flex flex-col items-center md:pt-6 pt-32 space-y-4 hyphens-auto">
           <div className="md:w-[600px] w-11/12 text-center text-white mx-auto">
-            <p className="text-3xl md:text-4xl font-light hyphens-none">Unsere Philosophie</p>
+            <p className="text-3xl md:text-4xl font-light hyphens-none">
+              Unsere Philosophie
+            </p>
             <br />
             <br />
             <p className="text-2xl md:text-3xl font-black">
@@ -155,6 +160,5 @@ export default function Home() {
           </BentoGrid>
         </div>
       </div>
-    </div>
   );
 }

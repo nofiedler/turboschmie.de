@@ -24,11 +24,11 @@ export default function Projects() {
           <p className="text-zinc-700 dark:text-zinc-400 font-semibold">
             2023/01/24
           </p>
-          <p className="text-zinc-700 dark:text-zinc-400 pt-2">
+          <p className="text-zinc-700 dark:text-zinc-400 pt-4">
             &quot;Der Ursprung allen Übels könnte man meinen oder vielleicht das
             beste was einem je passiert ist?&quot;
           </p>
-          <p className="mt-2 text-muted-foreground hyphens-auto pt-4">
+          <p className="mt-2 text-muted-foreground hyphens-auto pt-2">
             Mit der Plattform B5 Typ 8D konnte die Audi AG ab 1994 bis 2002
             durch mehrere Evolutionsstufen eines der absatzstärksten Modelle mit
             knapp 1,7 Millionen hergestellten Fahrzeuge verzeichnen. Aufgrund

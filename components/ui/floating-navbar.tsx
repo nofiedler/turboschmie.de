@@ -38,6 +38,7 @@ export const FloatingNav = ({
       )}
     >
       <div className="flex justify-center">
+      <Link href="/">
           <Image
             src={logo}
             alt="Company Logo"
@@ -45,6 +46,7 @@ export const FloatingNav = ({
             height={300}
             priority
           />
+        </Link>
         </div>
       <Separator className="h-6 w-[1px] bg-white/[0.2]" />
       {navItems.map((navItem: NavItem, idx: number) => (
