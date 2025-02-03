@@ -76,10 +76,10 @@ export default function Home() {
             <Image
               src={logo}
               alt="Company Logo"
-              width={1200}
-              height={300}
+              width={1500} // Erhöhe die Breite
+              height={500} // Erhöhe die Höhe
               priority
-              className="w-full max-w-xs md:max-w-full"
+              className=""
             />
           </div>
           <div className="text-xl md:text-4xl text-center mx-auto text-neutral-600 pt-10 md:pt-20">
