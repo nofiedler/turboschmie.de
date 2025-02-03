@@ -36,6 +36,7 @@ export function Services_() {
               <div className="flex grow flex-row items-end justify-between px-3 py-2">
                 <div>
                   <MorphingDialogTitle className="text-zinc-950 dark:text-zinc-50 text-2xl font-semibold">
+                    <br />
                     Chiptuning
                   </MorphingDialogTitle>
                 </div>
