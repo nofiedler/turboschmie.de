@@ -157,7 +157,7 @@ export function Services_() {
                       exit: { opacity: 0, scale: 0.8, y: 100 },
                     }}
                   >
-                    <p className="mt-2 text-muted-foreground">
+                    <p className="mt-2 text-muted-foreground hyphens-auto">
                       Um das Feld der Applikationen umfassend abzudecken bieten
                       wir Ihnen zudem eine umfassende Beratung und Anwendung im
                       Bereich Steuergeräte-Codierung an. Egal ob
@@ -235,7 +235,7 @@ export function Services_() {
                       exit: { opacity: 0, scale: 0.8, y: 100 },
                     }}
                   >
-                    <p className="mt-2 text-muted-foreground">
+                    <p className="mt-2 text-muted-foreground hyphens-auto">
                       Bedi steht eigentlich für die Benzin-Direkteinspritzung
                       eines Ottomotors. Da durch dieses System die Ansaugkanäle
                       nicht mehr wie früher durch Kraftstoff selbst
@@ -319,7 +319,7 @@ export function Services_() {
                       exit: { opacity: 0, scale: 0.8, y: 100 },
                     }}
                   >
-                    <p className="mt-2 text-muted-foreground">
+                    <p className="mt-2 text-muted-foreground hyphens-auto">
                       Wir bieten Ihnen die optimale Lösung zur Lagerung ihres
                       Lieblings. Unsere Räumlichkeiten sind beheizt,
                       videoüberwacht & werden täglich betreut. Zudem bieten wir
@@ -408,7 +408,7 @@ export function Services_() {
                       exit: { opacity: 0, scale: 0.8, y: 100 },
                     }}
                   >
-                    <p className="mt-2 text-muted-foreground">
+                    <p className="mt-2 text-muted-foreground hyphens-auto">
                       Sie suchen einen zuverlässigen Partner für Ihre
                       Fahrzeugvermittlung? Wir bieten Ihnen vom offenen
                       KFZ-Transport bis zum geschlossen Rennanhänger jede

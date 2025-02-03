@@ -82,7 +82,7 @@ export default function Home() {
               className="w-full max-w-xs md:max-w-full"
             />
           </div>
-          <div className="text-xl md:text-4xl text-center mx-auto text-neutral-600 font-satoshi font-light pt-10 md:pt-20">
+          <div className="text-xl md:text-4xl text-center mx-auto text-neutral-600 pt-10 md:pt-20">
             Wir liefern{" "}
             <a className="text-neutral-100 underline underline-offset-4 decoration-slate-100 decoration-1">
               Expertenlösungen

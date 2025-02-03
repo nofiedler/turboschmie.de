@@ -238,19 +238,24 @@ function MorphingDialogContainer({ children }: MorphingDialogContainerProps) {
   if (!mounted) return null;
 
   return createPortal(
-    <AnimatePresence initial={false} mode='sync'>
+    <AnimatePresence initial={false} mode='wait'>
       {isOpen && (
         <>
           <motion.div
             key={`backdrop-${uniqueId}`}
-            className='fixed inset-0 h-full w-full  backdrop-blur-xs bg-black/40'
+            className='fixed inset-0 h-full w-full bg-black/80'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0.2 } }} // Add delay on exit
           />
-          <div className='fixed inset-0 md:z-50 z-[9999] bg-black/90 flex items-center justify-center'>
+          <motion.div
+            className='fixed inset-0 md:z-50 z-[9999] flex items-center justify-center bg-black/50'
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { delay: 0.2, duration: 0.2 } }} // Delay shrinking of dialog
+          >
             {children}
-          </div>
+          </motion.div>
         </>
       )}
     </AnimatePresence>,
