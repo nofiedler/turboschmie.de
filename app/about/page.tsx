@@ -13,7 +13,7 @@ export default function About() {
         
         <div className="flex flex-col md:flex-row justify-center items-start md:space-x-12 space-y-8 md:space-y-0">
           <div className="w-full md:w-5/12 md:max-w-[600px]">
-            <h1 className="pt-6 text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">
+            <h1 className="pt-6 text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white hyphens-none">
               Die Entstehung der Turboschmiede
             </h1>
             <p className="text-lg md:text-xl font-light">
@@ -30,7 +30,7 @@ export default function About() {
           </div>
           
           <div className="w-full md:w-5/12 md:max-w-[600px]">
-            <h1 className="pt-6 text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">
+            <h1 className="pt-6 text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white hyphens-none">
               Die Vision
             </h1>
             <p className="text-lg md:text-xl font-light">

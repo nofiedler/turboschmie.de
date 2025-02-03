@@ -108,7 +108,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center pt-6 space-y-4 hyphens-auto">
           <div className="md:w-[600px] w-10/12 text-center text-white mx-auto">
-            <p className="text-4xl font-light">Unsere Philosophie</p>
+            <p className="text-4xl font-light hyphens-none">Unsere Philosophie</p>
             <br />
             <br />
             <p className="text-3xl font-black">
