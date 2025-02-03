@@ -14,7 +14,7 @@ import {
 
 export function Services_() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
           <MorphingDialog
             transition={{
               type: "spring",
@@ -259,7 +259,8 @@ export function Services_() {
             </MorphingDialogContainer>
           </MorphingDialog>
 
-          <MorphingDialog
+          {/* Dieser Teil soll nicht angezeigt werden */}
+          {/* <MorphingDialog
             transition={{
               type: "spring",
               bounce: 0.05,
@@ -348,7 +349,7 @@ export function Services_() {
                 <MorphingDialogClose className="text-zinc-50" />
               </MorphingDialogContent>
             </MorphingDialogContainer>
-          </MorphingDialog>
+          </MorphingDialog> */}
 
           <MorphingDialog
             transition={{
