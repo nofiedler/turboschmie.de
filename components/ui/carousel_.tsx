@@ -6,7 +6,7 @@ import {
 } from '@/components/ui/carousel';
 //import Image from "next/image";
 
-const logo = "/Turboschmiede (2).jpg";
+//const logo = "/Turboschmiede (2).jpg";
 
 export function CarouselSpacing() {
   return (
