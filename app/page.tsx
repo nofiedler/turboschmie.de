@@ -106,8 +106,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col items-center pt-6 space-y-4">
-          <div className="md:w-2/6 w-10/12 text-center text-white mx-auto">
+        <div className="flex flex-col items-center pt-6 space-y-4 hyphens-auto">
+          <div className="md:w-[600px] w-10/12 text-center text-white mx-auto">
             <p className="text-4xl font-light">Unsere Philosophie</p>
             <br />
             <br />

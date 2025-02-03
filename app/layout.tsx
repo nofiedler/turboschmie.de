@@ -70,7 +70,7 @@ const navItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "Turboschmie.de",
+  title: "Turboschmiede",
   description: "Created by N",
 };
 
