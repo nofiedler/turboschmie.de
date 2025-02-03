@@ -11,9 +11,9 @@ export default function Projects() {
         Unsere Projekte
       </h1>
 
-      <Card className="mb-6">
+      <Card className="mb-6 bg-zinc-900 border-zinc-800 text-white">
         <CardHeader>
-          <CardTitle className="text-2xl font-semibold text-zinc-950 dark:text-zinc-50">
+          <CardTitle className="text-2xl font-semibold">
             B5 - Eine Liebe die niemals endet.
           </CardTitle>
         </CardHeader>
@@ -21,10 +21,10 @@ export default function Projects() {
           <div className="h-80 flex justify-center">
             <CarouselSpacing />
           </div>
-          <p className="text-zinc-700 dark:text-zinc-400 font-semibold">
+          <p className="text-zinc-400 font-semibold">
             2023/01/24
           </p>
-          <p className="text-zinc-700 dark:text-zinc-400 pt-4">
+          <p className="text-zinc-400 pt-4">
             &quot;Der Ursprung allen Übels könnte man meinen oder vielleicht das
             beste was einem je passiert ist?&quot;
           </p>
@@ -51,9 +51,9 @@ export default function Projects() {
         </CardContent>
       </Card>
 
-      <Card className="mb-6">
+      <Card className="mb-6 bg-zinc-900 border-zinc-800 text-white">
         <CardHeader>
-          <CardTitle className="text-2xl font-semibold text-zinc-950 dark:text-zinc-50">
+          <CardTitle className="text-2xl font-semibold">
             Vorsicht Allzweckwaffe!
           </CardTitle>
         </CardHeader>
@@ -61,7 +61,7 @@ export default function Projects() {
           <div className="h-80 flex justify-center">
             <CarouselSpacing />
           </div>
-          <p className="text-zinc-700 dark:text-zinc-400 font-semibold">
+          <p className="text-zinc-400 font-semibold">
             2023/01/24
           </p>
           <p className="mt-2 text-muted-foreground hyphens-auto pt-2">
