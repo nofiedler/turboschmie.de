@@ -57,12 +57,12 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
 
   // add "dark" to the class names to enable dark mode ("" -> "dark")
   return (
-    <Card className={cn("w-full max-w-md", className, "")}>
+    <Card className={cn("w-full bg-zinc-900 max-w-md border-gray-600", className, "")}>
       <CardHeader className="relative">
-        <CardTitle className="text-2xl dark:text-white">
+        <CardTitle className="text-2xl text-white">
           Sende uns eine Anfrage
         </CardTitle>
-        <CardDescription className="dark:text-gray-300">
+        <CardDescription className="text-gray-300">
           Öffnungszeiten: Montag - Freitag 
           <br />
           Nur nach Terminabsprache
@@ -72,7 +72,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
       <form onSubmit={handleSubmit}>
         <CardContent className="flex flex-col gap-6">
           <div className="group/field grid gap-2">
-            <Label htmlFor="name" className="dark:text-white">
+            <Label htmlFor="name" className="text-white">
               Name <span aria-hidden="true">*</span>
             </Label>
             <Input
@@ -81,13 +81,13 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, name: e.target.value }))
               }
-              className="dark:bg-gray-700 dark:text-white dark:border-gray-600"
+              className=" text-white border-gray-600"
               required
             />
           </div>
 
           <div className="group/field grid gap-2">
-            <Label htmlFor="email" className="dark:text-white">
+            <Label htmlFor="email" className="text-white">
               Email <span aria-hidden="true">*</span>
             </Label>
             <Input
@@ -97,13 +97,13 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, email: e.target.value }))
               }
-              className="dark:bg-gray-700 dark:text-white dark:border-gray-600"
+              className=" text-white border-gray-600"
               required
             />
           </div>
 
           <div className="group/field grid gap-2">
-            <Label htmlFor="message" className="dark:text-white">
+            <Label htmlFor="message" className="text-white">
               Anfrage <span aria-hidden="true">*</span>
             </Label>
             <Textarea
@@ -112,15 +112,15 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, message: e.target.value }))
               }
-              className="dark:bg-gray-700 dark:text-white dark:border-gray-600"
+              className=" text-white border-gray-600"
               required
             />
           </div>
 
           <div className="group/field grid gap-2">
-            <Label className="dark:text-white">
+            <Label className="text-white">
               Datei Upload - Fahrzeugbrief
-              <small className="block text-xs text-gray-500 dark:text-gray-400">
+              <small className="block text-xs text-gray-400">
                 Maximale Dateigröße: 4MB
               </small>
             </Label>
