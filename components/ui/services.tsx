@@ -95,7 +95,7 @@ export function Services_() {
                 </ul>
                 <div className="pt-6">
                   <Link href="/contact">
-                    <Button className="bg-zinc-800 hover:bg-zinc-700 border-none text-sm">
+                    <Button className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full">
                       <span>Zum Kontaktformular</span>
                       <IconChevronRight className="h-4 w-4 text-white" />
                     </Button>
