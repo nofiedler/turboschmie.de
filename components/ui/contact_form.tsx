@@ -81,7 +81,9 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, name: e.target.value }))
               }
-              className=" text-white border-zinc-700"
+              className={`${
+                formData.name ? "bg-white text-black" : "bg-transparent text-white"
+              } border-zinc-700`}
               required
             />
           </div>
@@ -97,7 +99,9 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, email: e.target.value }))
               }
-              className=" text-white border-zinc-700"
+              className={`${
+                formData.email ? "bg-white text-black" : "bg-transparent text-white"
+              } border-zinc-700`}
               required
             />
           </div>
@@ -112,7 +116,9 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, message: e.target.value }))
               }
-              className=" text-white border-zinc-700"
+              className={`${
+                formData.message ? "bg-white text-black" : "bg-transparent text-white"
+              } border-zinc-700`}
               required
             />
           </div>

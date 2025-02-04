@@ -1,266 +1,288 @@
-'use client';
+"use client";
 import {
-    MorphingDialog,
-    MorphingDialogTrigger,
-    MorphingDialogContent,
-    MorphingDialogTitle,
-    MorphingDialogImage,
-    MorphingDialogSubtitle,
-    MorphingDialogClose,
-    MorphingDialogDescription,
-    MorphingDialogContainer,
-  } from "@/components/ui/morphing-dialog";
-  import { PlusIcon } from "lucide-react";
+  MorphingDialog,
+  MorphingDialogTrigger,
+  MorphingDialogContent,
+  MorphingDialogTitle,
+  MorphingDialogImage,
+  MorphingDialogSubtitle,
+  MorphingDialogClose,
+  MorphingDialogDescription,
+  MorphingDialogContainer,
+} from "@/components/ui/morphing-dialog";
+import { IconChevronRight } from "@tabler/icons-react";
+import { PlusIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Services_() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
-          <MorphingDialog
-            transition={{
-              type: "spring",
-              bounce: 0.05,
-              duration: 0.25,
-            }}
-          >
-            <MorphingDialogTrigger
-              style={{
-                borderRadius: "12px",
-              }}
-              className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+      <MorphingDialog
+        transition={{
+          type: "spring",
+          bounce: 0.05,
+          duration: 0.25,
+        }}
+      >
+        <MorphingDialogTrigger
+          style={{
+            borderRadius: "12px",
+          }}
+          className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+        >
+          <MorphingDialogImage
+            src="Service1.jpg"
+            alt=""
+            className="h-48 w-full object-cover"
+          />
+          <div className="flex grow flex-row items-end justify-between px-3 py-2">
+            <div>
+              <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
+                <br />
+                Chiptuning
+              </MorphingDialogTitle>
+            </div>
+            <button
+              type="button"
+              className="relative ml-1 flex h-6 w-6 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg border  transition-colors focus-visible:ring-2 active:scale-[0.98] border-zinc-50/10 bg-zinc-900 text-zinc-500 hover:bg-zinc-800 hover:text-zinc-50 focus-visible:ring-zinc-500"
+              aria-label="Open dialog"
             >
-              <MorphingDialogImage
-                src="Service1.jpg"
-                alt=""
-                className="h-48 w-full object-cover"
-              />
-              <div className="flex grow flex-row items-end justify-between px-3 py-2">
-                <div>
-                  <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
-                    <br />
-                    Chiptuning
-                  </MorphingDialogTitle>
-                </div>
-                <button
-                  type="button"
-                  className="relative ml-1 flex h-6 w-6 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg border  transition-colors focus-visible:ring-2 active:scale-[0.98] border-zinc-50/10 bg-zinc-900 text-zinc-500 hover:bg-zinc-800 hover:text-zinc-50 focus-visible:ring-zinc-500"
-                  aria-label="Open dialog"
-                >
-                  <PlusIcon size={12} />
-                </button>
-              </div>
-            </MorphingDialogTrigger>
-            <MorphingDialogContainer>
-              <MorphingDialogContent
-                style={{
-                  borderRadius: "24px",
-                }}
-                className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
-              >
-                <MorphingDialogImage
-                  src="Service1.jpg"
-                  alt=""
-                  className="h-full w-full"
-                />
-                <div className="p-6">
-                  <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
-                    Kennfeldoptimierung
-                  </MorphingDialogTitle>
-                  <MorphingDialogSubtitle className="text-zinc-400">
-                    auch bekannt als Chiptuning
-                  </MorphingDialogSubtitle>
-                  <MorphingDialogDescription
-                    disableLayoutAnimation
-                    variants={{
-                      initial: { opacity: 0, scale: 0.8, y: 100 },
-                      animate: { opacity: 1, scale: 1, y: 0 },
-                      exit: { opacity: 0, scale: 0.8, y: 100 },
-                    }}
-                  >
-                    <ul className="mt-2 text-muted-foreground list-disc pl-5 hyphens-auto">
-                      <li>
-                        von Stufe 1 bis zur Einzelabstimmung ist hier alles
-                        möglich
-                      </li>
-                      <li>
-                        Launch Control - NoLiftShift - Schubabschaltung -
-                        MapSwitch
-                      </li>
-                      <li>DPF - AGR - AdBlue etc.</li>
-                      <li>
-                        bei Fahrzeugen bis 5 Jahre und &lt;100tkm zusätzlich mit
-                        Garantie möglich
-                      </li>
-                      <li>Wiederherstellung des Werkszustands</li>
-                    </ul>
-                  </MorphingDialogDescription>
-                </div>
-                <MorphingDialogClose className="text-zinc-50" />
-              </MorphingDialogContent>
-            </MorphingDialogContainer>
-          </MorphingDialog>
-
-          <MorphingDialog
-            transition={{
-              type: "spring",
-              bounce: 0.05,
-              duration: 0.25,
+              <PlusIcon size={12} />
+            </button>
+          </div>
+        </MorphingDialogTrigger>
+        <MorphingDialogContainer>
+          <MorphingDialogContent
+            style={{
+              borderRadius: "24px",
             }}
+            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
           >
-            <MorphingDialogTrigger
-              style={{
-                borderRadius: "12px",
-              }}
-              className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
-            >
-              <MorphingDialogImage
-                src="Service2.jpg"
-                alt=""
-                className="h-48 w-full object-cover"
-              />
-              <div className="flex grow flex-row items-end justify-between px-3 py-2">
-                <div>
-                  <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
-                    Steuergeräte- <br /> Codierung
-                  </MorphingDialogTitle>
-                </div>
-                <button
-                  type="button"
-                  className="relative ml-1 flex h-6 w-6 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg border  transition-colors focus-visible:ring-2 active:scale-[0.98] border-zinc-50/10 bg-zinc-900 text-zinc-500 hover:bg-zinc-800 hover:text-zinc-50 focus-visible:ring-zinc-500"
-                  aria-label="Open dialog"
-                >
-                  <PlusIcon size={12} />
-                </button>
-              </div>
-            </MorphingDialogTrigger>
-            <MorphingDialogContainer>
-              <MorphingDialogContent
-                style={{
-                  borderRadius: "24px",
+            <MorphingDialogImage
+              src="Service1.jpg"
+              alt=""
+              className="h-full w-full"
+            />
+            <div className="p-6">
+              <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
+                Kennfeldoptimierung
+              </MorphingDialogTitle>
+              <MorphingDialogSubtitle className="text-zinc-400">
+                auch bekannt als Chiptuning
+              </MorphingDialogSubtitle>
+              <MorphingDialogDescription
+                disableLayoutAnimation
+                variants={{
+                  initial: { opacity: 0, scale: 0.8, y: 100 },
+                  animate: { opacity: 1, scale: 1, y: 0 },
+                  exit: { opacity: 0, scale: 0.8, y: 100 },
                 }}
-                className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
               >
-                <MorphingDialogImage
-                  src="Service2.jpg"
-                  alt=""
-                  className="h-full w-full"
-                />
-                <div className="p-6">
-                  <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
-                    Steuergeräte-Codierung
-                  </MorphingDialogTitle>
-
-                  <MorphingDialogDescription
-                    disableLayoutAnimation
-                    variants={{
-                      initial: { opacity: 0, scale: 0.8, y: 100 },
-                      animate: { opacity: 1, scale: 1, y: 0 },
-                      exit: { opacity: 0, scale: 0.8, y: 100 },
-                    }}
-                  >
-                    <p className="mt-2 text-muted-foreground hyphens-auto">
-                      Um das Feld der Applikationen umfassend abzudecken bieten
-                      wir Ihnen zudem eine umfassende Beratung und Anwendung im
-                      Bereich Steuergeräte-Codierung an. Egal ob
-                      Aktivierung-/Deaktivierung von bereits verbauten oder
-                      nachgerüsteten Komponenten, als auch die Nachrüstung
-                      selbst sind bei uns kein Problem. Wir arbeiten
-                      ausschließlich mit den offiziellen Endgeräten der
-                      jeweiligen Hersteller, um unsere Qualität stets
-                      gewährleisten zu können.
-                    </p>
-                  </MorphingDialogDescription>
+                <ul className="mt-2 text-muted-foreground list-disc pl-5 hyphens-auto">
+                  <li>
+                    von Stufe 1 bis zur Einzelabstimmung ist hier alles möglich
+                  </li>
+                  <li>
+                    Launch Control - NoLiftShift - Schubabschaltung - MapSwitch
+                  </li>
+                  <li>DPF - AGR - AdBlue etc.</li>
+                  <li>
+                    bei Fahrzeugen bis 5 Jahre und &lt;100tkm zusätzlich mit
+                    Garantie möglich
+                  </li>
+                  <li>Wiederherstellung des Werkszustands</li>
+                </ul>
+                <div className="pt-6">
+                  <Link href="/contact">
+                    <Button className="bg-zinc-800 hover:bg-zinc-700 border-none text-sm">
+                      <span>Zum Kontaktformular</span>
+                      <IconChevronRight className="h-4 w-4 text-white" />
+                    </Button>
+                  </Link>
                 </div>
-                <MorphingDialogClose className="text-zinc-50" />
-              </MorphingDialogContent>
-            </MorphingDialogContainer>
-          </MorphingDialog>
+              </MorphingDialogDescription>
+            </div>
+            <MorphingDialogClose className="text-zinc-50" />
+          </MorphingDialogContent>
+        </MorphingDialogContainer>
+      </MorphingDialog>
 
-          <MorphingDialog
-            transition={{
-              type: "spring",
-              bounce: 0.05,
-              duration: 0.25,
+      <MorphingDialog
+        transition={{
+          type: "spring",
+          bounce: 0.05,
+          duration: 0.25,
+        }}
+      >
+        <MorphingDialogTrigger
+          style={{
+            borderRadius: "12px",
+          }}
+          className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+        >
+          <MorphingDialogImage
+            src="Service2.jpg"
+            alt=""
+            className="h-48 w-full object-cover"
+          />
+          <div className="flex grow flex-row items-end justify-between px-3 py-2">
+            <div>
+              <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
+                Steuergeräte- <br /> Codierung
+              </MorphingDialogTitle>
+            </div>
+            <button
+              type="button"
+              className="relative ml-1 flex h-6 w-6 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg border  transition-colors focus-visible:ring-2 active:scale-[0.98] border-zinc-50/10 bg-zinc-900 text-zinc-500 hover:bg-zinc-800 hover:text-zinc-50 focus-visible:ring-zinc-500"
+              aria-label="Open dialog"
+            >
+              <PlusIcon size={12} />
+            </button>
+          </div>
+        </MorphingDialogTrigger>
+        <MorphingDialogContainer>
+          <MorphingDialogContent
+            style={{
+              borderRadius: "24px",
             }}
+            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
           >
-            <MorphingDialogTrigger
-              style={{
-                borderRadius: "12px",
-              }}
-              className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
-            >
-              <MorphingDialogImage
-                src="Service3.jpg"
-                alt=""
-                className="h-48 w-full object-cover"
-              />
-              <div className="flex grow flex-row items-end justify-between px-3 py-2">
-                <div>
-                  <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
-                    BEDI- <br /> Reinigung
-                  </MorphingDialogTitle>
-                </div>
-                <button
-                  type="button"
-                  className="relative ml-1 flex h-6 w-6 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg border  transition-colors focus-visible:ring-2 active:scale-[0.98] border-zinc-50/10 bg-zinc-900 text-zinc-500 hover:bg-zinc-800 hover:text-zinc-50 focus-visible:ring-zinc-500"
-                  aria-label="Open dialog"
-                >
-                  <PlusIcon size={12} />
-                </button>
-              </div>
-            </MorphingDialogTrigger>
-            <MorphingDialogContainer>
-              <MorphingDialogContent
-                style={{
-                  borderRadius: "24px",
-                }}
-                className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
-              >
-                <MorphingDialogImage
-                  src="Service3.jpg"
-                  alt=""
-                  className="h-full w-full"
-                />
-                <div className="p-6">
-                  <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
-                    BEDI-Reinigung
-                  </MorphingDialogTitle>
-                  <MorphingDialogSubtitle className="text-zinc-400">
-                    Reinigung der Ansaugwege
-                  </MorphingDialogSubtitle>
-                  <MorphingDialogDescription
-                    disableLayoutAnimation
-                    variants={{
-                      initial: { opacity: 0, scale: 0.8, y: 100 },
-                      animate: { opacity: 1, scale: 1, y: 0 },
-                      exit: { opacity: 0, scale: 0.8, y: 100 },
-                    }}
-                  >
-                    <p className="mt-2 text-muted-foreground hyphens-auto">
-                      Bedi steht eigentlich für die Benzin-Direkteinspritzung
-                      eines Ottomotors. Da durch dieses System die Ansaugkanäle
-                      nicht mehr wie früher durch Kraftstoff selbst
-                      &quot;mitgespült&quot; werden, entstehen durch moderne
-                      System wie der Abgasrückführung, mit der Zeit Ruß- &
-                      Ölkohleablagerungen, die schlussendlich den Ansaugtrakt
-                      verkoken und so eine Verlustleistung zur Folge haben. Hier
-                      können wir durch eine Kombination aus chemischer &
-                      mechanischer Reinigung die Ansaugwege von diesen
-                      Rückstanden restlos befreien und die ursprüngliche
-                      Leistung zurückgewinnen.
-                      <br />
-                      Dieses Verfahren findet genauso Anwendung bei
-                      Dieselmotoren wie z.B. den Common-Rail Generationen der
-                      VAG Gruppe.
-                    </p>
-                  </MorphingDialogDescription>
-                </div>
-                <MorphingDialogClose className="text-zinc-50" />
-              </MorphingDialogContent>
-            </MorphingDialogContainer>
-          </MorphingDialog>
+            <MorphingDialogImage
+              src="Service2.jpg"
+              alt=""
+              className="h-full w-full"
+            />
+            <div className="p-6">
+              <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
+                Steuergeräte-Codierung
+              </MorphingDialogTitle>
 
-          {/* Dieser Teil soll nicht angezeigt werden */}
-          {/* <MorphingDialog
+              <MorphingDialogDescription
+                disableLayoutAnimation
+                variants={{
+                  initial: { opacity: 0, scale: 0.8, y: 100 },
+                  animate: { opacity: 1, scale: 1, y: 0 },
+                  exit: { opacity: 0, scale: 0.8, y: 100 },
+                }}
+              >
+                <p className="mt-2 text-muted-foreground hyphens-auto">
+                  Um das Feld der Applikationen umfassend abzudecken bieten wir
+                  Ihnen zudem eine umfassende Beratung und Anwendung im Bereich
+                  Steuergeräte-Codierung an. Egal ob Aktivierung-/Deaktivierung
+                  von bereits verbauten oder nachgerüsteten Komponenten, als
+                  auch die Nachrüstung selbst sind bei uns kein Problem. Wir
+                  arbeiten ausschließlich mit den offiziellen Endgeräten der
+                  jeweiligen Hersteller, um unsere Qualität stets gewährleisten
+                  zu können.
+                </p>
+                <div className="pt-6">
+                  <Link href="/contact">
+                    <Button className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full">
+                      <span>Zum Kontaktformular</span>
+                      <IconChevronRight className="h-4 w-4 text-white" />
+                    </Button>
+                  </Link>
+                </div>
+              </MorphingDialogDescription>
+            </div>
+            <MorphingDialogClose className="text-zinc-50" />
+          </MorphingDialogContent>
+        </MorphingDialogContainer>
+      </MorphingDialog>
+
+      <MorphingDialog
+        transition={{
+          type: "spring",
+          bounce: 0.05,
+          duration: 0.25,
+        }}
+      >
+        <MorphingDialogTrigger
+          style={{
+            borderRadius: "12px",
+          }}
+          className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+        >
+          <MorphingDialogImage
+            src="Service3.jpg"
+            alt=""
+            className="h-48 w-full object-cover"
+          />
+          <div className="flex grow flex-row items-end justify-between px-3 py-2">
+            <div>
+              <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
+                BEDI- <br /> Reinigung
+              </MorphingDialogTitle>
+            </div>
+            <button
+              type="button"
+              className="relative ml-1 flex h-6 w-6 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg border  transition-colors focus-visible:ring-2 active:scale-[0.98] border-zinc-50/10 bg-zinc-900 text-zinc-500 hover:bg-zinc-800 hover:text-zinc-50 focus-visible:ring-zinc-500"
+              aria-label="Open dialog"
+            >
+              <PlusIcon size={12} />
+            </button>
+          </div>
+        </MorphingDialogTrigger>
+        <MorphingDialogContainer>
+          <MorphingDialogContent
+            style={{
+              borderRadius: "24px",
+            }}
+            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
+          >
+            <MorphingDialogImage
+              src="Service3.jpg"
+              alt=""
+              className="h-full w-full"
+            />
+            <div className="p-6">
+              <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
+                BEDI-Reinigung
+              </MorphingDialogTitle>
+              <MorphingDialogSubtitle className="text-zinc-400">
+                Reinigung der Ansaugwege
+              </MorphingDialogSubtitle>
+              <MorphingDialogDescription
+                disableLayoutAnimation
+                variants={{
+                  initial: { opacity: 0, scale: 0.8, y: 100 },
+                  animate: { opacity: 1, scale: 1, y: 0 },
+                  exit: { opacity: 0, scale: 0.8, y: 100 },
+                }}
+              >
+                <p className="mt-2 text-muted-foreground hyphens-auto">
+                  Bedi steht eigentlich für die Benzin-Direkteinspritzung eines
+                  Ottomotors. Da durch dieses System die Ansaugkanäle nicht mehr
+                  wie früher durch Kraftstoff selbst &quot;mitgespült&quot;
+                  werden, entstehen durch moderne System wie der
+                  Abgasrückführung, mit der Zeit Ruß- & Ölkohleablagerungen, die
+                  schlussendlich den Ansaugtrakt verkoken und so eine
+                  Verlustleistung zur Folge haben. Hier können wir durch eine
+                  Kombination aus chemischer & mechanischer Reinigung die
+                  Ansaugwege von diesen Rückstanden restlos befreien und die
+                  ursprüngliche Leistung zurückgewinnen.
+                  <br />
+                  Dieses Verfahren findet genauso Anwendung bei Dieselmotoren
+                  wie z.B. den Common-Rail Generationen der VAG Gruppe.
+                </p>
+                <div className="pt-6">
+                  <Link href="/contact">
+                    <Button className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full">
+                      <span>Zum Kontaktformular</span>
+                      <IconChevronRight className="h-4 w-4 text-white" />
+                    </Button>
+                  </Link>
+                </div>
+              </MorphingDialogDescription>
+            </div>
+            <MorphingDialogClose className="text-zinc-50" />
+          </MorphingDialogContent>
+        </MorphingDialogContainer>
+      </MorphingDialog>
+
+      {/* Dieser Teil soll nicht angezeigt werden */}
+      {/* <MorphingDialog
             transition={{
               type: "spring",
               bounce: 0.05,
@@ -344,6 +366,14 @@ export function Services_() {
                       <li>Wertgutachten</li>
                       <li>Gutachtenerstellung im Allgemeinen</li>
                     </ul>
+                    <div className="pt-6">
+                  <Link href="/contact">
+                    <Button className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full">
+                      <span>Zum Kontaktformular</span>
+                      <IconChevronRight className="h-4 w-4 text-white" />
+                    </Button>
+                  </Link>
+                </div>
                   </MorphingDialogDescription>
                 </div>
                 <MorphingDialogClose className="text-zinc-50" />
@@ -351,87 +381,95 @@ export function Services_() {
             </MorphingDialogContainer>
           </MorphingDialog> */}
 
-          <MorphingDialog
-            transition={{
-              type: "spring",
-              bounce: 0.05,
-              duration: 0.25,
-            }}
-          >
-            <MorphingDialogTrigger
-              style={{
-                borderRadius: "12px",
-              }}
-              className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+      <MorphingDialog
+        transition={{
+          type: "spring",
+          bounce: 0.05,
+          duration: 0.25,
+        }}
+      >
+        <MorphingDialogTrigger
+          style={{
+            borderRadius: "12px",
+          }}
+          className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+        >
+          <MorphingDialogImage
+            src="Service5.jpg"
+            alt=""
+            className="h-48 w-full object-cover"
+          />
+          <div className="flex grow flex-row items-end justify-between px-3 py-2">
+            <div>
+              <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
+                Fahrzeug- <br /> transporte
+              </MorphingDialogTitle>
+            </div>
+            <button
+              type="button"
+              className="relative ml-1 flex h-6 w-6 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg border  transition-colors focus-visible:ring-2 active:scale-[0.98] border-zinc-50/10 bg-zinc-900 text-zinc-500 hover:bg-zinc-800 hover:text-zinc-50 focus-visible:ring-zinc-500"
+              aria-label="Open dialog"
             >
-              <MorphingDialogImage
-                src="Service5.jpg"
-                alt=""
-                className="h-48 w-full object-cover"
-              />
-              <div className="flex grow flex-row items-end justify-between px-3 py-2">
-                <div>
-                  <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
-                    Fahrzeug- <br /> transporte
-                  </MorphingDialogTitle>
-                </div>
-                <button
-                  type="button"
-                  className="relative ml-1 flex h-6 w-6 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg border  transition-colors focus-visible:ring-2 active:scale-[0.98] border-zinc-50/10 bg-zinc-900 text-zinc-500 hover:bg-zinc-800 hover:text-zinc-50 focus-visible:ring-zinc-500"
-                  aria-label="Open dialog"
-                >
-                  <PlusIcon size={12} />
-                </button>
-              </div>
-            </MorphingDialogTrigger>
-            <MorphingDialogContainer>
-              <MorphingDialogContent
-                style={{
-                  borderRadius: "24px",
-                }}
-                className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
-              >
-                <MorphingDialogImage
-                  src="Service5.jpg"
-                  alt=""
-                  className="h-full w-full"
-                />
-                <div className="p-6">
-                  <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
-                    Fahrzeugtransporte
-                  </MorphingDialogTitle>
+              <PlusIcon size={12} />
+            </button>
+          </div>
+        </MorphingDialogTrigger>
+        <MorphingDialogContainer>
+          <MorphingDialogContent
+            style={{
+              borderRadius: "24px",
+            }}
+            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
+          >
+            <MorphingDialogImage
+              src="Service5.jpg"
+              alt=""
+              className="h-full w-full"
+            />
+            <div className="p-6">
+              <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
+                Fahrzeugtransporte
+              </MorphingDialogTitle>
 
-                  <MorphingDialogDescription
-                    disableLayoutAnimation
-                    variants={{
-                      initial: { opacity: 0, scale: 0.8, y: 100 },
-                      animate: { opacity: 1, scale: 1, y: 0 },
-                      exit: { opacity: 0, scale: 0.8, y: 100 },
-                    }}
-                  >
-                    <p className="mt-2 text-muted-foreground hyphens-auto">
-                      Sie suchen einen zuverlässigen Partner für Ihre
-                      Fahrzeugvermittlung? Wir bieten Ihnen vom offenen
-                      KFZ-Transport bis zum geschlossen Rennanhänger jede
-                      Möglichkeit und lassen keine Extrawünsche außen vor.
-                      <br />
-                      <br />
-                      Für ein Angebot senden Sie uns bitte eine Anfrage per Mail
-                      mit folgenden Daten:
-                    </p>
-                    <ul className="mt-2 text-muted-foreground list-disc pl-5">
-                      <li>Distanz der Strecke</li>
-                      <li>Überführungsdatum</li>
-                      <li>zu überführendes Fahrzeug</li>
-                      <li>offener / geschlossener Transport</li>
-                      <li>individuelle Wünsche</li>
-                    </ul>
-                  </MorphingDialogDescription>
+              <MorphingDialogDescription
+                disableLayoutAnimation
+                variants={{
+                  initial: { opacity: 0, scale: 0.8, y: 100 },
+                  animate: { opacity: 1, scale: 1, y: 0 },
+                  exit: { opacity: 0, scale: 0.8, y: 100 },
+                }}
+              >
+                <p className="mt-2 text-muted-foreground hyphens-auto">
+                  Sie suchen einen zuverlässigen Partner für Ihre
+                  Fahrzeugvermittlung? Wir bieten Ihnen vom offenen
+                  KFZ-Transport bis zum geschlossen Rennanhänger jede
+                  Möglichkeit und lassen keine Extrawünsche außen vor.
+                  <br />
+                  <br />
+                  Für ein Angebot senden Sie uns bitte eine Anfrage per Mail mit
+                  folgenden Daten:
+                </p>
+                <ul className="mt-2 text-muted-foreground list-disc pl-5">
+                  <li>Distanz der Strecke</li>
+                  <li>Überführungsdatum</li>
+                  <li>zu überführendes Fahrzeug</li>
+                  <li>offener / geschlossener Transport</li>
+                  <li>individuelle Wünsche</li>
+                </ul>
+                <div className="pt-6">
+                  <Link href="/contact">
+                    <Button className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full">
+                      <span>Zum Kontaktformular</span>
+                      <IconChevronRight className="h-4 w-4 text-white" />
+                    </Button>
+                  </Link>
                 </div>
-                <MorphingDialogClose className="text-zinc-50" />
-              </MorphingDialogContent>
-            </MorphingDialogContainer>
-          </MorphingDialog>
-        </div>
+              </MorphingDialogDescription>
+            </div>
+            <MorphingDialogClose className="text-zinc-50" />
+          </MorphingDialogContent>
+        </MorphingDialogContainer>
+      </MorphingDialog>
+    </div>
   );
 }
