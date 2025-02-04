@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export function Services_() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 justify-items-center">
       <MorphingDialog
         transition={{
           type: "spring",
@@ -29,16 +29,16 @@ export function Services_() {
           style={{
             borderRadius: "12px",
           }}
-          className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
         >
           <MorphingDialogImage
             src="Service1.jpg"
             alt=""
-            className="h-48 w-full object-cover"
+            className="md:h-48 h-36 w-full object-cover"
           />
           <div className="flex grow flex-row items-end justify-between px-3 py-2">
             <div>
-              <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
+              <MorphingDialogTitle className="text-zinc-50 text-xl font-semibold">
                 <br />
                 Chiptuning
               </MorphingDialogTitle>
@@ -65,7 +65,7 @@ export function Services_() {
               className="h-full w-full"
             />
             <div className="p-6">
-              <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
+              <MorphingDialogTitle className="text-xl font-semibold text-zinc-50">
                 Kennfeldoptimierung
               </MorphingDialogTitle>
               <MorphingDialogSubtitle className="text-zinc-400">
@@ -79,7 +79,7 @@ export function Services_() {
                   exit: { opacity: 0, scale: 0.8, y: 100 },
                 }}
               >
-                <ul className="mt-2 text-muted-foreground list-disc pl-5 hyphens-auto">
+                <ul className="mt-2 text-muted-foreground text-base list-disc pl-5 hyphens-auto">
                   <li>
                     von Stufe 1 bis zur Einzelabstimmung ist hier alles möglich
                   </li>
@@ -119,16 +119,16 @@ export function Services_() {
           style={{
             borderRadius: "12px",
           }}
-          className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
         >
           <MorphingDialogImage
             src="Service2.jpg"
             alt=""
-            className="h-48 w-full object-cover"
+            className="md:h-48 h-36 w-full object-cover"
           />
           <div className="flex grow flex-row items-end justify-between px-3 py-2">
             <div>
-              <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
+              <MorphingDialogTitle className="text-zinc-50 text-xl font-semibold">
                 Steuergeräte- <br /> Codierung
               </MorphingDialogTitle>
             </div>
@@ -154,7 +154,7 @@ export function Services_() {
               className="h-full w-full"
             />
             <div className="p-6">
-              <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
+              <MorphingDialogTitle className="text-xl font-semibold text-zinc-50">
                 Steuergeräte-Codierung
               </MorphingDialogTitle>
 
@@ -202,16 +202,16 @@ export function Services_() {
           style={{
             borderRadius: "12px",
           }}
-          className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
         >
           <MorphingDialogImage
             src="Service3.jpg"
             alt=""
-            className="h-48 w-full object-cover"
+            className="md:h-48 h-36 w-full object-cover"
           />
           <div className="flex grow flex-row items-end justify-between px-3 py-2">
             <div>
-              <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
+              <MorphingDialogTitle className="text-zinc-50 text-xl font-semibold">
                 BEDI- <br /> Reinigung
               </MorphingDialogTitle>
             </div>
@@ -237,7 +237,7 @@ export function Services_() {
               className="h-full w-full"
             />
             <div className="p-6">
-              <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
+              <MorphingDialogTitle className="text-xl font-semibold text-zinc-50">
                 BEDI-Reinigung
               </MorphingDialogTitle>
               <MorphingDialogSubtitle className="text-zinc-400">
@@ -293,12 +293,12 @@ export function Services_() {
               style={{
                 borderRadius: "12px",
               }}
-              className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+              className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
             >
               <MorphingDialogImage
                 src="Service4.jpg"
                 alt=""
-                className="h-48 w-full object-cover"
+                className="md:h-48 h-36 w-full object-cover"
               />
               <div className="flex grow flex-row items-end justify-between px-3 py-2">
                 <div>
@@ -392,16 +392,16 @@ export function Services_() {
           style={{
             borderRadius: "12px",
           }}
-          className="flex md:max-w-[270px] max-w-[550px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
         >
           <MorphingDialogImage
             src="Service5.jpg"
             alt=""
-            className="h-48 w-full object-cover"
+            className="md:h-48 h-36 w-full object-cover"
           />
           <div className="flex grow flex-row items-end justify-between px-3 py-2">
             <div>
-              <MorphingDialogTitle className="text-zinc-50 text-2xl font-semibold">
+              <MorphingDialogTitle className="text-zinc-50 text-xl font-semibold">
                 Fahrzeug- <br /> transporte
               </MorphingDialogTitle>
             </div>
@@ -427,7 +427,7 @@ export function Services_() {
               className="h-full w-full"
             />
             <div className="p-6">
-              <MorphingDialogTitle className="text-2xl font-semibold text-zinc-50">
+              <MorphingDialogTitle className="text-xl font-semibold text-zinc-50">
                 Fahrzeugtransporte
               </MorphingDialogTitle>
 
