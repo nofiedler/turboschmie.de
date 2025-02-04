@@ -81,10 +81,10 @@ export default function Home() {
             className=""
           />
         </div>
-        <div className="text-xl md:text-4xl text-center mx-auto text-neutral-400 pt-10 md:pt-20">
+        <div className="text-base md:text-4xl text-center mx-auto text-neutral-400 pt-10 md:pt-20">
           Wir bieten die passenden Lösungen im Bereich...{" "}
           <FlipWords
-            className="text-2xl md:text-5xl font-satoshi font-black text-neutral-100 text-center pt-4"
+            className="text-xl md:text-5xl font-satoshi font-black text-neutral-100 text-center pt-4"
             words={words}
           />
         </div>
@@ -102,19 +102,16 @@ export default function Home() {
           <ChevronsUpDownIcon />
         </div>
       </div>
-      <div className="flex flex-col items-center md:pt-6 pt-32 space-y-4 hyphens-auto">
-        <div className="md:w-[600px] w-11/12 text-center text-white mx-auto">
-          <p className="text-3xl md:text-4xl font-light hyphens-none">
+      <div className="flex flex-col items-center pt-32 space-y-4 hyphens-auto">
+        <div className="w-11/12 text-center text-white mx-auto">
+          <p className="md:w-[600px] mx-auto text-2xl md:text-4xl font-light hyphens-none">
             Unsere Philosophie
           </p>
-          <br />
-          <br />
-          <p className="text-2xl md:text-3xl font-black">
+          <p className="md:w-[750px] mx-auto pt-6 text-xl md:text-3xl font-black">
             &ldquo;Perfektion ist nicht erreichbar, aber wenn wir Perfektion
             anstreben, können wir Exzellenz erreichen.&rdquo; - Vince Lombardi
           </p>
-          <br />
-          <p className="text-lg md:text-xl font-light">
+          <p className="md:w-[650px] mx-auto pt-6 text-base md:text-xl font-light">
             Bereits seit 2017 sind wir umfassend mit dem Thema der
             Kennfeldapplikation vertraut. Durch die Faszination für aufgeladene
             Verbrennungskraftmaschinen, haben wir es uns zur Hauptaufgabe
@@ -130,9 +127,9 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="pt-24 md:pt-48">
-        <h1 className="text-2xl md:text-3xl font-bold text-center text-white hyphens-auto">
-          Impressionen <br /> aus dem vergangenen Jahr
+      <div className="pt-32 md:pt-80">
+        <h1 className="md:mb-12 mb-6 text-xl md:text-3xl font-bold text-center text-white hyphens-auto">
+          Impressionen aus dem <br /> vergangenen Jahr
         </h1>
         <InViewImagesGrid />
       </div>

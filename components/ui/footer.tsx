@@ -6,7 +6,7 @@ const logo = "/logo.svg";
 
 export default function Component() {
   return (
-    <footer className="w-full bg-transparent text-gray-400 md:mb-0 mb-12 pt-20">
+    <footer className="w-full bg-transparent text-gray-400 md:mb-0 mb-12 pt-6">
       <div className="container flex flex-col items-center px-4 mx-auto space-y-6 pb-12">
         <nav className="flex flex-wrap justify-center gap-6 text-sm md:gap-8">
           <Link href="/" className="hover:text-white transition-colors">

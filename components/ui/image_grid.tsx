@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 export function InViewImagesGrid() {
   return (
     <div className="h-full md:w-10/12 w-full overflow-auto mx-auto">
-      <div className="flex pt-12 items-end justify-center pb-12">
+      <div className="flex items-end justify-center pb-12">
         <InView
           viewOptions={{ once: true, margin: "0px 0px -250px 0px" }}
           variants={{
