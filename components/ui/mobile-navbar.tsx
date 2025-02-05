@@ -86,7 +86,7 @@ export default function MobileNavbar() {
                 >
                   <Link
                     href={item.href}
-                    className="px-3 py-4 text-2xl font-medium text-zinc-300 hover:text-primary/80 transition-colors duration-200"
+                    className="px-3 py-4 text-xl text-zinc-300 hover:text-primary/80 transition-colors duration-200"
                     onClick={toggleMenu}
                   >
                     {item.label}
