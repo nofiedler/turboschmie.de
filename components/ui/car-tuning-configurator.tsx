@@ -153,7 +153,7 @@ export const CarTuningConfigurator = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto">
       <Card className="mb-6 bg-zinc-900 border-zinc-800 text-zinc-300">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold">
