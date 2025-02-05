@@ -73,9 +73,9 @@ export default function MobileNavbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-background/80 backdrop-blur-md z-40"
+            className="fixed inset-0 bg-zinc-900/70 backdrop-blur-md z-40"
           >
-            <div className="flex flex-col items-center justify-center h-full">
+            <div className="flex flex-col items-center justify-center h-full space-y-4">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -86,7 +86,7 @@ export default function MobileNavbar() {
                 >
                   <Link
                     href={item.href}
-                    className="px-3 py-4 text-2xl font-medium text-primary hover:text-primary/80 transition-colors duration-200"
+                    className="px-3 py-4 text-2xl font-medium text-zinc-300 hover:text-primary/80 transition-colors duration-200"
                     onClick={toggleMenu}
                   >
                     {item.label}
@@ -100,4 +100,3 @@ export default function MobileNavbar() {
     </>
   )
 }
-
