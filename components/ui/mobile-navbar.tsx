@@ -40,7 +40,7 @@ export default function MobileNavbar() {
         size="icon"
         onClick={toggleMenu}
         aria-label="Toggle menu"
-        className="fixed top-4 right-4 z-50 bg-zinc-300 text-base text-zinc-900"
+        className="fixed top-4 right-4 z-50 bg-white text-base text-zinc-900"
       >
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
