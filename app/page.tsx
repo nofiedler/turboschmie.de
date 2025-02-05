@@ -81,37 +81,37 @@ export default function Home() {
             className=""
           />
         </div>
-        <div className="text-base md:text-4xl text-center mx-auto text-neutral-400 pt-10 md:pt-20">
+        <div className="text-base md:text-4xl text-center mx-auto text-muted-foreground pt-10 md:pt-20">
           Wir bieten die passenden Lösungen im Bereich...{" "}
           <FlipWords
-            className="text-xl md:text-5xl font-satoshi font-black text-neutral-100 text-center pt-4"
+            className="text-xl md:text-5xl font-satoshi font-black text-white text-center pt-4"
             words={words}
           />
         </div>
         <div className="flex flex-col items-center pt-6 space-y-4">
           <Link href="/configurator">
             <HoverBorderGradient containerClassName="rounded-full" as="button">
-              <div className="flex items-center text-sm space-x-2 font-satoshi">
+              <div className="flex items-center text-sm space-x-2 text-zinc-300 font-satoshi">
                 <span>&nbsp;Tuning konfigurieren</span>
-                <IconChevronRight className="h-4 w-4 text-white" />
+                <IconChevronRight className="h-4 w-4 text-zinc-300" />
               </div>
             </HoverBorderGradient>
           </Link>
         </div>
-        <div className="relative justify-center items-center mt-auto pb-5 text-white text-sm hidden md:flex">
+        <div className="relative justify-center items-center mt-auto pb-5 text-zinc-300 text-sm hidden md:flex">
           <ChevronsUpDownIcon />
         </div>
       </div>
       <div className="flex flex-col items-center pt-32 space-y-4 hyphens-auto">
-        <div className="w-11/12 text-center text-white mx-auto">
-          <p className="md:w-[600px] mx-auto text-2xl md:text-4xl font-light hyphens-none">
+        <div className="w-11/12 text-center mx-auto">
+          <p className="md:w-[600px] mx-auto text-2xl md:text-4xl font-light hyphens-none text-zinc-300">
             Unsere Philosophie
           </p>
-          <p className="md:w-[750px] mx-auto pt-6 text-xl md:text-3xl font-black">
+          <p className="md:w-[750px] mx-auto pt-6 text-xl md:text-3xl font-semibold text-zinc-300">
             &ldquo;Perfektion ist nicht erreichbar, aber wenn wir Perfektion
             anstreben, können wir Exzellenz erreichen.&rdquo; - Vince Lombardi
           </p>
-          <p className="md:w-[650px] mx-auto pt-6 text-base md:text-xl font-light">
+          <p className="md:w-[650px] mx-auto pt-6 text-base md:text-xl font-light text-muted-foreground">
             Bereits seit 2017 sind wir umfassend mit dem Thema der
             Kennfeldapplikation vertraut. Durch die Faszination für aufgeladene
             Verbrennungskraftmaschinen, haben wir es uns zur Hauptaufgabe
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </div>
       <div className="pt-32 md:pt-80">
-        <h1 className="md:mb-12 mb-6 text-xl md:text-3xl font-bold text-center text-white hyphens-auto">
+        <h1 className="md:mb-12 mb-6 text-xl md:text-3xl font-bold text-center text-zinc-300 hyphens-auto">
           Impressionen aus dem <br /> vergangenen Jahr
         </h1>
         <InViewImagesGrid />

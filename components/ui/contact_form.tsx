@@ -59,10 +59,10 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
   return (
     <Card className={cn("w-full bg-zinc-900 max-w-md border-zinc-700", className, "")}>
       <CardHeader className="relative">
-        <CardTitle className="text-2xl text-white">
+        <CardTitle className="text-2xl text-zinc-300">
           Sende uns eine Anfrage
         </CardTitle>
-        <CardDescription className="text-gray-300">
+        <CardDescription className="text-zinc-300">
           Öffnungszeiten: Montag - Freitag 
           <br />
           Nur nach Terminabsprache
@@ -72,7 +72,7 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
       <form onSubmit={handleSubmit}>
         <CardContent className="flex flex-col gap-6">
           <div className="group/field grid gap-2">
-            <Label htmlFor="name" className="text-white">
+            <Label htmlFor="name" className="text-zinc-300">
               Name <span aria-hidden="true">*</span>
             </Label>
             <Input
@@ -82,14 +82,14 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
                 setFormData((prev) => ({ ...prev, name: e.target.value }))
               }
               className={`${
-                formData.name ? "bg-white text-black" : "bg-transparent text-white"
+                formData.name ? "bg-zinc-300 text-zinc-900" : "bg-transparent text-zinc-300"
               } border-zinc-700`}
               required
             />
           </div>
 
           <div className="group/field grid gap-2">
-            <Label htmlFor="email" className="text-white">
+            <Label htmlFor="email" className="text-zinc-300">
               Email <span aria-hidden="true">*</span>
             </Label>
             <Input
@@ -100,14 +100,14 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
                 setFormData((prev) => ({ ...prev, email: e.target.value }))
               }
               className={`${
-                formData.email ? "bg-white text-black" : "bg-transparent text-white"
+                formData.email ? "bg-zinc-300 text-zinc-900" : "bg-transparent text-zinc-300"
               } border-zinc-700`}
               required
             />
           </div>
 
           <div className="group/field grid gap-2">
-            <Label htmlFor="message" className="text-white">
+            <Label htmlFor="message" className="text-zinc-300">
               Anfrage <span aria-hidden="true">*</span>
             </Label>
             <Textarea
@@ -117,16 +117,16 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
                 setFormData((prev) => ({ ...prev, message: e.target.value }))
               }
               className={`${
-                formData.message ? "bg-white text-black" : "bg-transparent text-white"
+                formData.message ? "bg-zinc-300 text-zinc-900" : "bg-transparent text-zinc-300"
               } border-zinc-700`}
               required
             />
           </div>
 
           <div className="group/field grid gap-2">
-            <Label className="text-white">
+            <Label className="text-zinc-300">
               Datei Upload - Fahrzeugbrief
-              <small className="block text-xs text-gray-400">
+              <small className="block text-xs text-muted-foreground pt-2 mb-2">
                 Maximale Dateigröße: 4MB
               </small>
             </Label>
@@ -144,10 +144,10 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
                   error?.cause || error.message || "Unbekannter Fehler";
                 setUploadError(`Fehler beim Hochladen: ${detailedMessage}`);
               }}
-              className="text-sm ut-button:bg-blue-600 ut-button:text-white ut-button:hover:bg-blue-700 ut-button:h-10 ut-button:w-full"
+              className="text-sm ut-button:bg-blue-600 ut-button:hover:bg-blue-700 ut-button:h-10 ut-button:w-full"
             />
             {fileUrl && (
-              <p className="text-sm text-green-600 dark:text-green-400 text-center">
+              <p className="text-sm text-green-400 text-center">
                 Datei erfolgreich hochgeladen
               </p>
             )}
@@ -159,21 +159,21 @@ export function ContactForm({ className }: React.ComponentProps<typeof Card>) {
           <Button
             type="submit"
             disabled={isSubmitting || !fileUrl}
-            className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full"
+            className="bg-blue-600 text-zinc-300 text-sm hover:bg-blue-700 h-10 w-full"
           >
             {isSubmitting ? "Senden..." : "Nachricht senden"}
           </Button>
 
           <div>
             {submitStatus === "success" && (
-              <p className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
+              <p className="flex items-center gap-2 text-sm text-green-400">
                 <Check className="size-4" />
                 Ihre Nachricht wurde erfolgreich gesendet. Vielen Dank.
               </p>
             )}
 
             {uploadError && (
-              <p className="text-sm text-red-600 dark:text-red-400">
+              <p className="text-sm text-red-400">
                 {uploadError}
               </p>
             )}

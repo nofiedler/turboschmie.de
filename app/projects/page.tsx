@@ -11,9 +11,9 @@ export default function Projects() {
         Unsere Projekte
       </h1>
 
-      <Card className="mb-12 md:bg-zinc-900 md:border-zinc-800 bg-transparent border-transparent text-white">
+      <Card className="mb-12 md:bg-zinc-900 md:border-zinc-800 bg-transparent border-transparent">
         <CardHeader>
-          <CardTitle className="text-xl md:text-3xl font-semibold">
+          <CardTitle className="text-xl md:text-3xl font-semibold text-zinc-300">
             B5 - Eine Liebe die niemals endet.
           </CardTitle>
         </CardHeader>
@@ -51,9 +51,9 @@ export default function Projects() {
         </CardContent>
       </Card>
 
-      <Card className="mb-12 md:bg-zinc-900 md:border-zinc-800 bg-transparent border-transparent text-white">
+      <Card className="mb-12 md:bg-zinc-900 md:border-zinc-800 bg-transparent border-transparent">
         <CardHeader>
-          <CardTitle className="text-xl md:text-3xl font-semibold">
+          <CardTitle className="text-xl md:text-3xl font-semibold text-zinc-300">
             Vorsicht Allzweckwaffe!
           </CardTitle>
         </CardHeader>

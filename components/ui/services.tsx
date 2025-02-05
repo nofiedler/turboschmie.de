@@ -29,7 +29,7 @@ export function Services_() {
           style={{
             borderRadius: "12px",
           }}
-          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-zinc-300"
         >
           <MorphingDialogImage
             src="Service1.jpg"
@@ -38,7 +38,7 @@ export function Services_() {
           />
           <div className="flex grow flex-row items-end justify-between px-3 py-2">
             <div>
-              <MorphingDialogTitle className="text-zinc-50 text-xl font-semibold">
+              <MorphingDialogTitle className="text-zinc-300 text-xl font-semibold">
                 <br />
                 Chiptuning
               </MorphingDialogTitle>
@@ -57,7 +57,7 @@ export function Services_() {
             style={{
               borderRadius: "24px",
             }}
-            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
+            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-zinc-300 sm:w-[600px] max-w-[90%] mx-auto"
           >
             <MorphingDialogImage
               src="Service1.jpg"
@@ -65,10 +65,10 @@ export function Services_() {
               className="h-full w-full"
             />
             <div className="p-6">
-              <MorphingDialogTitle className="text-xl font-semibold text-zinc-50">
+              <MorphingDialogTitle className="text-xl font-semibold text-zinc-300">
                 Kennfeldoptimierung
               </MorphingDialogTitle>
-              <MorphingDialogSubtitle className="text-zinc-400">
+              <MorphingDialogSubtitle className="text-zinc-300">
                 auch bekannt als Chiptuning
               </MorphingDialogSubtitle>
               <MorphingDialogDescription
@@ -95,15 +95,15 @@ export function Services_() {
                 </ul>
                 <div className="pt-6">
                   <Link href="/contact">
-                    <Button className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full">
+                    <Button className="bg-blue-600 text-zinc-300 text-sm hover:bg-blue-700 h-10 w-full">
                       <span>Zum Kontaktformular</span>
-                      <IconChevronRight className="h-4 w-4 text-white" />
+                      <IconChevronRight className="h-4 w-4 text-zinc-300" />
                     </Button>
                   </Link>
                 </div>
               </MorphingDialogDescription>
             </div>
-            <MorphingDialogClose className="text-zinc-50" />
+            <MorphingDialogClose className="text-zinc-300" />
           </MorphingDialogContent>
         </MorphingDialogContainer>
       </MorphingDialog>
@@ -119,7 +119,7 @@ export function Services_() {
           style={{
             borderRadius: "12px",
           }}
-          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-zinc-300"
         >
           <MorphingDialogImage
             src="Service2.jpg"
@@ -128,7 +128,7 @@ export function Services_() {
           />
           <div className="flex grow flex-row items-end justify-between px-3 py-2">
             <div>
-              <MorphingDialogTitle className="text-zinc-50 text-xl font-semibold">
+              <MorphingDialogTitle className="text-zinc-300 text-xl font-semibold">
                 Steuergeräte- <br /> Codierung
               </MorphingDialogTitle>
             </div>
@@ -146,7 +146,7 @@ export function Services_() {
             style={{
               borderRadius: "24px",
             }}
-            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
+            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-zinc-300 sm:w-[600px] max-w-[90%] mx-auto"
           >
             <MorphingDialogImage
               src="Service2.jpg"
@@ -154,7 +154,7 @@ export function Services_() {
               className="h-full w-full"
             />
             <div className="p-6">
-              <MorphingDialogTitle className="text-xl font-semibold text-zinc-50">
+              <MorphingDialogTitle className="text-xl font-semibold text-zinc-300">
                 Steuergeräte-Codierung
               </MorphingDialogTitle>
 
@@ -178,15 +178,15 @@ export function Services_() {
                 </p>
                 <div className="pt-6">
                   <Link href="/contact">
-                    <Button className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full">
+                    <Button className="bg-blue-600 text-zinc-300 text-sm hover:bg-blue-700 h-10 w-full">
                       <span>Zum Kontaktformular</span>
-                      <IconChevronRight className="h-4 w-4 text-white" />
+                      <IconChevronRight className="h-4 w-4 text-zinc-300" />
                     </Button>
                   </Link>
                 </div>
               </MorphingDialogDescription>
             </div>
-            <MorphingDialogClose className="text-zinc-50" />
+            <MorphingDialogClose className="text-zinc-300" />
           </MorphingDialogContent>
         </MorphingDialogContainer>
       </MorphingDialog>
@@ -202,7 +202,7 @@ export function Services_() {
           style={{
             borderRadius: "12px",
           }}
-          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-zinc-300"
         >
           <MorphingDialogImage
             src="Service3.jpg"
@@ -211,7 +211,7 @@ export function Services_() {
           />
           <div className="flex grow flex-row items-end justify-between px-3 py-2">
             <div>
-              <MorphingDialogTitle className="text-zinc-50 text-xl font-semibold">
+              <MorphingDialogTitle className="text-zinc-300 text-xl font-semibold">
                 BEDI- <br /> Reinigung
               </MorphingDialogTitle>
             </div>
@@ -229,7 +229,7 @@ export function Services_() {
             style={{
               borderRadius: "24px",
             }}
-            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
+            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-zinc-300 sm:w-[600px] max-w-[90%] mx-auto"
           >
             <MorphingDialogImage
               src="Service3.jpg"
@@ -237,10 +237,10 @@ export function Services_() {
               className="h-full w-full"
             />
             <div className="p-6">
-              <MorphingDialogTitle className="text-xl font-semibold text-zinc-50">
+              <MorphingDialogTitle className="text-xl font-semibold text-zinc-300">
                 BEDI-Reinigung
               </MorphingDialogTitle>
-              <MorphingDialogSubtitle className="text-zinc-400">
+              <MorphingDialogSubtitle className="text-zinc-300">
                 Reinigung der Ansaugwege
               </MorphingDialogSubtitle>
               <MorphingDialogDescription
@@ -268,15 +268,15 @@ export function Services_() {
                 </p>
                 <div className="pt-6">
                   <Link href="/contact">
-                    <Button className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full">
+                    <Button className="bg-blue-600 text-zinc-300 text-sm hover:bg-blue-700 h-10 w-full">
                       <span>Zum Kontaktformular</span>
-                      <IconChevronRight className="h-4 w-4 text-white" />
+                      <IconChevronRight className="h-4 w-4 text-zinc-300" />
                     </Button>
                   </Link>
                 </div>
               </MorphingDialogDescription>
             </div>
-            <MorphingDialogClose className="text-zinc-50" />
+            <MorphingDialogClose className="text-zinc-300" />
           </MorphingDialogContent>
         </MorphingDialogContainer>
       </MorphingDialog>
@@ -392,7 +392,7 @@ export function Services_() {
           style={{
             borderRadius: "12px",
           }}
-          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-white"
+          className="flex md:max-w-[270px] max-w-[280px] flex-col overflow-hidden border bg-zinc-900 border-zinc-800 text-zinc-300"
         >
           <MorphingDialogImage
             src="Service5.jpg"
@@ -401,7 +401,7 @@ export function Services_() {
           />
           <div className="flex grow flex-row items-end justify-between px-3 py-2">
             <div>
-              <MorphingDialogTitle className="text-zinc-50 text-xl font-semibold">
+              <MorphingDialogTitle className="text-zinc-300 text-xl font-semibold">
                 Fahrzeug- <br /> transporte
               </MorphingDialogTitle>
             </div>
@@ -419,7 +419,7 @@ export function Services_() {
             style={{
               borderRadius: "24px",
             }}
-            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-white sm:w-[600px] max-w-[90%] mx-auto"
+            className="pointer-events-auto overflow-y-scroll scrollbar-hide relative flex h-auto w-full flex-col border bg-zinc-900 border-zinc-800 text-zinc-300 sm:w-[600px] max-w-[90%] mx-auto"
           >
             <MorphingDialogImage
               src="Service5.jpg"
@@ -427,7 +427,7 @@ export function Services_() {
               className="h-full w-full"
             />
             <div className="p-6">
-              <MorphingDialogTitle className="text-xl font-semibold text-zinc-50">
+              <MorphingDialogTitle className="text-xl font-semibold text-zinc-300">
                 Fahrzeugtransporte
               </MorphingDialogTitle>
 
@@ -458,15 +458,15 @@ export function Services_() {
                 </ul>
                 <div className="pt-6">
                   <Link href="/contact">
-                    <Button className="bg-blue-600 text-white text-sm hover:bg-blue-700 h-10 w-full">
+                    <Button className="bg-blue-600 text-zinc-300 text-sm hover:bg-blue-700 h-10 w-full">
                       <span>Zum Kontaktformular</span>
-                      <IconChevronRight className="h-4 w-4 text-white" />
+                      <IconChevronRight className="h-4 w-4 text-zinc-300" />
                     </Button>
                   </Link>
                 </div>
               </MorphingDialogDescription>
             </div>
-            <MorphingDialogClose className="text-zinc-50" />
+            <MorphingDialogClose className="text-zinc-300" />
           </MorphingDialogContent>
         </MorphingDialogContainer>
       </MorphingDialog>

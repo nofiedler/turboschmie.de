@@ -154,11 +154,7 @@ export const CarTuningConfigurator = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center text-white">
-        Tuning Konfigurator
-      </h1>
-
-      <Card className="mb-6 bg-zinc-900 border-zinc-800 text-white">
+      <Card className="mb-6 bg-zinc-900 border-zinc-800 text-zinc-300">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold">
             Modell Auswahl
@@ -238,7 +234,7 @@ export const CarTuningConfigurator = () => {
       </Card>
 
       {engine && (
-        <Card className="sticky top-6 z-10 md:top-36 bg-zinc-900 border-zinc-800 text-white">
+        <Card className="sticky top-6 z-10 bg-zinc-900 border-zinc-800 text-zinc-300 md:static">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">
               Tuning Optionen
@@ -269,7 +265,7 @@ export const CarTuningConfigurator = () => {
       {originalPerformance && tunedPerformance && (
         <div className="relative z-1">
           {model && engine && (
-            <h2 className="text-3xl font-bold mb-6 text-white text-center pt-10">
+            <h2 className="text-3xl font-bold mb-6 text-zinc-300 text-center pt-12">
               {manufacturer} {model} - {engine}
             </h2>
           )}
@@ -278,7 +274,7 @@ export const CarTuningConfigurator = () => {
               (performance, index) => (
                 <Card
                   key={index}
-                  className=" bg-transparent text-white border-transparent md:bg-zinc-900 md:border-zinc-800 "
+                  className=" bg-transparent text-zinc-300 border-transparent md:bg-zinc-900 md:border-zinc-800 "
                 >
                   <CardHeader>
                     <CardTitle className="text-xl font-bold">

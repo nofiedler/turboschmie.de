@@ -13,10 +13,10 @@ export default function About() {
         
         <div className="flex flex-col md:flex-row justify-center items-start md:space-x-12 space-y-8 md:space-y-0">
           <div className="w-full md:w-5/12 md:max-w-[600px]">
-            <h1 className="pt-6 text-xl md:text-3xl font-bold mb-4 md:mb-6 text-white hyphens-none">
+            <h1 className="pt-6 text-xl md:text-3xl font-semibold mb-4 md:mb-6 text-zinc-300 hyphens-none">
               Die Entstehung der Turboschmiede
             </h1>
-            <p className="text-base md:text-xl font-light">
+            <p className="text-base md:text-xl font-light text-muted-foreground">
               Bereits in jungen Jahren & diversen kleineren &bdquo;Hobby-Garagen&ldquo; entstand
               das Verlangen einen Ort zu schaffen, wo das Thema Automobil komplett
               im Vordergrund steht. Nach 7 langen Jahren auf der Suche nach dem
@@ -25,15 +25,15 @@ export default function About() {
               Stunden der Renovierung in Eigenleistung und Einrichtung der
               Räumlichkeiten verfallen. Wie jedes Projekt eines Enthusiasten &
               Perfektionisten ist auch hier kein Ende in Sicht und es bleibt ein
-              stetiger <a className="font-black">Work in Progress</a>.
+              stetiger <a className="font-semibold text-zinc-300">Work in Progress</a>.
             </p>
           </div>
           
           <div className="w-full md:w-5/12 md:max-w-[600px]">
-            <h1 className="pt-6 text-xl md:text-3xl font-bold mb-4 md:mb-6 text-white hyphens-none">
+            <h1 className="pt-6 text-xl md:text-3xl font-semibold mb-4 md:mb-6 text-zinc-300 hyphens-none">
               Die Vision
             </h1>
-            <p className="text-base md:text-xl font-light">
+            <p className="text-base md:text-xl font-light text-muted-foreground">
               Durch das Studium im Bereich Nachhaltige Fahrzeug- und Antriebstechnik
               und der Passion für Young- & Oldtimer, mit Schwerpunkt Deutscher
               Ingenierskunst, haben wir es uns zur Aufgabe gemacht angesichts des

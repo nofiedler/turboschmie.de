@@ -4,11 +4,11 @@ import React from "react";
 
 export default function Impressum() {
   return (
-    <div className="flex flex-col items-center md:pt-28 text-white text-center w-10/12 mx-auto hyphens-auto">
-      <h1 className="pt-6 text-3xl font-bold mb-6">Impressum</h1>
+    <div className="flex flex-col items-center md:pt-44 pt-12 mb-12 text-muted-foreground text-center w-10/12 mx-auto hyphens-auto">
+      <h1 className="text-3xl font-bold mb-6 text-zinc-300">Impressum</h1>
 
       <section className="w-full text-left">
-        <h2 className="text-xl font-semibold mb-4">Angaben gemäß § 5 TMG</h2>
+        <h2 className="text-xl font-semibold mb-4 text-zinc-300">Angaben gemäß § 5 TMG</h2>
         <address className="not-italic mb-4">
           Frederik Zeiler
           <br />
@@ -23,7 +23,7 @@ export default function Impressum() {
           Germany
         </address>
 
-        <h2 className="text-xl font-semibold mt-6 mb-4">Kontakt</h2>
+        <h2 className="text-xl font-semibold mt-6 mb-4 text-zinc-300">Kontakt</h2>
         <p className="mb-4">
           E-Mail:{" "}
           <a
@@ -34,14 +34,14 @@ export default function Impressum() {
           </a>
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-4">Umsatzsteuer-ID</h2>
+        <h2 className="text-xl font-semibold mt-6 mb-4 text-zinc-300">Umsatzsteuer-ID</h2>
         <p className="mb-4">
           Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
           <br />
           DE344500331
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-4">
+        <h2 className="text-xl font-semibold mt-6 mb-4 text-zinc-300">
           EU-Streitschlichtung
         </h2>
         <p className="mb-4">
@@ -60,7 +60,7 @@ export default function Impressum() {
           Unsere E-Mail-Adresse finden Sie oben im Impressum.
         </p>
 
-        <h2 className="text-xl font-semibold mt-6 mb-4">
+        <h2 className="text-xl font-semibold mt-6 mb-4 text-zinc-300">
           Verbraucherstreitbeilegung/ <br /> Universalschlichtungsstelle
         </h2>
         <p className="mb-8">
@@ -80,11 +80,11 @@ export default function Impressum() {
           </a>
         </p>
 
-        <h3 className="text-lg font-semibold mt-8 mb-4">
+        <h3 className="text-lg font-semibold mt-8 mb-4 text-zinc-300">
           Haftungsausschluss (Disclaimer)
         </h3>
 
-        <h4 className="font-medium mb-2">Haftung für Inhalte</h4>
+        <h4 className="font-medium mb-2 text-zinc-300">Haftung für Inhalte</h4>
         <p className="mb-4">
           Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte
           auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach
@@ -99,7 +99,7 @@ export default function Impressum() {
           Inhalte umgehend entfernen.
         </p>
 
-        <h4 className="font-medium mb-2">Haftung für Links</h4>
+        <h4 className="font-medium mb-2 text-zinc-300">Haftung für Links</h4>
         <p className="mb-4">
           Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren
           Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
@@ -114,7 +114,7 @@ export default function Impressum() {
           umgehend entfernen.
         </p>
 
-        <h4 className="font-medium mb-2">Urheberrecht</h4>
+        <h4 className="font-medium mb-2 text-zinc-300">Urheberrecht</h4>
         <p className="mb-8">
           Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
           Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
@@ -130,11 +130,11 @@ export default function Impressum() {
           werden wir derartige Inhalte umgehend entfernen.
         </p>
 
-        <h3 className="text-lg font-semibold mt-8 mb-4">
+        <h3 className="text-lg font-semibold mt-8 mb-4 text-zinc-300">
           Datenschutzerklärung
         </h3>
 
-        <h4 className="font-medium mb-2">1. Datenschutz auf einen Blick</h4>
+        <h4 className="font-medium mb-2 text-zinc-300">1. Datenschutz auf einen Blick</h4>
         <p className="mb-4">
           <strong>Allgemeine Hinweise</strong>
           <br />
@@ -144,7 +144,7 @@ export default function Impressum() {
           persönlich identifiziert werden können.
         </p>
 
-        <h4 className="font-medium mb-2">Datenerfassung auf dieser Website</h4>
+        <h4 className="font-medium mb-2 text-zinc-300">Datenerfassung auf dieser Website</h4>
         <p className="mb-4">
           <strong>
             Wer ist verantwortlich für die Datenerfassung auf dieser Website?
@@ -188,7 +188,7 @@ export default function Impressum() {
           uns wenden.
         </p>
 
-        <h4 className="font-medium mb-2">
+        <h4 className="font-medium mb-2 text-zinc-300">
           2. Allgemeine Hinweise und Pflichtinformationen
         </h4>
         <p className="mb-4">
@@ -394,7 +394,7 @@ export default function Impressum() {
           oder eines Mitgliedstaats verarbeitet werden.
         </p>
 
-        <h4 className="font-medium mb-2">
+        <h4 className="font-medium mb-2 text-zinc-300">
           3. Datenerfassung auf dieser Website
         </h4>
         <p className="mb-4">
@@ -502,7 +502,7 @@ export default function Impressum() {
           gesetzliche Aufbewahrungsfristen – bleiben unberührt.
         </p>
 
-        <h4 className="font-medium mb-2">4. Soziale Medien</h4>
+        <h4 className="font-medium mb-2 text-zinc-300">4. Soziale Medien</h4>
         <p className="mb-4">
           <strong>Social-Media-Elemente mit Shariff</strong>
           <br />
@@ -719,7 +719,7 @@ export default function Impressum() {
           https://policy.pinterest.com/de/privacy-policy.
         </p>
 
-        <h4 className="font-medium mb-2">5. Analyse-Tools und Werbung</h4>
+        <h4 className="font-medium mb-2 text-zinc-300">5. Analyse-Tools und Werbung</h4>
         <p className="mb-4">
           <strong>IONOS WebAnalytics</strong>
           <br />
@@ -762,7 +762,7 @@ export default function Impressum() {
           unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.
         </p>
 
-        <h4 className="font-medium mb-2">6. Newsletter</h4>
+        <h4 className="font-medium mb-2 text-zinc-300">6. Newsletter</h4>
         <p className="mb-4">
           <strong>Newsletterdaten</strong>
           <br />
@@ -802,7 +802,7 @@ export default function Impressum() {
           berechtigtes Interesse überwiegen.
         </p>
 
-        <h4 className="font-medium mb-2">7. Plugins und Tools</h4>
+        <h4 className="font-medium mb-2 text-zinc-300">7. Plugins und Tools</h4>
         <p className="mb-4">
           <strong>YouTube mit erweitertem Datenschutz</strong>
           <br />
