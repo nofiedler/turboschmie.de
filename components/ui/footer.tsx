@@ -60,8 +60,9 @@ export default function Component() {
             priority
             className="pb-5" // Optional, wenn das Bild above the fold ist
           />
-          © {new Date().getFullYear()} This is a website for testing purposes
-          only.
+          © {new Date().getFullYear()} POWERED BY Turboschmie.de
+
+
         </p>
       </div>
     </footer>
