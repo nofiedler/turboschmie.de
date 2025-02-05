@@ -35,7 +35,7 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <nav className="text-zinc-300 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+      <nav className="text-zinc-300 bg-transparent fixed top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -73,7 +73,7 @@ export default function MobileNavbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/70 backdrop-blur-md z-40"
+            className="fixed inset-0 backdrop-blur-md z-40"
           >
             <div className="flex flex-col items-center justify-center h-full space-y-4">
               {navItems.map((item, index) => (
@@ -82,7 +82,7 @@ export default function MobileNavbar() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.2, delay: index * 0.1 }}
+                  transition={{ duration: 0.1, delay: index * 0.1 }}
                 >
                   <Link
                     href={item.href}
