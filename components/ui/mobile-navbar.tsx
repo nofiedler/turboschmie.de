@@ -73,7 +73,7 @@ export default function MobileNavbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 backdrop-blur-md z-40"
+            className="fixed inset-0 backdrop-blur-md backdrop-brightness-50 z-40"
           >
             <div className="flex flex-col items-center justify-center h-full space-y-4">
               {navItems.map((item, index) => (
