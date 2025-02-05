@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/ui/footer";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import Navbar from "@/components/ui/mobile-navbar";
 import {
   IconHome,
   IconMessage,
@@ -15,30 +16,30 @@ import {
 const satoshi = localFont({
   src: [
     {
-      path: './fonts/Satoshi-Light.woff2',
-      weight: '200',
-      style: 'normal',
+      path: "./fonts/Satoshi-Light.woff2",
+      weight: "200",
+      style: "normal",
     },
     {
-      path: './fonts/Satoshi-Regular.woff2',
-      weight: '400',
-      style: 'normal',
+      path: "./fonts/Satoshi-Regular.woff2",
+      weight: "400",
+      style: "normal",
     },
     {
-      path: './fonts/Satoshi-Bold.woff2',
-      weight: '700',
-      style: 'normal',
+      path: "./fonts/Satoshi-Bold.woff2",
+      weight: "700",
+      style: "normal",
     },
     {
-      path: './fonts/Satoshi-Black.woff2',
-      weight: '900',
-      style: 'normal',
+      path: "./fonts/Satoshi-Black.woff2",
+      weight: "900",
+      style: "normal",
     },
   ],
-  variable: '--font-satoshi',
-  fallback: ['system-ui', 'arial'], // Fallback-Schriftarten
+  variable: "--font-satoshi",
+  fallback: ["system-ui", "arial"], // Fallback-Schriftarten
   preload: true,
-  display: 'swap',
+  display: "swap",
 });
 
 const navItems = [
@@ -82,7 +83,11 @@ export default function RootLayout({
   return (
     <html lang="de" className={satoshi.variable}>
       <body className="antialiased min-h-screen bg-black bg-dot-white/[0.15] relative font-satoshi">
+      <div className="mb-12">
+          <Navbar />
+        </div>
         <div className="fixed pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+
         <div className="hidden md:block">
           <FloatingNav navItems={navItems} />
         </div>
