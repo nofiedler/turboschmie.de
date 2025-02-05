@@ -8,7 +8,7 @@ import { MapView } from "@/components/ui/map_view";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center md:pt-40 pt-12 mb-12 p-6">
+    <div className="flex flex-col items-center md:pt-40 pt-12 mb-12">
       <div className="container mx-auto flex flex-col md:flex-row justify-center md:space-x-12">
         <div id="contact-form" className="flex-1 max-w-lg md:max-w-md">
           <div className="h-full flex flex-col">
