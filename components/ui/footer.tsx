@@ -8,7 +8,7 @@ export default function Component() {
   return (
     <footer className="w-full bg-transparent text-muted-foreground md:mb-0 mb-12 pt-6">
       <div className="container flex flex-col items-center px-4 mx-auto space-y-6 pb-12">
-        <nav className="flex flex-wrap justify-center gap-6 text-base md:gap-8">
+        <nav className="flex flex-wrap justify-center gap-6 md:text-base text-sm md:gap-8">
           <Link href="/" className="hover:text-white transition-colors">
             Startseite
           </Link>
@@ -32,7 +32,7 @@ export default function Component() {
           </Link>
         </nav>
 
-        <nav className="flex flex-wrap justify-center gap-6 text-sm md:gap-8">
+        <nav className="flex flex-wrap justify-center gap-6 md:text-base text-sm md:gap-8">
           <Link
             href="/impressum"
             className="hover:text-white transition-colors"
