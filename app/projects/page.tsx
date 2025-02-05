@@ -11,13 +11,13 @@ export default function Projects() {
         Unsere Projekte
       </h1>
 
-      <Card className="mb-12 bg-zinc-900 border-zinc-800 text-white">
+      <Card className="mb-12 md:bg-zinc-900 md:border-zinc-800 bg-transparent border-transparent text-white">
         <CardHeader>
-          <CardTitle className="text-2xl font-semibold">
+          <CardTitle className="text-xl md:text-3xl font-semibold">
             B5 - Eine Liebe die niemals endet.
           </CardTitle>
         </CardHeader>
-        <CardContent className="hyphens-auto">
+        <CardContent className="hyphens-auto text-base md:text-xl">
           <div className="h-80 flex justify-center">
             <CarouselSpacing />
           </div>
@@ -51,13 +51,13 @@ export default function Projects() {
         </CardContent>
       </Card>
 
-      <Card className="mb-12 bg-zinc-900 border-zinc-800 text-white">
+      <Card className="mb-12 md:bg-zinc-900 md:border-zinc-800 bg-transparent border-transparent text-white">
         <CardHeader>
-          <CardTitle className="text-2xl font-semibold">
+          <CardTitle className="text-xl md:text-3xl font-semibold">
             Vorsicht Allzweckwaffe!
           </CardTitle>
         </CardHeader>
-        <CardContent className="hyphens-auto">
+        <CardContent className="hyphens-auto text-base md:text-xl">
           <div className="h-80 flex justify-center">
             <CarouselSpacing />
           </div>
