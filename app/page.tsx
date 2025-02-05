@@ -102,7 +102,7 @@ export default function Home() {
           <ChevronsUpDownIcon />
         </div>
       </div>
-      <div className="flex flex-col items-center pt-32 space-y-4 hyphens-auto">
+      <div className="flex flex-col items-center pt-32 space-y-4 hyphens-auto p-6">
         <div className="w-11/12 text-center mx-auto">
           <p className="md:w-[600px] mx-auto text-2xl md:text-4xl font-light hyphens-none text-zinc-300">
             Unsere Philosophie
