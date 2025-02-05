@@ -83,13 +83,13 @@ export default function RootLayout({
   return (
     <html lang="de" className={satoshi.variable}>
       <body className="antialiased min-h-screen bg-black bg-dot-white/[0.15] relative font-satoshi">
-        <div className="mb-12 md:hidden">
-          <Navbar />
-        </div>
         <div className="fixed pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-
+        
         <div className="hidden md:block">
           <FloatingNav navItems={navItems} />
+        </div>
+        <div className="md:hidden bg-transparent">
+          <Navbar />
         </div>
         {/* Wrapper mit scrollbar-hide */}
         <main className="relative z-10 overflow-y-scroll scrollbar-hide h-screen">

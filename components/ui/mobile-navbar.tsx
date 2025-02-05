@@ -35,36 +35,25 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <nav className="text-zinc-300 bg-transparent fixed top-0 left-0 right-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              
-            </div>
-            <div>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleMenu}
-                aria-label="Toggle menu"
-                className="z-50 relative bg-zinc-300 text-base text-zinc-900"
-              >
-                <AnimatePresence mode="wait" initial={false}>
-                  <motion.div
-                    key={isOpen ? "close" : "open"}
-                    initial={{ opacity: 0, rotate: 90 }}
-                    animate={{ opacity: 1, rotate: 0 }}
-                    exit={{ opacity: 0, rotate: -90 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                  </motion.div>
-                </AnimatePresence>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+        className="fixed top-4 right-4 z-50 bg-zinc-300 text-base text-zinc-900"
+      >
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={isOpen ? "close" : "open"}
+            initial={{ opacity: 0, rotate: 90 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0, rotate: -90 }}
+            transition={{ duration: 0.2 }}
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </motion.div>
+        </AnimatePresence>
+      </Button>
 
       <AnimatePresence>
         {isOpen && (
@@ -73,10 +62,9 @@ export default function MobileNavbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 backdrop-blur-md backdrop-brightness-50 backdrop-grayscale-0 backdrop-contrast-100 z-40"
-            style={{ top: '0' }} // Remove the top position adjustment
+            className="fixed inset-0 bg-transparent backdrop-blur-md backdrop-brightness-50 backdrop-grayscale-0 backdrop-contrast-100 z-40"
           >
-            <div className="flex flex-col items-center justify-center h-full space-y-4">
+            <div className="flex flex-col items-center justify-center h-full space-y-4 bg-transparent">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -87,7 +75,7 @@ export default function MobileNavbar() {
                 >
                   <Link
                     href={item.href}
-                    className="px-3 py-4 text-xl text-zinc-300 hover:text-primary/80 transition-colors duration-200"
+                    className="px-3 py-4 text-xl text-zinc-300 hover:text-primary/80 bg-transparent transition-colors duration-200"
                     onClick={toggleMenu}
                   >
                     {item.label}
